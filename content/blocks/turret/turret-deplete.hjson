@@ -121,6 +121,4 @@ ammoTypes: {
     lightningDamage: 12
   }
 }
-research: {
-  parent: core-legion
-          }
+research: core-legion
