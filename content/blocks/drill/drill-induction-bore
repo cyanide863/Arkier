@@ -27,5 +27,5 @@ consumes: {
 }
 heatColor: 87ceebe6
 research: {
-  parent: core-derp
+  parent: core-leigon
      }
