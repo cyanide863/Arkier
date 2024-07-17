@@ -1,0 +1,132 @@
+type: ItemTurret
+name: Exhume
+description: Fires alternating projectiles at enemies.
+size: 3
+health: 1450
+category: turret
+range: 180
+squareSprite: false
+reload: 45
+shootSound: shootAlt
+inaccuracy: 2
+rotateSpeed: 2
+shootCone: 3
+shootY: 4
+outlineColor: 0f0f14
+recoils: 2
+shake: 1
+requirements: [
+  tungsten-but-stolen/85
+  aluminum/50
+]
+researchCost: [
+  tungsten-but-stolen/175
+  aluminum/105
+]
+shoot: {
+  type: ShootAlternate
+  spread: 8
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: insulated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -barrel-r
+      mirror: false
+      under: true
+      progress: recoil
+      x: 4.25
+      y: 5
+      recoilIndex: 1
+      moveY: -2.4
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-l
+      mirror: false
+      under: true
+      progress: recoil
+      x: -4.25
+      y: 5
+      recoilIndex: 0
+      moveY: -2.4
+    }
+      {
+      type: RegionPart
+      suffix: -barrel-mid
+      mirror: false
+      under: true
+      progress: recoil
+      x: 0
+      y: 5
+      recoilIndex: 0
+      moveY: -2.4
+    }
+  ]
+}
+ammoTypes: {
+  item-flux-alloy: {
+    type: BasicBulletType
+    damage: 35
+    speed: 4
+    lifetime: 42.5
+    width: 8
+    hitSize: 7
+    height: 14
+    shootEffect: shootSmallColor
+    smokeEffect: shootBigSmoke
+    ammoMultiplier: 1
+    pierceCap: 3
+    pierce: true
+    pierceBuilding: true
+    hitColor: 546143
+    trailColor: 546143
+    frontColor: 8c9d75
+    lightColor: 8c9d75
+    backColor: 546143
+    trailWidth: 2
+    trailLength: 12
+    hitEffect: hitBulletColor
+    despawnEffect: hitBulletColor
+  }
+  item-paragonite: {
+    type: BasicBulletType
+    damage: 30
+    speed: 8
+    lifetime: 28.3333334
+    width: 8
+    hitSize: 7
+    height: 14
+    shootEffect: shootSmallColor
+    smokeEffect: shootBigSmoke
+    ammoMultiplier: 1
+    pierceCap: 2
+    pierce: true
+    pierceBuilding: true
+    hitColor: a65c53
+    trailColor: a65c53
+    frontColor: d99073
+    lightColor: d99073
+    backColor: a65c53
+    trailWidth: 2
+    trailLength: 12
+    hitEffect: hitBulletColor
+    despawnEffect: hitBulletColor
+    lightning: 5
+    lightningLength: 4
+    lightningColor: d99073
+    lightningLengthRand: 4
+    lightningDamage: 12
+  }
+}
+research: {
+  parent: core-legion
+  objectives: [
+    {
+      type: OnSector
+      preset: depth
+    }
+  ]
+}
