@@ -1,0 +1,10 @@
+name: Paragonite
+description: A hard mineral,has electrical properties.
+cost: 1
+color: fcf387
+charge: 0.6
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: core-legion
