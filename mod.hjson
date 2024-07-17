@@ -1,0 +1,13 @@
+{
+  displayName : "Arctican"
+  repo: Mr-fisho/arkier
+  name: arc
+  author: triton
+  description: adds a frozen planet
+  subtitle: "In active development."
+  minGameVersion : 147
+  version : "0.1"
+  dependencies: [
+    "multi-crafter"
+  ]
+}
