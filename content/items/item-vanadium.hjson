@@ -1,0 +1,10 @@
+name: Vanadium
+description: Dense, Used in simple construction.
+cost: 1.6
+color: ab9fc7
+hardness: 0.9
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: paragonite
