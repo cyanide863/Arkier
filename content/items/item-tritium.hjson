@@ -1,0 +1,9 @@
+name: Neptunium
+description: a radioactive material.
+cost: 1.2
+color: 884d26
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: item-paragonite
