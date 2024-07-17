@@ -1,14 +1,14 @@
 type: ItemTurret
-name: Exhume
-description: Fires alternating projectiles at enemies.
+name: Rupture
+description: Fires three puncturing projectiles at enemies.
 size: 3
-health: 1450
+health: 1280
 category: turret
-range: 180
+range: 190
 squareSprite: false
-reload: 45
+reload: 40
 shootSound: shootAlt
-inaccuracy: 2
+inaccuracy: 5
 rotateSpeed: 2
 shootCone: 3
 shootY: 4
@@ -16,12 +16,12 @@ outlineColor: 0f0f14
 recoils: 2
 shake: 1
 requirements: [
-  tungsten-but-stolen/85
-  aluminum/50
+  item-vanadium/85
+  item-paragonite/50
 ]
 researchCost: [
-  tungsten-but-stolen/175
-  aluminum/105
+  item-vanadium/175
+  item-paragonite/105
 ]
 shoot: {
   type: ShootAlternate
@@ -29,7 +29,7 @@ shoot: {
 }
 drawer: {
   type: DrawTurret
-  basePrefix: insulated-
+  basePrefix: heated-
   parts: [
     {
       type: RegionPart
@@ -38,7 +38,7 @@ drawer: {
       under: true
       progress: recoil
       x: 4.25
-      y: 5
+      y: 8
       recoilIndex: 1
       moveY: -2.4
     }
@@ -49,7 +49,7 @@ drawer: {
       under: true
       progress: recoil
       x: -4.25
-      y: 5
+      y: 8
       recoilIndex: 0
       moveY: -2.4
     }
@@ -60,7 +60,7 @@ drawer: {
       under: true
       progress: recoil
       x: 0
-      y: 5
+      y: 8
       recoilIndex: 0
       moveY: -2.4
     }
