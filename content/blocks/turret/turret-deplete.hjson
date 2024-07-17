@@ -123,10 +123,4 @@ ammoTypes: {
 }
 research: {
   parent: core-legion
-  objectives: [
-    {
-      type: OnSector
-      preset: depth
-    }
-  ]
-}
+          }
