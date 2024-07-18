@@ -1,0 +1,8 @@
+name: Desolate Spikes
+type: TallBlock
+description: Purple, rocky spikes. Unpleasantly sharp.
+variants: 2
+clipSize: 128
+emitLight: true
+lightRadius: 128
+lightColor: 7b5f8359
