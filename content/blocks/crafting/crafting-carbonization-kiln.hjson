@@ -26,7 +26,6 @@ items: [
 graphite/3
 vanadium/3
 ]
-}
 drawer: [
 {
 type: drawDefault
