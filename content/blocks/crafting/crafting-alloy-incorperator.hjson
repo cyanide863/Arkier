@@ -1,0 +1,49 @@
+squareSprite: false
+size: 3
+category: crafting
+craftTime: 60
+craftEffect: {
+particles: 12
+length: 95
+lifetime: 270
+cone: 30
+baseRotation: 20
+sizeFrom: 0
+sizeTo: 8
+colorFrom: dce3d280
+colorTo: 83757210
+sizeInterp: pow3Out
+interp: pow3Out
+} 
+requirements: [
+item-vanadium/60
+item-paragonite/120
+]
+consumes: {
+power: 2.08333333333
+liquid: {
+liquid: nitrogen
+amount: .3
+}
+items: [
+item-vanadium/3
+item-paragonite/3
+]
+}
+drawer: [
+{
+type: drawDefault
+}
+{
+type: DrawCrucibleFlame
+}
+]
+outputItem: item-flux-alloy/4
+research: {
+requirements: [
+item-vanadium/120
+item-paragonite/60
+]
+parent: power-static-generator
+name: Alloy Kiln
+  }
