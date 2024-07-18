@@ -1,0 +1,7 @@
+name: Decrepit Chunks
+type: TallBlock
+variants: 3
+clipSize: 160
+emitLight: true
+lightRadius: 75
+lightColor: f3ffce
