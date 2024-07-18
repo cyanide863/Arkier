@@ -1,0 +1,136 @@
+type: ItemTurret
+name: Reverb
+description: Launches high-speed rounds at near by enemies.
+size: 3
+health: 1850
+category: turret
+range: 400
+squareSprite: false
+reload: 45
+shootSound: laser
+rotateSpeed: 1.5
+shootY: -2.5
+outlineColor: 0f0f14
+shake: 2
+heatColor: a65c53
+ammoPerShot: 3
+cooldownTime: 60
+requirements: [
+  items-vanadium/60
+  items-flux-alloy/80
+]
+researchCost: [
+  items-vanadium/600
+  items-flux-alloy/800
+]
+consumes: {
+  power: 1.6
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: insulated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -heatsink
+      progress: recoil
+      mirror: true
+      under: true
+      x: 5
+      y: -4
+      rotation: 45
+      moveX: 4
+      moveY: -4
+      heatColor: a65c53
+      turretHeatLayer: 49.999
+      layerOffset: -0.002
+      blending: additive
+    }
+  ]
+}
+ammoTypes: {
+  item-flux-alloy: {
+    type: BasicBulletType
+    despawnEffect: none
+    width: 10
+    height: 20
+    hitColor: a65c53
+    trailColor: a65c53
+    frontColor: d99073
+    backColor: a65c53
+    speed: 4
+    lifetime: 40
+    trailWidth: 2
+    trailLength: 17
+    trailInterval: 5
+    trailRotation: true
+    damage: 90
+    pierce: true
+    pierceCap: 10
+    fragBullets: 1
+    fragRandomSpread: 0
+    fragVelocityMin: 2
+    fragVelocityMax: 2
+    fragBullet: {
+      type: BasicBulletType
+      width: 10
+      height: 25
+      hitColor: a65c53
+      trailColor: a65c53
+      frontColor: d99073
+      backColor: a65c53
+      speed: 8
+      lifetime: 20
+      pierce: true
+      pierceCap: 10
+      damage: 180
+      trailWidth: 2
+      trailLength: 17
+      trailInterval: 4
+      trailRotation: true
+      trailEffect: sparkShoot
+    }
+    trailEffect: {
+      type: SeqEffect
+      effects: [
+        {
+          type: ParticleEffect
+          followParent: true
+          rotWithParent: true
+          useRotation: true
+          region: arc-arrow
+          colorFrom: d99073
+          colorTo: d99073
+          lightColor: d99073
+          offsetX: 3
+          particles: 1
+          cone: 0
+          randLength: false
+          length: 35
+          sizeFrom: 2
+          sizeTo: 4
+          lifetime: 16
+        }
+        {
+          type: ParticleEffect
+          followParent: true
+          rotWithParent: true
+          useRotation: true
+          region: arc-arrow
+          colorFrom: d99073
+          colorTo: d99073
+          lightColor: d99073
+          offsetX: 38
+          particles: 1
+          cone: 0
+          randLength: false
+          length: 70
+          sizeFrom: 4
+          sizeTo: 0
+          lifetime: 32
+        }
+      ]
+    }
+  }
+}
+research: turret-spread
