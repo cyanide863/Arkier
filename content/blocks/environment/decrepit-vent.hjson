@@ -1,0 +1,9 @@
+name: Decrepit Vent
+type: SteamVent
+blendGroup: decrepit-floor
+parent: decrepit-floor
+effect: ventSteam
+effectColor: 9ca67c
+attributes: {
+   steam: 0.22222
+}
