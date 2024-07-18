@@ -1,6 +1,6 @@
 name: Void Spikes
 type: TallBlock
-variants: 3
+variants: 5
 clipSize: 128
 emitLight: true
 lightRadius: 75
