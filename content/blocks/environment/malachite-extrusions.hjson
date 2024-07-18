@@ -1,0 +1,7 @@
+name: Malachite extrusions
+type: TallBlock
+variants: 2
+clipSize: 128
+emitLight: true
+lightRadius: 190
+lightColor: 7fc2a8
