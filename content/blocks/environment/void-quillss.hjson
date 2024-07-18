@@ -1,0 +1,7 @@
+name: Void Quills
+type: TallBlock
+variants: 2
+clipSize: 128
+emitLight: true
+lightRadius: 45
+lightColor: ffffff
