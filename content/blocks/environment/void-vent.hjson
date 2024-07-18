@@ -1,0 +1,9 @@
+name: Void Vent
+type: SteamVent
+blendGroup: void-floor
+parent: void-floor
+effect: ventSteam
+effectColor: 0f0f14
+attributes: {
+   steam: 0.22222222
+}
