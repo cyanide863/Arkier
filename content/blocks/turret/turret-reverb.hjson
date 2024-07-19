@@ -32,7 +32,7 @@ drawer: {
   parts: [
     {
       type: RegionPart
-      suffix: -heatsink
+      suffix: -heatsinks
       progress: recoil
       mirror: true
       under: true
