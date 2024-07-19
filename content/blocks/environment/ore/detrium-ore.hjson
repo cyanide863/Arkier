@@ -1,1 +1,4 @@
-
+type: OreBlock
+name: Detrium
+itemDrop: item-detrium
+variants: 3
