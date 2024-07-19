@@ -30,27 +30,21 @@ isEnemy: false
 engines: [
   {
     x: 5
-    y: 8
+    y: 0
     radius: 2
-    rotation: 180
+    rotation: 0
   }
   {
     x: -5
-    y: 8
+    y: 0
     radius: 2
     rotation: 180
   }
   {
-    x: 4
-    y: -8
-    radius: 2
-    rotation: 180
-  }
-  {
-    x: -4
-    y: -8
-    radius: 2
-    rotation: 180
+    x: 0
+    y: -6
+    radius: 4
+    rotation: 270
   }
 ]
 parts: [
