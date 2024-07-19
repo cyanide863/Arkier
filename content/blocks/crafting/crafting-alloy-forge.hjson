@@ -38,7 +38,7 @@ recipes: [
       arc-item-areonium/4
     ]
   }
-  craftTime: 400.0
+  craftTime: 225.0
 }
 {
   input: {
@@ -54,6 +54,26 @@ recipes: [
   output: {
     items: [
       arc-item-paragonium/4
+    ]
+  }
+  craftTime: 200.0
+}
+{
+  input: {
+    items: [
+      arc-item-paragonite/4
+      arc-item-power-cell/5
+      arc-item-detrium/4
+      arc-item-vanadium/6
+    ]
+    fluids: [
+      arc-liquid-methane/0.3
+    ]
+    power: 3.6
+  }
+  output: {
+    items: [
+      arc-item-lithonite/10
     ]
   }
   craftTime: 400.0
