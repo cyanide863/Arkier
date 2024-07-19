@@ -34,8 +34,8 @@ parts: [
 ]
 weapons: [
   {
-    x: 0
-    y: 0
+    x: 3.5
+    y: -1
     name: unit-chaos-gun
     layerOffset: 0.0001
     shootSound: shootBig
@@ -44,7 +44,7 @@ weapons: [
     recoil: 2
     rotate: true
     rotateSpeed: 2.5
-    mirror: false
+    mirror: true
     reload: 100
     bullet: {
       type: BasicBulletType
@@ -56,7 +56,7 @@ weapons: [
       smokeEffect: shootSmokeTitan
       shootEffect: shootBigColor
       width: 8
-      speed: 6
+     3 speed: 6
       height: 12
       lifetime: 40
       pierce: true
@@ -93,42 +93,6 @@ weapons: [
         trailLength: 4
         despawnEffect: hitBulletColor
         hitEffect: hitBulletColor
-      }
-  }
-     {
-    x: 6
-    y: -4
-    name: unit-chaos-sub
-    shootY: 4
-    recoil: 1
-    rotate: true
-    rotateSpeed: 2.5
-    mirror: false
-    reload: 60
-    layerOffset: 0.0001
-    shoot: {
-      shots: 5
-      shotDelay: 6
-    }
-    bullet: {
-      type: BasicBulletType
-      damage: 30
-      lightColor: fcf387
-      smokeEffect: shootSmallSmoke
-      shootEffect: shootSmallColor
-      width: 5
-      speed: 9
-      height: 10
-      lifetime: 40
-      hitSize: 4
-      trailWidth: 1.2
-      trailLength: 6
-      hitColor: fcf387
-      trailColor: fcf387
-      backColor: fcf387
-      frontColor: ffffff
-      despawnEffect: hitBulletColor
-      hitEffect: hitBulletColor
-     }
+     }    
    }
  ]
