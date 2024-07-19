@@ -1,0 +1,69 @@
+type: multicraft.MultiCrafter
+name: Alloy Kiln
+description: Melts down various metals into alloys.
+details: gets the job done though very ineffciently.
+size: 4
+health: 870
+category: crafting
+itemCapacity: 12
+requirements: [
+  item-paragonite/325
+  item-vanadium/200
+]
+researchCost: [
+  item-paragonite/650
+  item-vanadium/400
+]
+category: crafting
+squareSprite: false
+hasLiquids: false
+ambientSound: glow
+ambientSoundVolume: 0.08
+recipes: [
+{
+  input: {
+    items: [
+      arc-item-vanadium/2
+      arc-item-paragonite/3
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-flux-alloy/2
+    ]
+  }
+  craftTime: 200.0
+}
+{
+  input: {
+    items: [
+      arc-item-vanadium/2
+      arc-item-detrium/3
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-vanadium-carbide/2
+    ]
+  }
+  craftTime: 320.0
+}
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -glass
+    }
+    {
+      type: DrawCrucibleFlame
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+research: core-legion
