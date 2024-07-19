@@ -1,4 +1,4 @@
-name: Link
+name: Havoc
 description: Fires bursts of bullets at enemy targets.
 type: tank
 lightColor: ca6a65
@@ -26,7 +26,7 @@ weapons: [
   {
     x: 0
     y: 0
-    name: mar-weapon
+    name: unit-link-cannon
     shootY: 4
     recoil: 1
     rotate: true
@@ -40,20 +40,20 @@ weapons: [
     }
     bullet: {
       type: BasicBulletType
-      damage: 15
-      lightColor: feb380
+      damage: 30
+      lightColor: fcf387
       smokeEffect: shootSmallSmoke
       shootEffect: shootSmallColor
       width: 5
-      speed: 5
+      speed: 9
       height: 10
       lifetime: 40
       hitSize: 4
       trailWidth: 1.2
       trailLength: 6
-      hitColor: feb380
-      trailColor: feb380
-      backColor: feb380
+      hitColor: fcf387
+      trailColor: fcf387
+      backColor: fcf387
       frontColor: ffffff
       despawnEffect: hitBulletColor
       hitEffect: hitBulletColor
