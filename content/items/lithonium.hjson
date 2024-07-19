@@ -1,0 +1,10 @@
+name: Lithonium
+description: Volatile, Essential in high-tier blocks and as ammo.
+cost: 1.4
+color: 66703d
+charge: 1
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: item-power-cell
