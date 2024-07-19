@@ -1,1 +1,10 @@
-
+name: paragonium
+description: A hard mineral,has electrical properties.
+cost: 1
+color: fcf387
+charge: 1.2
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: item-paragonite
