@@ -1,49 +1,90 @@
-squareSprite: false
+type: multicraft.MultiCrafter
+name: Induction smelter
+description: Melts minerals down for later use.
+details: melts vanadium and paragonite for later use
 size: 3
+health: 450
 category: crafting
-craftTime: 60
-craftEffect: {
-particles: 12
-length: 95
-lifetime: 270
-cone: 30
-baseRotation: 20
-sizeFrom: 0
-sizeTo: 8
-colorFrom: dce3d280
-colorTo: 83757210
-sizeInterp: pow3Out
-interp: pow3Out
-} 
+researchCost: [
+  item-vanadium/30
+  item-paragonite/20
+]
+category: crafting
+squareSprite: false
+liquidCapacity: 36
+hasLiquids: true
+ambientSound: flux
+ambientSoundVolume: 0.05
+itemCapacity: 12
 requirements: [
-item-vanadium/60
-item-paragonite/120
+  item-vanadium/45
+  item-paragonite/40
 ]
-consumes: {
-power: 2.08333333333
-liquid: {
-liquid: nitrogen
-amount: .3
-}
-items: [
-item-vanadium/3
-item-paragonite/3
-]
-}
-drawer: [
+recipes: [
 {
-type: drawDefault
-}
-{
-type: DrawCrucibleFlame
-}
-]
-outputItem: item-flux-alloy/4
-research: {
-requirements: [
-item-vanadium/120
-item-paragonite/60
-]
-parent: power-static-generator
-name: Alloy Kiln
+  input: {
+    items: [
+      arc-item-vanadium/3
+    ]
+    power: 2
   }
+  output: {
+    fluids: [
+      arc-liquid-molten-vandium/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    items: [
+      arc-item-paragonite/4
+    ]
+    power: 2.4
+  }
+  output: {
+    fluids: [
+      arc-liquid-molten-paragonite/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      
+      //pixels from edge to do it from
+      padding: 4
+      //alternatively use padLeft, padRight, padTop, and padBottom to pad at specific edges
+      
+      //liquid to draw
+      drawLiquid: molten-vanadium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 4
+      drawLiquid: molten-paragonite
+    }
+    {
+      type: DrawCrucibleFlame
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      alpha: 0.5
+      glowScale: 8
+      color: 8c9d75
+    }
+  ]
+}
+research: crafting-alloy-kiln
