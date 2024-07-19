@@ -32,11 +32,11 @@ shoot: {
 }
 drawer: {
   type: DrawTurret
-  basePrefix: insulated-
+  basePrefix: heated-
   parts: [
     {
       type: RegionPart
-      suffix: -mid
+      suffix: -barrel
       mirror: false
       under: false
       progress: recoil
