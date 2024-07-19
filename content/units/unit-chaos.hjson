@@ -1,4 +1,4 @@
-name: Maul
+name: Chaos
 description: Fires cannon shells at nearby enemies.
 type: tank
 lightColor: ca6a65
@@ -50,7 +50,7 @@ weapons: [
       type: BasicBulletType
       sprite: missile-large
       damage: 75
-      lightColor: feb380
+      lightColor: fcf387
       splashDamage: 50
       splashDamageRadius: 16
       smokeEffect: shootSmokeTitan
@@ -64,9 +64,9 @@ weapons: [
       hitSize: 6
       trailWidth: 2.5
       trailLength: 7
-      hitColor: feb380
-      trailColor: feb380
-      backColor: feb380
+      hitColor: fcf387
+      trailColor: fcf387
+      backColor: fcf387
       frontColor: ffffff
       trailEffect: hitBulletColor
       trailRotation: true
@@ -74,7 +74,7 @@ weapons: [
       fragBullets: 6
       fragBullet: {
         speed: 2
-        lightColor: feb380
+        lightColor: fcf387
         width: 6
         height: 8
         damage: 15
@@ -85,15 +85,51 @@ weapons: [
         pierceCap: 2
         pierce: true
         pierceBuilding: false
-        hitColor: feb380
-        trailColor: feb380
-        backColor: feb380
+        hitColor: fcf387
+        trailColor: fcf387
+        backColor: fcf387
         frontColor: ffffff
         trailWidth: 1
         trailLength: 4
         despawnEffect: hitBulletColor
         hitEffect: hitBulletColor
-      }
     }
-  }
-]
+     }
+     }
+     {
+    x: 6
+    y: -4
+    name: unit-chaos-sub
+    shootY: 4
+    recoil: 1
+    rotate: true
+    rotateSpeed: 2.5
+    mirror: false
+    reload: 60
+    layerOffset: 0.0001
+    shoot: {
+      shots: 5
+      shotDelay: 6
+    }
+    bullet: {
+      type: BasicBulletType
+      damage: 30
+      lightColor: fcf387
+      smokeEffect: shootSmallSmoke
+      shootEffect: shootSmallColor
+      width: 5
+      speed: 9
+      height: 10
+      lifetime: 40
+      hitSize: 4
+      trailWidth: 1.2
+      trailLength: 6
+      hitColor: fcf387
+      trailColor: fcf387
+      backColor: fcf387
+      frontColor: ffffff
+      despawnEffect: hitBulletColor
+      hitEffect: hitBulletColor
+     }
+   }
+ ]
