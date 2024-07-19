@@ -143,45 +143,9 @@ weapons: [
     shootCone: 2
     inaccuracy: 2
     recoils: 3
-    parts: [
-      {
-        type: RegionPart
-        suffix: -barrel-1
-        recoilIndex: 0
-        progress: recoil
-        under: true
-        moveY: -2
-        x: -0.25
-        y: 18.5
-      }
-      {
-        type: RegionPart
-        suffix: -barrel-2
-        recoilIndex: 1
-        progress: recoil
-        under: true
-        moveY: -2
-        x: 0
-        y: 18.5
-      }
-      {
-        type: RegionPart
-        suffix: -barrel-3
-        recoilIndex: 2
-        progress: recoil
-        under: true
-        moveY: -2
-        x: 0.25
-        y: 18.5
-      }
-    ]
+  }
     shoot: {
-      type: ShootBarrel
-      barrels: [
-        -0.25, 18.5, 0,
-         0, 18.5, 0,
-         0.25, 18.5, 0
-      ]
+      type: Shootspread
     }
     bullet: {
       type: BasicBulletType
