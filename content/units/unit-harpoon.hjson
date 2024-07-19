@@ -44,88 +44,6 @@ parts: [
     color: 9db9ed
   }
 ]
-weapons: [
-  {
-    name: unit-harpoon-gun
-    shootSound: malignShoot
-    layerOffset: -0.002
-    mirror: true
-    cooldownTime: 30
-    shake: 2
-    heatColor: 9db9ed
-    shootY: 2
-    x: 23.25
-    y: 0
-    reload: 10
-    recoil: 2
-    shootCone: 2
-    inaccuracy: 2
-    recoils: 3
-    parts: [
-      {
-        type: RegionPart
-        suffix: -barrel-1
-        recoilIndex: 0
-        progress: recoil
-        under: true
-        moveY: -2
-        x: -0.25
-        y: 18.5
-      }
-      {
-        type: RegionPart
-        suffix: -barrel-2
-        recoilIndex: 1
-        progress: recoil
-        under: true
-        moveY: -2
-        x: 0
-        y: 18.5
-      }
-      {
-        type: RegionPart
-        suffix: -barrel-3
-        recoilIndex: 2
-        progress: recoil
-        under: true
-        moveY: -2
-        x: 0.25
-        y: 18.5
-      }
-    ]
-    shoot: {
-      type: ShootBarrel
-      barrels: [
-        -0.25, 18.5, 0,
-         0, 18.5, 0,
-         0.25, 18.5, 0
-      ]
-    }
-    bullet: {
-      type: BasicBulletType
-      shootEffect: [
-        sparkShoot,
-        hitSquaresColor
-      ]
-      trailEffect: hitSquaresColor
-      trailInterval: 3
-      height: 14
-      width: 12
-      trailWidth: 3.5
-      trailLength: 15
-      backColor: 9db9ed
-      frontColor: ffffff
-      trailColor: 9db9ed
-      hitColor: 9db9ed
-      lifetime: 32
-      speed: 7
-      damage: 90
-      pierce: false
-      lightColor: 9db9ed
-      despawnEffect: hitSquaresColor
-      hitEffect: hitSquaresColor
-    }
-  }
   weapons: [
   {
     name: unit-harpoon-gun
@@ -143,9 +61,11 @@ weapons: [
     shootCone: 2
     inaccuracy: 2
     recoils: 3
-  }
-    shoot: {
-      type: Shootspread
+  } 
+      shoot: {
+      type: ShootSpread
+      shots: 10
+      spread: 1.25
     }
     bullet: {
       type: BasicBulletType
