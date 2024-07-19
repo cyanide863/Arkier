@@ -1,0 +1,14 @@
+type: Duct
+name: Power duct
+description: Moves items forward.
+category: distribution
+researchCost: [
+  item-vanadium/10
+]
+speed: 3.3333334
+health: 55
+bridgeReplacement: viaduct-bridge
+requirements: [
+  item-vanadium/1
+]
+research: core-legion
