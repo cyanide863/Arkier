@@ -43,7 +43,7 @@ parts: [
 ]
 weapons: [
   {
-    name: degrade-weapon
+    name: unit-pike-gun
     shootSound: blaster
     layerOffset: -0.002
     mirror: true
@@ -51,12 +51,53 @@ weapons: [
     heatColor: ab3400
     shootY: 0
     x: 3.5
-    y: 7
-    reload: 75
+    y: -4
+    reload: 40
     recoil: 1
     shoot: {
       type: ShootHelix
-      scl: 6
+      scl: 2
+      mag: 3
+    }
+    bullet: {
+      type: BasicBulletType
+      shootEffect: [
+        sparkShoot,
+        hitBulletColor
+      ]
+      height: 12
+      width: 7
+      trailWidth: 1.5
+      trailLength: 5
+      backColor: 9db9ed
+      frontColor: ffffff
+      trailColor: 9db9ed
+      hitColor: 9db9ed
+      lifetime: 40
+      speed: 6
+      damage: 50
+      pierce: true
+      pierceCap: 2
+      hitEffect: hitSquaresColor
+      despawnEffect: hitSquaresColor
+      lightColor: 9db9ed
+    }
+  }
+  {
+    name: rah
+    shootSound: blaster
+    layerOffset: -0.002
+    mirror: true
+    cooldownTime: 30
+    heatColor: ab3400
+    shootY: 0
+    x: 0
+    y: 7
+    reload: 150
+    recoil: 1
+    shoot: {
+      type: ShootHelix
+      scl: 2
       mag: 5
     }
     bullet: {
