@@ -1,0 +1,82 @@
+type: multicraft.MultiCrafter
+name: Component Fabricator
+description: melts alloys and minerals together to make complex alloys.
+details: Makes complex alloys 
+size: 4
+health: 1200
+category: crafting
+itemCapacity: 12
+requirements: [
+  item-vanadium/200
+  item-paragonite/80
+  item-flux-alloy/80
+  item-detrium/50
+]
+researchCost: [
+  item-vanadium/1100
+  item-paragonite/950
+  item-flux-alloy/800
+  item-detrium/650
+]
+category: crafting
+squareSprite: false
+hasLiquids: false
+ambientSound: glow
+ambientSoundVolume: 0.08
+recipes: [
+{
+  input: {
+    items: [
+      arc-item-paragonite/2
+      arc-item-vanadium/1
+      arc-item-vanadium-carbide/1
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-areonium/4
+    ]
+  }
+  craftTime: 400.0
+}
+{
+  input: {
+    items: [
+      arc-item-paragonite/2
+    ]
+    fluids: [
+      arc-liquid-methane/1
+      arc-liquid-oxygen/1
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-paragonium/4
+    ]
+  }
+  craftTime: 400.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+     type: DrawPlasma
+     plasmas: 3
+    }
+    {
+      type: DrawCrucibleFlame
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+research: crafting-pyro-smelter
