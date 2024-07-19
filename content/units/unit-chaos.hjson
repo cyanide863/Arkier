@@ -93,9 +93,8 @@ weapons: [
         trailLength: 4
         despawnEffect: hitBulletColor
         hitEffect: hitBulletColor
-    }
-     }
-     }
+      }
+  }
      {
     x: 6
     y: -4
