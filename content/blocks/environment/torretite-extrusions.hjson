@@ -1,0 +1,7 @@
+name: torretite extrusions
+type: TallBlock
+variants: 3
+clipSize: 128
+emitLight: true
+lightRadius: 90
+lightColor: ffffff
