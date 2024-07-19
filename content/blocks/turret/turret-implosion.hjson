@@ -46,6 +46,20 @@ drawer: {
       layerOffset: -0.002
       blending: additive
     }
+    {
+      type: RegionPart
+      suffix: -side
+      mirror: true
+      under: false
+      progress: warmup
+      x: 0
+      y: 0
+      moveRot: 25
+      moveY: 1.2
+      moveX: -2
+      layerOffset: -0.005
+      heatColor: 979d5a
+    }
   ]
 }
 ammoTypes: {
