@@ -1,0 +1,9 @@
+name: Aeronium
+description: Lightweight and sturdy. Used in advanced machines.
+cost: 1.6
+color: 4a8e7c
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: item-vanadium-carbide
