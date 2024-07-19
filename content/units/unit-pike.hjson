@@ -2,7 +2,7 @@ name: Degrade
 description: Fires weaving projectiles at nearby enemies. Can step over most terrain.
 type: legs
 template: ErekirUnitType
-lightColor: 9db9ed
+lightColor: bef8e0
 outlineColor: 0f0f14
 itemCapacity: 0
 speed: 0.9
@@ -71,8 +71,8 @@ weapons: [
       trailLength: 5
       backColor: 9db9ed
       frontColor: ffffff
-      trailColor: 9db9ed
-      hitColor: 9db9ed
+      trailColor: bef8e0
+      hitColor: bef8e0
       lifetime: 40
       speed: 6
       damage: 50
@@ -80,7 +80,7 @@ weapons: [
       pierceCap: 2
       hitEffect: hitSquaresColor
       despawnEffect: hitSquaresColor
-      lightColor: 9db9ed
+      lightColor: bef8e0
     }
   }
   {
@@ -89,7 +89,7 @@ weapons: [
     layerOffset: -0.002
     mirror: true
     cooldownTime: 30
-    heatColor: ab3400
+    heatColor: bef8e0
     shootY: 0
     x: 0
     y: 7
@@ -110,10 +110,10 @@ weapons: [
       width: 7
       trailWidth: 1.5
       trailLength: 5
-      backColor: 9db9ed
+      backColor: bef8e0
       frontColor: ffffff
-      trailColor: 9db9ed
-      hitColor: 9db9ed
+      trailColor: bef8e0
+      hitColor: bef8e0
       lifetime: 40
       speed: 6
       damage: 50
@@ -121,7 +121,7 @@ weapons: [
       pierceCap: 2
       hitEffect: hitSquaresColor
       despawnEffect: hitSquaresColor
-      lightColor: 9db9ed
+      lightColor: bef8e0
     }
   }
 ]
