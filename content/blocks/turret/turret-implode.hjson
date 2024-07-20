@@ -32,7 +32,7 @@ drawer: {
   parts: [
     {
       type: RegionPart
-      suffix: -sink
+      suffix: -sinks
       progress: recoil
       mirror: true
       under: true
@@ -40,7 +40,7 @@ drawer: {
       y: 1
       rotation: 135
       moveX: 5.5
-      moveY: -5.5
+      moveY: 5.5
       heatColor: c1975c
       turretHeatLayer: 49.999
       layerOffset: -0.002
@@ -57,6 +57,20 @@ drawer: {
       moveRot: 25
       moveY: 1.2
       moveX: -2
+      layerOffset: -0.005
+      heatColor: 979d5a
+    }
+    {
+      type: RegionPart
+      suffix: -barrel
+      mirror: true
+      under: false
+      progress: warmup
+      x: 0
+      y: 0
+      moveRot: 0
+      moveY: -2.5
+      moveX: 0
       layerOffset: -0.005
       heatColor: 979d5a
     }
