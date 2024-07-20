@@ -1,6 +1,6 @@
 type: ItemTurret
-name: Shroud
-description: Fires artillery shells at nearby enemies.
+name: shroud
+description: Fires fragging artillery shells at nearby enemies.
 size: 4
 health: 1780
 category: turret
@@ -8,24 +8,24 @@ range: 240
 squareSprite: false
 reload: 120
 shootSound: mediumCannon
-rotateSpeed: 1.9
+rotateSpeed: 2
 shootY: 14
 outlineColor: 0f0f14
 shake: 3
 heatColor: 5c5986
 cooldownTime: 90
 ammoPerShot: 4
-shootWarmupSpeed: 0.08
+shootWarmupSpeed: 0.1
 minWarmup: 0.95
 requirements: [
-  item-flux-alloy/120
-  item-lithonium/95
-  item-vanadium/75
+  item-flux-alloy/110
+  item-paragonium/95
+  item-lithonium/80
 ]
 researchCost: [
-  item-flux-alloy/1200
-  item-lithonium/950
-  item-vanadium/770
+  item-flux-alloy/1100
+  item-paragonium/950
+  item-lithonium/800
 ]
 drawer: {
   type: DrawTurret
@@ -46,9 +46,9 @@ drawer: {
       mirror: true
       under: false
       progress: warmup
-      x: 9.5
-      y: -4
-      moveRot: -25
+      x: 8.75
+      y: 0
+      moveRot: -10
       moveY: -3
       moveX: -2
       layerOffset: -0.005
@@ -57,21 +57,21 @@ drawer: {
   ]
 }
 ammoTypes: {
-   item-lithonium: {
+  item-paragonium: {
     type: ArtilleryBulletType
     sprite: shell
-    lifetime: 90
-    speed: 3
-    splashDamage: 400
+    lifetime: 100
+    speed: 4
+    splashDamage: 200
     splashDamageRadius: 32
     despawnEffect: none
     shootEffect: shootBig2
     smokeEffect: shootSmokeTitan
-    lightColor: edf5ad
-    frontColor: fffff
-    backColor: edf5ad
-    hitColor: edf5ad
-    trailColor: edf5ad
+    lightColor: 8a86b7
+    frontColor: 8a86b7
+    backColor: 5c5986
+    hitColor: 5c5986
+    trailColor: 5c5986
     width: 14
     height: 20
     trailWidth: 2
@@ -81,9 +81,9 @@ ammoTypes: {
       effects: [
         {
           type: WaveEffect
-          colorFrom: edf5ad
-          colorTo: edf5ad
-          lightColor: edf5ad
+          colorFrom: 5c5986
+          colorTo: 8a86b7
+          lightColor: 8a86b7
           strokeFrom: 3
           sizeTo: 60
           lifetime: 30
@@ -94,7 +94,7 @@ ammoTypes: {
           smokeSize: 10
           smokeRad: 60
           smokes: 20
-          sparks: 4
+          sparks: 0
           smokeColor: 5c5986
           lifetime: 90
         }
@@ -129,12 +129,12 @@ ammoTypes: {
       despawnEffect: hitBulletColor
     }
   }
-  item-detrium: {
+  item-lithonium: {
     type: ArtilleryBulletType
     sprite: shell
-    lifetime: 90
-    speed: 7
-    splashDamage: 300
+    lifetime: 100
+    speed: 4
+    splashDamage: 340
     splashDamageRadius: 32
     despawnEffect: none
     shootEffect: shootBig2
@@ -165,8 +165,8 @@ ammoTypes: {
           waveLife: 0
           smokeSize: 10
           smokeRad: 60
-          smokes: 50
-          sparks: 6
+          smokes: 20
+          sparks: 0
           smokeColor: 979d5a
           lifetime: 90
         }
@@ -183,10 +183,10 @@ ammoTypes: {
         }
       ]
     }
-    fragBullets: 12
+    fragBullets: 6
     fragBullet: {
       type: BasicBulletType
-      splashDamage: 60
+      splashDamage: 40
       splashDamageRadius: 16
       lightColor: c9c780
       frontColor: c9c780
