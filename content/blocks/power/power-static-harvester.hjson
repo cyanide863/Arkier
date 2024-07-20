@@ -17,10 +17,10 @@ liquidCapacity: 0
 ambientSound: pulse
 ambientSoundVolume: 0.09
 researchCost: [
-  tungsten-but-stolen/10
+  item-paragonite/10
 ]
 requirements: [
-  tungsten-but-stolen/35
+  item-paragonite/35
 ]
 drawer: {
   type: DrawMulti
