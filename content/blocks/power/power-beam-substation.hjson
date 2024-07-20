@@ -1,0 +1,23 @@
+type: BeamNode
+name: Beam Subsation
+description: Transmits power to nearby blocks over the four cardinal directions. Stores a small amount of power.
+consumesPower: true
+outputsPower: true
+health: 240
+category: power
+consumes: {
+  powerBuffered: 1000
+} 
+range: 32
+size: 3
+requirements: [
+  item-paragonium/5
+  item-vanadium/6
+  item-power-cell/2
+]
+researchCost: [
+  item-paragonium/10
+  item-vanadium/12
+  item-power-cell/5
+]
+research: power-beam-pylon
