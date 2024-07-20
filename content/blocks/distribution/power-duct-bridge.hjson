@@ -1,0 +1,15 @@
+type: DuctBridge
+name: Power Duct Bridge
+description: Moves items over structures and terrain.
+health: 135
+size: 1
+solid: false
+requirements: [
+  item-vandium/10
+] 
+category: distribution
+range: 6
+speed: 4
+researchCost: [
+  item-vandium/25
+]
