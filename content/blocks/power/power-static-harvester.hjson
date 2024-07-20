@@ -1,0 +1,39 @@
+type: ThermalGenerator
+name: Static Harvester
+description: Pulls electricity from the Abyssus's depths. Must be placed on Undercurrent Vents.
+health: 350
+attribute: heat
+displayEfficiency: false
+minEfficiency: 0.999
+category: power
+powerProduction: 30
+generateEffect: turbinegenerate
+effectChance: 0.03
+size: 3
+hasItems: false
+itemCapacity: 0
+hasLiquids: false
+liquidCapacity: 0
+ambientSound: pulse
+ambientSoundVolume: 0.09
+researchCost: [
+  tungsten-but-stolen/10
+]
+requirements: [
+  tungsten-but-stolen/35
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawDefault
+    }
+   {
+      type: Drawregion
+      suffix: -spinner
+      spinSprite: true
+      rotateSpeed: 3
+    }
+  ]
+}
+research: core-legion
