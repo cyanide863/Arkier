@@ -48,8 +48,8 @@ drawer: {
     }
     {
       type: RegionPart
-      suffix: -side
-      mirror: true
+      suffix: -side-r
+      mirror: false
       under: false
       progress: warmup
       x: 0
@@ -62,10 +62,24 @@ drawer: {
     }
     {
       type: RegionPart
+      suffix: -side-r
+      mirror: false
+      under: false
+      progress: warmup
+      x: 0
+      y: 0
+      moveRot: -25
+      moveY: 1.2
+      moveX: 2
+      layerOffset: -0.005
+      heatColor: 979d5a
+    }
+    {
+      type: RegionPart
       suffix: -barrel
       mirror: true
       under: false
-      progress: warmup
+      progress: recoil
       x: 0
       y: 0
       moveRot: 0
@@ -93,7 +107,7 @@ ammoTypes: {
     trailLength: 25
     splashDamage: 150
     splashDamageRadius: 40
-    fragBullets: 4
+    fragBullets: 7
     fragVelocityMin: 0.5
     fragVelocityMax: 1
     fragLifeMin: 0.5
@@ -112,9 +126,9 @@ ammoTypes: {
       lightColor: e9d164
       backColor: c1975c
       speed: 2
-      lifetime: 20
+      lifetime: 6
       collidesAir: false
-      fragBullets: 7
+      fragBullets: 4
       fragVelocityMin: 0.5
       fragVelocityMax: 5
       fragLifeMin: 0.8
@@ -133,7 +147,7 @@ ammoTypes: {
         lightColor: e9d164
         backColor: c1975c
         speed: 2
-        lifetime: 20
+        lifetime: 7
         collidesAir: false
       }
     }
