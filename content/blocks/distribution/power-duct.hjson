@@ -7,7 +7,7 @@ researchCost: [
 ]
 speed: 3.3333334
 health: 55
-bridgeReplacement: viaduct-bridge
+bridgeReplacement: power-duct-bridge
 requirements: [
   item-vanadium/1
 ]
