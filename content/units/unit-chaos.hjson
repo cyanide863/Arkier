@@ -1,4 +1,4 @@
-name: Maul
+name: Chaos
 description: Fires cannon shells at nearby enemies.
 type: tank
 lightColor: ca6a65
@@ -36,7 +36,7 @@ weapons: [
   {
     x: 4
     y: -2.5
-    name: maul-weapon
+    name: unit-chaos-gun
     layerOffset: 0.0001
     shootSound: shootBig
     shootCone: 3
