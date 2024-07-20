@@ -16,19 +16,19 @@ heatColor: a65c53
 ammoPerShot: 3
 cooldownTime: 60
 requirements: [
-  items-vanadium/60
-  items-flux-alloy/80
+  item-vanadium/60
+  item-flux-alloy/80
 ]
 researchCost: [
-  items-vanadium/600
-  items-flux-alloy/800
+  item-vanadium/600
+  item-flux-alloy/800
 ]
 consumes: {
   power: 1.6
 }
 drawer: {
   type: DrawTurret
-  basePrefix: insulated-
+  basePrefix: heated-
   parts: [
     {
       type: RegionPart
