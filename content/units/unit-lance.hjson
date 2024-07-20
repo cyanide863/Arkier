@@ -1,0 +1,138 @@
+name: Lance
+description: Fires shot gun bursts at enemies.
+details: a very unstable unit. the energy stored in it almost blows the thing apart.
+type: legs
+template: ErekirUnitType
+lightColor: 9db9ed
+outlineColor: 0f0f14
+itemCapacity: 0
+speed: 1.4
+drag: 0.1
+hitSize: 25
+rotateSpeed: 2.6
+health: 1400
+armor: 5
+legStraightness: 0.4
+baseLegStraightness: 0.5
+stepShake: 0.6
+legCount: 8
+legLength: 14
+lockLegBase: true
+legContinuousMove: true
+legExtension: -3
+legBaseOffset: 7
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.95
+legForwardScl: 0.9
+rippleScale: 0.8
+legMoveSpace: 1.5
+legGroupSize: 3
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.2
+groundLayer: 74
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    color: 9db9ed
+  }
+]
+weapons: [
+  {
+    name: unit-lancer-gun
+    shootSound: pulseBlast
+    layerOffset: -0.002
+    mirror: true
+    cooldownTime: 60
+    shake: 3
+    heatColor: 9db9ed
+    shootY: 14
+    x: 13.5
+    y: 0
+    reload: 60
+    recoil: 6
+    inaccuracy: 6
+    shoot: {
+      type: ShootSpread
+      shots: 5
+      spread: 2.5
+    }
+    bullet: {
+      type: BasicBulletType
+      shootEffect: sparkShoot
+      smokeEffect: shootSmokeSquareSparse
+      trailEffect: hitSquaresColor
+      trailInterval: 3
+      height: 14
+      width: 12
+      trailWidth: 3.5
+      trailLength: 15
+      backColor: a5e6cb
+      frontColor: ffffff
+      trailColor: a5e6cb
+      hitColor: a5e6cb
+      lifetime: 45
+      speed: 6
+      damage: 100
+      splashDamage: 24
+      splashDamageRadius: 12
+      pierce: true
+      pierceCap: 4
+      lightColor: a5e6cb
+      despawnEffect: {
+        type: ExplosionEffect
+        lifetime: 15
+        waveStroke: 2
+        waveColor: a5e6cb
+        sparkColor: a5e6cb
+        sparks: 6
+        sparkRad: 20
+        sparkLen: 3
+        sparkStroke: 1.2
+        smokeSize: 0
+        smokeSizeBase: 0
+        smokes: 0
+      }
+      hitEffect: {
+        type: ExplosionEffect
+        lifetime: 15
+        waveStroke: 5
+        waveColor: a5e6cb
+        sparkColor: 9db9ed
+        sparks: 6
+        sparkRad: 20
+        sparkLen: 3
+        sparkStroke: 1.6
+        smokeSize: 5
+        smokeSizeBase: 0
+        smokes: 2
+      }
+      fragBullets: 5
+      fragBullet: {
+        type: BasicBulletType
+        damage: 20
+        lifetime: 20
+        splashDamage: 16
+        splashDamageRadius: 8
+        backColor: 9db9ed
+        frontColor: ffffff
+        trailColor: a5e6cb
+        hitColor: a5e6cb
+        trailWidth: 2
+        trailLength: 4
+        height: 10
+        width: 10
+        speed: 2
+        despawnEffect: hitBulletColor
+        hitEffect: hitBulletColor
+        lightColor: a5e6cb
+      }
+    }
+  }
+]

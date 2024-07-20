@@ -1,4 +1,4 @@
-name: Chaos
+name: Maul
 description: Fires cannon shells at nearby enemies.
 type: tank
 lightColor: ca6a65
@@ -34,23 +34,23 @@ parts: [
 ]
 weapons: [
   {
-    x: 0
-    y: 0
+    x: 6
+    y: -3.5
     name: unit-chaos-gun
     layerOffset: 0.0001
-    shootSound: shootBig
+    shootSound: shootTitan
     shootCone: 3
     shootY: 8
     recoil: 2
     rotate: true
     rotateSpeed: 2.5
-    mirror: false
+    mirror: true
     reload: 100
     bullet: {
       type: BasicBulletType
       sprite: missile-large
       damage: 75
-      lightColor: fcf387
+      lightColor: feb380
       splashDamage: 50
       splashDamageRadius: 16
       smokeEffect: shootSmokeTitan
@@ -64,17 +64,17 @@ weapons: [
       hitSize: 6
       trailWidth: 2.5
       trailLength: 7
-      hitColor: fcf387
-      trailColor: fcf387
-      backColor: fcf387
+      hitColor: feb380
+      trailColor: feb380
+      backColor: feb380
       frontColor: ffffff
       trailEffect: hitBulletColor
       trailRotation: true
       trailInterval: 3
-      fragBullets: 6
+      fragBullets: 12
       fragBullet: {
         speed: 2
-        lightColor: fcf387
+        lightColor: feb380
         width: 6
         height: 8
         damage: 15
@@ -85,50 +85,15 @@ weapons: [
         pierceCap: 2
         pierce: true
         pierceBuilding: false
-        hitColor: fcf387
-        trailColor: fcf387
-        backColor: fcf387
+        hitColor: feb380
+        trailColor: feb380
+        backColor: feb380
         frontColor: ffffff
         trailWidth: 1
         trailLength: 4
         despawnEffect: hitBulletColor
         hitEffect: hitBulletColor
       }
-  }
-     {
-    x: 6
-    y: -4
-    name: unit-chaos-sub
-    shootY: 4
-    recoil: 1
-    rotate: true
-    rotateSpeed: 2.5
-    mirror: false
-    reload: 60
-    layerOffset: 0.0001
-    shoot: {
-      shots: 5
-      shotDelay: 6
     }
-    bullet: {
-      type: BasicBulletType
-      damage: 30
-      lightColor: fcf387
-      smokeEffect: shootSmallSmoke
-      shootEffect: shootSmallColor
-      width: 5
-      speed: 9
-      height: 10
-      lifetime: 40
-      hitSize: 4
-      trailWidth: 1.2
-      trailLength: 6
-      hitColor: fcf387
-      trailColor: fcf387
-      backColor: fcf387
-      frontColor: ffffff
-      despawnEffect: hitBulletColor
-      hitEffect: hitBulletColor
-     }
-   }
- ]
+  }
+]

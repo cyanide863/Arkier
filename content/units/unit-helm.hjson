@@ -15,9 +15,9 @@ flying: true
 mineSpeed: 8
 mineTier: 2
 buildSpeed: 2
-speed: 5
+speed: 7
 drag: 0.08
-accel: 0.01
+accel: 0.09
 itemCapacity: 45
 health: 540
 armor: 2
