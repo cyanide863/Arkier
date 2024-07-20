@@ -1,4 +1,4 @@
-name: Chaos
+name: Maul
 description: Fires cannon shells at nearby enemies.
 type: tank
 lightColor: ca6a65
@@ -34,9 +34,9 @@ parts: [
 ]
 weapons: [
   {
-    x: 3.5
-    y: -1
-    name: unit-chaos-gun
+    x: 4
+    y: -2.5
+    name: maul-weapon
     layerOffset: 0.0001
     shootSound: shootBig
     shootCone: 3
@@ -50,7 +50,7 @@ weapons: [
       type: BasicBulletType
       sprite: missile-large
       damage: 75
-      lightColor: fcf387
+      lightColor: feb380
       splashDamage: 50
       splashDamageRadius: 16
       smokeEffect: shootSmokeTitan
@@ -64,17 +64,17 @@ weapons: [
       hitSize: 6
       trailWidth: 2.5
       trailLength: 7
-      hitColor: fcf387
-      trailColor: fcf387
-      backColor: fcf387
+      hitColor: fff8a6
+      trailColor: fff8a6
+      backColor: fff8a6
       frontColor: ffffff
       trailEffect: hitBulletColor
       trailRotation: true
       trailInterval: 3
       fragBullets: 6
       fragBullet: {
-        speed: 2
-        lightColor: fcf387
+        speed: 4
+        lightColor: fff8a6
         width: 6
         height: 8
         damage: 15
@@ -85,14 +85,15 @@ weapons: [
         pierceCap: 2
         pierce: true
         pierceBuilding: false
-        hitColor: fcf387
-        trailColor: fcf387
-        backColor: fcf387
+        hitColor: fff8a6
+        trailColor: fff8a6
+        backColor: fff8a6
         frontColor: ffffff
         trailWidth: 1
         trailLength: 4
         despawnEffect: hitBulletColor
         hitEffect: hitBulletColor
-     }    
-   }
- ]
+      }
+    }
+  }
+]
