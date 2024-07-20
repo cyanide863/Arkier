@@ -5,11 +5,11 @@ health: 135
 size: 1
 solid: false
 requirements: [
-  item-vandium/10
+  item-vanadium/10
 ] 
 category: distribution
 range: 6
 speed: 4
 researchCost: [
-  item-vandium/25
+  item-vanadium/25
 ]
