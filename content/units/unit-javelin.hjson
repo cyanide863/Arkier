@@ -46,10 +46,10 @@ parts: [
 ]
 weapons: [
   {
-    name: unit-javelin-gun
+    name: unit-javelin-gun-r
     shootSound:  shootSmite
     layerOffset: -0.002
-    mirror: true
+    mirror: false
     cooldownTime: 30
     shake: 2
     heatColor: 9db9ed
@@ -58,19 +58,19 @@ weapons: [
     y: 0
     reload: 15
     recoil: 4
-    shootCone: 2
+    shootCone: 5
     inaccuracy: 2
     recoils: 3
       shoot: {
       type: ShootSpread
       shots: 20
-      spread: 0.5
+      spread: 1.5
     }
     bullet: {
       type: MissileBulletType
-      homingPower: 0.1
-      weaveMag: 3
-      weaveScale: 4
+      homingPower: 0.06
+      weaveMag: 4
+      weaveScale: 3
       shootEffect: [
         sparkShoot,
         shootBig2
@@ -87,53 +87,60 @@ weapons: [
       hitColor: 9db9ed
       lifetime: 32
       speed: 9
-      damage: 110
+      damage: 100
       pierce: false
       lightColor: 9db9ed
       despawnEffect: hitSquaresColor
       hitEffect: hitSquaresColor
      }
   }
-{
-   name: unit-pike-gun
-    shootSound: blaster
-    layerOffset: 1.1
-    mirror: true
+  {
+    name: unit-javelin-gun-l
+    shootSound:  pulseBlast
+    layerOffset: -0.002
+    mirror: false
     cooldownTime: 30
-    heatColor: bef8e0
-    shootY: 0
-    x: 14
-    y: -4
-    reload: 150
-    recoil: 1
-    shoot: {
-      type: ShootHelix
-      scl: 2
-      mag: 5
+    shake: 2
+    heatColor: 9db9ed
+    shootY: 2
+    x: -23.25
+    y: 0
+    reload: 100
+    recoil: 4
+    shootCone: 5
+    inaccuracy: 2
+    recoils: 3
+      shoot: {
+      shots: 12
+      shotDelay: 5
     }
     bullet: {
-      type: BasicBulletType
-      shootEffect: [
-        sparkShoot,
-        hitBulletColor
-      ]
-      height: 12
-      width: 7
-      trailWidth: 1.5
-      trailLength: 5
-      backColor: bef8e0
-      frontColor: ffffff
-      trailColor: bef8e0
-      hitColor: bef8e0
-      lifetime: 40
-      speed: 6
-      damage: 50
+   type: BasicBulletType
+      damage: 120
+      splashDamage: 50
+      splashDamageRadius: 40
+      smokeEffect: shootSmokeTitan
+      shootEffect: shootBigColor
+      width: 14
+      speed: 13
+      lightColor: 9db9ed
+      height: 18
+      lifetime: 30
+      hitSize: 14
       pierce: true
-      pierceCap: 2
+      pierceCap: 3
+      trailWidth: 3
+      trailLength: 9
+      hitColor: 9db9ed
+      trailColor: 9db9ed
+      backColor: 9db9ed
+      frontColor: ffffff
+      trailEffect: hitSquaresColor
       hitEffect: hitSquaresColor
       despawnEffect: hitSquaresColor
-      lightColor: bef8e0
-    }
+      trailRotation: true
+      trailInterval: 4
+     }
   }
 {
    name: unit-pike-gun
