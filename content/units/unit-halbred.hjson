@@ -1,21 +1,21 @@
-name: Harpoon
+name: Halbred
 description: Tears enemies asunder with a variety of energy weaponry. Can step over most terrain.
 type: legs
 template: ErekirUnitType
 lightColor: 9db9ed
 outlineColor: 0f0f14
 itemCapacity: 0
-speed: 1.6
+speed: 1.7
 drag: 0.1
-hitSize: 25
+hitSize: 30
 rotateSpeed: 2
-health: 6600
-armor: 6
+health: 22000
+armor: 7
 legStraightness: 0.6
 baseLegStraightness: 0.5
-stepShake: 0.6
+stepShake: 0.7
 legCount: 8
-legLength: 32
+legLength: 55
 lockLegBase: true
 legContinuousMove: true
 legExtension: -6
@@ -93,5 +93,102 @@ weapons: [
       despawnEffect: hitSquaresColor
       hitEffect: hitSquaresColor
      }
-   }  
+   } 
+  {
+    name: unit-halbred-gun-2
+    shootSound:  cannon
+    layerOffset: -0.002
+    mirror: true
+    cooldownTime: 30
+    shake: 2
+    heatColor: 9db9ed
+    shootY: 2
+    x: 25
+    y: 0
+    reload: 50
+    recoil: 4
+    shootCone: 5
+    inaccuracy: 2
+    recoils: 3
+      shoot: {
+      shots: 4
+      shotDelay: 6
+    }
+    bullet: {
+   type: BasicBulletType
+      damage: 50
+      splashDamage: 50
+      splashDamageRadius: 40
+      smokeEffect: shootSmokeTitan
+      shootEffect: shootBigColor
+      width: 14
+      speed: 13
+      lightColor: 9db9ed
+      height: 18
+      lifetime: 30
+      hitSize: 14
+      pierce: true
+      pierceCap: 5
+      trailWidth: 3
+      trailLength: 9
+      hitColor: 9db9ed
+      trailColor: 9db9ed
+      backColor: 9db9ed
+      frontColor: ffffff
+      trailEffect: hitSquaresColor
+      hitEffect: hitSquaresColor
+      despawnEffect: hitSquaresColor
+      trailRotation: true
+      trailInterval: 4
+     }
+   }
+  {
+    name: unit-halbred-gun-2
+    shootSound:  cannon
+    layerOffset: -0.002
+    mirror: true
+    cooldownTime: 30
+    shake: 2
+    heatColor: 9db9ed
+    shootY: 2
+    x: 0
+    y: -12
+    reload: 50
+    recoil: 4
+    shootCone: 5
+    inaccuracy: 2
+    recoils: 3
+      shoot: {
+      type: ShootSpread
+      shots: 6
+      spread: 0.75
+    }
+    bullet: {
+   type: BasicBulletType
+      damage: 60
+      splashDamage: 50
+      splashDamageRadius: 40
+      smokeEffect: shootSmokeTitan
+      shootEffect: shootBigColor
+      width: 14
+      speed: 13
+      lightColor: 9db9ed
+      height: 18
+      lifetime: 4
+      hitSize: 14
+      pierce: true
+      pierceCap: 5
+      trailWidth: 3
+      trailLength: 9
+      hitColor: 9db9ed
+      trailColor: 9db9ed
+      backColor: 9db9ed
+      frontColor: ffffff
+      trailEffect: hitSquaresColor
+      hitEffect: hitSquaresColor
+      despawnEffect: hitSquaresColor
+      trailRotation: true
+      trailInterval: 4
+     }
+   }
  ]
