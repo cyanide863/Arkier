@@ -69,49 +69,7 @@ weapons: [
         blending: additive
         layer: -1
         outline: false
-        color: fcf387
-        colorTo: fff8a6
-        outline: false
-        progress: warmup
-      }
-      {
-        type: RegionPart
-        suffix: -blade-1
-        heatColor: fff8a6
-        mirror: true
-        moveY: 5.5
-        moves: [
-        type: PartMove
-        progress: recoil
-        rot: -12
-        y: -2
-       ]
-    }
-      {
-        type: RegionPart
-        suffix: -blade-2
-        heatColor: fff8a6
-        mirror: true
-        moveY: 2.3
-        moves: [
-        type: PartMove
-        progress: recoil
-        rot: -20
-        y: 0
-      ]
-    }
-      {
-       type: RegionPart
-       suffix: -blade-3
-       heatColor: fff8a6
-       mirror: true
-       moveY: 2.3
-       moves: [
-       type: PartMove
-       progress: recoil
-       rot: -15
-       y: 0
-      ]
+        color: fff8a6
      }
     ]
     bullet: {
