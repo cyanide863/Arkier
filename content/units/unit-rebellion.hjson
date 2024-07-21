@@ -28,10 +28,16 @@ parts: [
 ]
 treadRects: [
   {
-    x: -70
-    y: -109
+    x: 80
+    y: 160
     width: 52
-    height: 216
+    height: 50
+  }
+  {
+    x: 80
+    y: -84
+    width: 52
+    height: 50
   }
 ]
 weapons: [
@@ -64,7 +70,49 @@ weapons: [
         layer: -1
         outline: false
         color: fff8a6
+        colorTo: fff8a6
+        outline: false
+        progress: warmup
       }
+      {
+        type: RegionPart
+        suffix: -blade-1
+        heatColor: fff8a6
+        mirror: true
+        moveY: 5.5
+        moves: [
+        type: PartMove
+        progress: recoil
+        rot: -12
+        y: -2
+       ]
+    }
+      {
+        type: RegionPart
+        suffix: -blade-2
+        heatColor: fff8a6
+        mirror: true
+        moveY: 2.3
+        moves: [
+        type: PartMove
+        progress: recoil
+        rot: -20
+        y: 0
+      ]
+    }
+      {
+       type: RegionPart
+       suffix: -blade-3
+       heatColor: fff8a6
+       mirror: true
+       moveY: 2.3
+       moves: [
+       type: PartMove
+       progress: recoil
+       rot: -15
+       y: 0
+      ]
+     }
     ]
     bullet: {
       type: BasicBulletType
