@@ -3,19 +3,19 @@ description: Tears into the enemy frontline with cascading shotgun blasts. Can t
 type: tank
 lightColor: fff8a6
 template: ErekirUnitType
-treadPullOffset: 5
+treadPullOffset: 3
 omniMovement: false
 faceTarget: false
 rotateMoveFirst: true
 rotateSpeed: 1.4
-speed: 0.6
+speed: 1
 outlineColor: 0f0f14
 health: 22000
 armor: 21
 itemCapacity: 0
 hitSize: 50
 crushDamage: 6
-treadFrames: 1200
+treadFrames: 30
 parts: [
   {
     type: RegionPart
@@ -28,16 +28,10 @@ parts: [
 ]
 treadRects: [
   {
-    x: -89
+    x: -70
     y: -109
     width: 52
     height: 216
-  }
-  {
-    x: -26
-    y: -115
-    width: 52
-    height: 228
   }
 ]
 weapons: [
@@ -53,14 +47,14 @@ weapons: [
     rotate: true
     rotateSpeed: 1
     mirror: false
-    reload: 120
+    reload: 150
     heatColor: fff8a6
     inaccuracy: 4
     cooldownTime: 75
     shoot: {
       type: ShootSpread
-      shots: 20
-      spread: 0.5
+      shots: 30
+      spread: 0.25
     }
     parts: [
       {
@@ -124,9 +118,9 @@ weapons: [
         sparkRad: 40
         sparkLen: 4
         sparkStroke: 2
-        waveColor: feb380
-        sparkColor: feb380
-        smokeColor: feb380
+        waveColor: fff8a6
+        sparkColor: fff8a6
+        smokeColor: fff8a6
       }
     }
   }
