@@ -1,5 +1,5 @@
 type: mech
-name: Ghost
+name: Helix
 description: Fires bullets in a helix like manner.
 hovering: true
 hoverable: true
