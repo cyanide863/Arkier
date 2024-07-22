@@ -173,7 +173,7 @@ weapons: [
     }
   }
   {
-    name: rah
+    name: unit-quadplex-launcher
     baseRotation: 0
     reload: 80
     shootCone: 180
