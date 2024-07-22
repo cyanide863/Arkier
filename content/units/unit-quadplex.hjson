@@ -1,0 +1,244 @@
+type: flying
+fogRadius: 45
+flying: true
+lowAltitude: false
+health: 1200
+armor: 18
+hitSize: 55
+speed: 1.2
+rotateSpeed: 1.2
+accel: 0.3
+drag: 0.07
+drawCell: false
+outlines: true
+outlineColor: 0f0f14
+engineOffset: 0
+engineSize: 3
+engineColor: c9a5c8
+engineLayer: -0.0001
+engines: [
+  {
+    x: 12
+    y: -10
+    radius: 3
+    rotation: -225
+    engineColor: c9a5c8
+  }
+  {
+    x: 0
+    y: -12
+    radius: 4
+    rotation: 0
+    engineColor: c9a5c8
+  }
+  {
+    x: -12
+    y: -10
+    radius: 3
+    rotation: 225
+    engineColor: c9a5c8
+  }
+]
+parts: [
+  {
+    type: RegionPart
+    layer: 90.04
+    outline: false
+  }
+	{
+		type: FlarePart
+		x: 0
+		y: -12
+		radius: 4
+		stroke: 8
+    minStroke: 0
+    followRotation: false
+		color1: c9a5c8
+    color2: ffffff
+ 	}
+]
+weapons: [
+  {
+    name: unit-quadplex-gun1
+    alternate: false
+    mirror: false
+    reload: 180
+    rotationLimit: 75
+    rotate: true
+    rotateSpeed: 2
+    recoil: 5
+    recoilTime: 25
+    layerOffset: 1.99
+    x: 0
+    y: 4
+    shootY: 2
+    mirror: false
+    shoot: {
+      shots: 4
+      shotDelay: 18
+    }
+    shootSound: blaster
+    shake: 3
+    heatColor: c9a5c8
+    cooldownTime: 55
+    bullet: {
+      lifetime: 45
+      speed: 7
+      damage: 60
+      splashDamage: 25
+      splashDamageRadius: 25
+      height: 6
+      width: 2
+      frontColor: ffffff 
+      backColor: c9a5c8
+      trailColor: c9a5c8
+      shootEffect: hitSquaresColor
+      smokeEffect: hitSquaresColor
+      trailEffect: hitSquaresColor
+      trailInterval: 2
+      trailWidth: 1
+      trailLength: 7
+      hitEffect: [
+        {
+          lightOpacity: 0
+          length: 24
+          lifetime: 40
+          particles: 20
+          colorFrom: 787878
+          colorTo: c9a5c8
+          sizeFrom: 3
+          sizeTo: 0
+          interp: pow3Out
+          sizeInterp: pow2In
+        }
+        {
+          lightOpacity: 0
+          length: 32
+          lifetime: 25
+          particles: 14
+          colorFrom: 9f9f9f
+          colorTo: c9a5c8
+          sizeFrom: 4
+          sizeTo: 0
+          interp: pow5Out
+          sizeInterp: pow3In
+        }
+        {
+          length: 40
+          line: true
+          lifetime: 30
+          particles: 8
+          colorTo: c9a5c8
+          lenFrom: 5
+          lenTo: 0
+          strokeFrom: 2
+          strokeTo: 1
+          sizeInterp: pow2In
+        }
+        {
+          type: WaveEffect
+          lifetime: 20
+          sizeFrom: 0
+          sizeTo: 24
+          strokeFrom: 2
+          strokeTo: 0
+          colorTo: c9a5c8
+        }
+      ]
+    }
+  }
+  {
+    name: unit-helix-gun
+    reload: 40
+    rotationLimit: 75
+    rotate: true
+    rotateSpeed: 2
+    recoil: 0
+    layerOffset: 2
+    x: 4
+    y: 4
+    mirror: true
+    shootSound: blaster
+    bullet: {
+      type: BulletType
+      damage: 40
+      collides: true 
+      hittable: true 
+      lifetime: 12
+      speed: 7
+      despawnEffect: hitSquaresColor
+      shootEffect: hitSquaresColor
+      smokeEffect: hitSquaresColor
+    }
+  }
+  {
+    name: rah
+    baseRotation: 0
+    reload: 80
+    shootCone: 180
+    layerOffset: -1
+    x: 12
+    y: -5
+    shoot: {
+      shots: 2
+      shotDelay: 3
+    }
+    shootSound: missileSmall
+    shake: 2
+    bullet: {
+      type: BulletType
+      spawnUnit: arc-unit-quadplex-missile
+    }
+  }
+]
+abilities: [
+  {
+    display: false
+    type: MoveEffectAbility
+    minVelocity: 0
+    x: 0
+    y: -12
+    rotateEffect: true
+    effect: [
+      {
+        particles: 1
+        lifetime: 20
+        length: 0
+        baseLength: 3
+        interp: pow10Out
+        sizeInterp: linear
+        sizeFrom: 2
+        sizeTo: 0
+        colorFrom: c9a5c8
+        colorTo: c9a5c8
+        layer: 90.01
+      }
+      {
+        particles: 2
+        lifetime: 40
+        length: 8
+        baseLength: 0
+        interp: pow10Out
+        sizeInterp: linear
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: 787878
+        colorTo: 787878
+        layer: 90
+      }
+      {
+        particles: 1
+        lifetime: 40
+        length: 0
+        baseLength: 7
+        interp: pow10Out
+        sizeInterp: linear
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: 787878
+        colorTo: 787878
+        layer: 90
+      }
+    ]
+  }
+]
