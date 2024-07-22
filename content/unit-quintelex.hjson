@@ -1,0 +1,211 @@
+type: flying
+template: ErekirUnitType
+name: Triplex
+description: Rains a hell of missiles on enemies.A very dangerous machine handle with care.
+detail: Annihlates bases.
+lightColor: cca8fa
+outlineColor: 0f0f14
+lowAltitude: true
+flying: true
+drag: 0.08
+speed: 2.5
+rotateSpeed: 4
+accel: 0.09
+health: 5460
+armor: 2
+engineSize: 0
+itemCapacity: 0
+hitSize: 6.5
+strafePenalty: 0.6
+abilities: [
+  {
+    type: MoveEffectAbility
+    teamColor: true
+    effect: missileTrail
+    x: 0
+    y: -22
+    interval: 1
+    minVelocity: 0.6
+  }
+]
+engines: [
+  {
+    x: 0
+    y: -22
+    radius: 7
+    rotation: 0
+  }
+  {
+    x: 10
+    y: -22
+    radius: 4
+    rotation: 0
+  }
+  {
+    x: -10
+    y: -22
+    radius: 4
+    rotation: 0
+  }
+  {
+    x: -16
+    y: -22
+    radius: 3
+    rotation: 0
+  }
+ {
+    x: 16
+    y: -22
+    radius: 3
+    rotation: 0
+  }
+]
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    color: 9db9ed
+  }
+  {
+    type: FlarePart
+    x: 0
+    y: -2.75
+    radius: 7
+    stroke: 3
+    minStroke: 0
+    followRotation: false
+    color1: c9a5c8
+    color2: ffffff
+  }
+]
+weapons: [
+  {
+    name: unit-quadplex-launcher
+    baseRotation: 0
+    reload: 80
+    shootCone: 180
+    layerOffset: -1
+    x: 17
+    y: -10
+    shoot: {
+      shots: 2
+      shotDelay: 3
+    }
+    shootSound: missileSmall
+    shake: 2
+    bullet: {
+      type: BulletType
+      spawnUnit: arc-unit-quadplex-missile
+    }
+  }
+    {
+    name: unit-quadplex-launcher
+    baseRotation: 0
+    reload: 80
+    shootCone: 180
+    layerOffset: -1
+    x: 23
+    y: -5
+    shoot: {
+      shots: 2
+      shotDelay: 3
+    }
+    shootSound: missileSmall
+    shake: 2
+    bullet: {
+      type: BulletType
+      spawnUnit: arc-unit-quintelex-missile
+    }
+  }
+           {
+    name: unit-small-launcher
+    mirror: true
+    ignoreRotation: true
+    baseRotation: 180
+    reload: 80
+    shootCone: 180
+    layerOffset: -1
+    x: 9.5
+    y: 5
+    shoot: {
+      shots: 3
+      shotDelay: 3
+    }
+    shootSound: missileSmall
+    shake: 2
+    bullet: {
+      type: BulletType
+      spawnUnit: arc-unit-missile-small
+    }
+  }
+  name: unit-quadplex-launcher
+    baseRotation: 270
+    reload: 80
+    shootCone: 180
+    layerOffset: -1
+    x: 23
+    y: -5
+    shoot: {
+      shots: 2
+      shotDelay: 3
+    }
+    shootSound: missileSmall
+    shake: 2
+    bullet: {
+      type: BulletType
+      spawnUnit: arc-unit-quadplex-missile
+]
+abilities: [
+  {
+    display: false
+    type: MoveEffectAbility
+    minVelocity: 0
+    x: 0
+    y: -12
+    rotateEffect: true
+    effect: [
+      {
+        particles: 1
+        lifetime: 20
+        length: 0
+        baseLength: 3
+        interp: pow10Out
+        sizeInterp: linear
+        sizeFrom: 2
+        sizeTo: 0
+        colorFrom: c9a5c8
+        colorTo: c9a5c8
+        layer: 90.01
+      }
+      {
+        particles: 2
+        lifetime: 40
+        length: 8
+        baseLength: 0
+        interp: pow10Out
+        sizeInterp: linear
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: 787878
+        colorTo: 787878
+        layer: 90
+      }
+      {
+        particles: 1
+        lifetime: 40
+        length: 0
+        baseLength: 7
+        interp: pow10Out
+        sizeInterp: linear
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: 787878
+        colorTo: 787878
+        layer: 90
+      }
+    ]
+  }
+]
