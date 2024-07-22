@@ -157,6 +157,7 @@ weapons: [
     bullet: {
       type: BulletType
       spawnUnit: arc-unit-quadplex-missile
+   }
 ]
 abilities: [
   {
