@@ -101,26 +101,7 @@ weapons: [
       spawnUnit: arc-unit-quadplex-missile
     }
   }
-    {
-    name: unit-quadplex-launcher
-    baseRotation: 0
-    reload: 80
-    shootCone: 180
-    layerOffset: -1
-    x: 23
-    y: -5
-    shoot: {
-      shots: 2
-      shotDelay: 3
-    }
-    shootSound: missileSmall
-    shake: 2
-    bullet: {
-      type: BulletType
-      spawnUnit: arc-unit-quintelex-missile
-    }
-  }
-           {
+  {
     name: unit-small-launcher
     mirror: true
     ignoreRotation: true
@@ -141,8 +122,9 @@ weapons: [
       spawnUnit: arc-unit-missile-small
     }
   }
-  name: unit-quadplex-launcher
-    baseRotation: 270
+  {
+    name: unit-quadplex-launcher
+    baseRotation: 0
     reload: 80
     shootCone: 180
     layerOffset: -1
@@ -156,8 +138,9 @@ weapons: [
     shake: 2
     bullet: {
       type: BulletType
-      spawnUnit: arc-unit-quadplex-missile
-   }
+      spawnUnit: arc-unit-quintelex-missile
+    }
+  }
 ]
 abilities: [
   {
