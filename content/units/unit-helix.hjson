@@ -8,8 +8,8 @@ mechFrontSway: 0
 mechSideSway: 0
 mechStride: 0
 drag: 0.08
-outlineColor: 44413c
-speed: 1.4
+outlineColor: 0f0f14
+speed: 1.8
 rotateSpeed: 5
 accel: 0.095
 groundLayer: 60
@@ -20,37 +20,74 @@ abilities: [
   {
     type: MoveEffectAbility
     teamColor: true
-    effect: missileTrailShort
+    effect: missileTrail
     x: 0
     y: -6.6
-    interval: 4
+    interval: 1
     minVelocity: 0.6
   }
 ]
 engines: [
   {
     x: 0
-    y: -6.6
+    y: -5.2
     radius: 1.5
   }
+]
+parts: [
+	{
+		type: FlarePart
+		x: 0
+		y: -5.2
+		radius: 7
+		stroke: 3
+    minStroke: 0
+    followRotation: false
+		color1: c9a5c8
+    color2: ffffff
+	}
+	{
+		type: HoverPart
+		x: 4
+		y: -5.2
+    mirror: true
+		radius: 6
+		phase: 90
+		stroke: 1.2
+    minStroke: 0
+		layerOffset: -0.001
+		color: c9a5c8
+	}
+	{
+		type: HoverPart
+		x: 4
+		y: 5.2
+    mirror: true
+		radius: 6
+		phase: 100
+		stroke: 3
+    minStroke: 0
+		layerOffset: -0.001
+		color: c9a5c8
+	}
 ]
 weapons: [
   {
     name: unit-helix-gun
     shootSound: blaster
-    layerOffset: -0.002
+    layerOffset: 0.001
     mirror: true
     cooldownTime: 30
     heatColor: ab3400
     shootY: 0
-    x: 1.5
+    x: 4
     y: 0
     reload: 15
     recoil: 2
     shoot: {
       type: ShootSpread
       shots: 3
-      spread: 0.5
+      spread: 1.5
     }
     bullet: {
       type: BasicBulletType
