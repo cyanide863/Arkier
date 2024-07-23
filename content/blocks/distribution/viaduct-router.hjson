@@ -1,0 +1,16 @@
+type: DuctRouter
+name: Reinforced Router
+description: Equally distributes inputted items across three directions. Only accepts item input from the back. Can be configured to act as a sorter.
+size: 1
+speed: 5
+health: 120
+solid: false
+itemCapacity: 6
+requirements: [
+  item-vanadium/8
+]
+category: distribution
+researchCost: [
+  item-vanadium/16
+]
+research: viaduct
