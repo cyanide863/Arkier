@@ -1,6 +1,6 @@
 type: Drill
 name: Flux Drill
-size: 5
+size: 4
 health: 900
 description: A large drill,uses lithonium discharges to extract materials.
 detail: Uses gravity inversions to pull materials to the surface.
