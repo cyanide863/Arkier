@@ -1,7 +1,7 @@
 type: DuctBridge
-name: Power Duct Bridge
+name: Reinforced Overpass
 description: Moves items over structures and terrain.
-health: 135
+health: 140
 size: 1
 solid: false
 requirements: [
@@ -9,7 +9,7 @@ requirements: [
 ] 
 category: distribution
 range: 6
-speed: 4
+speed: 5
 researchCost: [
   item-vanadium/25
 ]
