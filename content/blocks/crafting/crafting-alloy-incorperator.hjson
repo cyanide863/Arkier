@@ -47,6 +47,19 @@ recipes: [
   }
   craftTime: 60.0
 }
+  input: {
+    items: [
+      arc-item-cobalite/2
+    ]
+    power: 2.4
+  }
+  output: {
+    fluids: [
+      arc-liquid-molten-cobalite/0.2
+    ]
+  }
+  craftTime: 60.0
+}
 ]
 
 drawer: {
@@ -70,6 +83,11 @@ drawer: {
       type: DrawLiquidTile     
       padding: 4
       drawLiquid: molten-paragonite
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 4
+      drawLiquid: molten-cobalite
     }
     {
       type: DrawCrucibleFlame
