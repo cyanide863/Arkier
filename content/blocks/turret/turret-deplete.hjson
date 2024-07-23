@@ -38,7 +38,7 @@ drawer: {
       under: true
       progress: recoil
       x: 4.25
-      y: 8
+      y: 5.5
       recoilIndex: 1
       moveY: -2.4
     }
@@ -49,18 +49,7 @@ drawer: {
       under: true
       progress: recoil
       x: -4.25
-      y: 8
-      recoilIndex: 0
-      moveY: -2.4
-    }
-      {
-      type: RegionPart
-      suffix: -barrel-mid
-      mirror: false
-      under: true
-      progress: recoil
-      x: 0
-      y: 8
+      y: 5.5
       recoilIndex: 0
       moveY: -2.4
     }
