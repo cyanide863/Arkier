@@ -61,7 +61,11 @@ drawer: {
   drawers: [
     {
       type: DrawRegion
-      suffix: -glass
+      suffix: -bottom
+    }
+    {
+      type: DrawRegion
+      suffix: -top
     }
     {
       type: DrawCrucibleFlame
