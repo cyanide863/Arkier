@@ -1,5 +1,5 @@
 type: BeamDrill
-name: Induction Bore
+name: Thermal Bore
 size: 3
 health: 350
 description: Fires concentrated energy beams at ores using electric induction coils, yielding trace minerals. Capable of mining from walls.
