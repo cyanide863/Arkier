@@ -38,7 +38,7 @@ drawer: {
       under: true
       x: 7.5
       y: 1
-      rotation: 135
+      rotation: 45
       moveX: 5.5
       moveY: 5.5
       heatColor: c1975c
@@ -62,7 +62,7 @@ drawer: {
     }
     {
       type: RegionPart
-      suffix: -side-r
+      suffix: -side-l
       mirror: false
       under: false
       progress: warmup
