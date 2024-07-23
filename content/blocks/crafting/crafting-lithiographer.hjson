@@ -27,53 +27,32 @@ recipes: [
 {
   input: {
     items: [
-      arc-item-paragonite/2
       arc-item-paragonium/1
-      arc-item-vanadium-carbide/2
+      arc-item-cobalite/2
     ]
     power: 2
   }
   output: {
-    items: [
-      arc-item-power-cell/4
-    ]
-  }
-  craftTime: 225.0
-}
-{
-  input: {
     items: [
       arc-item-power-cell/2
-      arc-item-vanadium/1
-      arc-item-chromium/2
-    ]
-    power: 2
-  }
-  output: {
-    items: [
-      arc-item-power-cell/4
     ]
   }
-  craftTime: 225.0
+  craftTime: 120.0
 }
 {
   input: {
     items: [
-      arc-item-paragonium/5
-      arc-item-paragonite/2
-    ]
-fluids: [
-      arc-liquid-oxygen/2
-      arc-liquid-methane/2
+      arc-item-power-cell/3
+      arc-item-vanadium/3
     ]
     power: 2
   }
   output: {
     items: [
-      arc-item-paragonium/12
+      arc-item-lithonium/2
     ]
   }
-  craftTime: 425.0
+  craftTime: 150.0
 }
 ]
 
