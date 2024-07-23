@@ -15,9 +15,8 @@ tier: 2
 ambientSound: drill
 ambientSoundVolume: 0.10
 researchCost: [
-  tungsten-but-stolen/25
-  aluminum/20
-  magnesium/15
+  item-paragonite/15
+  item-vanadium/20
 ]
 category: production
 hasLiquids: false
