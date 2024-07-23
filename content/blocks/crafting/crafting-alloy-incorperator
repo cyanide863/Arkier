@@ -21,30 +21,28 @@ requirements: [
   item-paragonite/40
 ]
 recipes: [
-{
   input: {
     items: [
-      arc-item-vanadium/3
-    ]
-    power: 2
-  }
-  output: {
-    fluids: [
-      arc-liquid-molten-vandium/0.2
-    ]
-  }
-  craftTime: 60.0
-}
-{
-  input: {
-    items: [
-      arc-item-paragonite/4
+      arc-item-paragonith/2
     ]
     power: 2.4
   }
   output: {
     fluids: [
       arc-liquid-molten-paragonite/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+  input: {
+    items: [
+      arc-item-detrite/2
+    ]
+    power: 2.4
+  }
+  output: {
+    fluids: [
+      arc-liquid-molten-detrium/0.2
     ]
   }
   craftTime: 60.0
@@ -66,7 +64,7 @@ drawer: {
       //alternatively use padLeft, padRight, padTop, and padBottom to pad at specific edges
       
       //liquid to draw
-      drawLiquid: molten-vanadium
+      drawLiquid: molten-detrium
     }
     {
       type: DrawLiquidTile     
@@ -83,7 +81,7 @@ drawer: {
       type: DrawGlowRegion
       alpha: 0.5
       glowScale: 8
-      color: 8c9d75
+      color: e6a48a
     }
   ]
 }
