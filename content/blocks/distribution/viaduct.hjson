@@ -3,7 +3,7 @@ name: Reinforced Duct
 description: Moves items forward.
 category: distribution
 researchCost: [
-  tungsten-but-stolen/10
+  item-vanadium/10
 ]
 speed: 3.3333334
 health: 55
