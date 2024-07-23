@@ -1,18 +1,18 @@
 name: Paragonite Wall
 description: Blocks enemy projectiles. Releases sparks when damaged.
 type: Wall
-size: 1
+size: 2
 category: defense
-health: 220
+health: 440
 armor: 4
 lightningChance: 0.1
 lightningDamage: 4
 lightningLength: 12
 lightningColor: bcac8f
 requirements: [
-  item-paragonite/8
+  item-paragonite/32
 ]
 researchCost: [
-  item-paragonite/160
+  item-paragonite/320
 ]
-research: core-legion
+research: wall-paragonite-wall-small
