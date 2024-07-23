@@ -1,14 +1,14 @@
 type: Duct
-name: Power duct
+name: Reinforced Duct
 description: Moves items forward.
 category: distribution
 researchCost: [
-  item-vanadium/10
+  tungsten-but-stolen/10
 ]
 speed: 3.3333334
 health: 55
-bridgeReplacement: power-duct-bridge
+bridgeReplacement: viaduct-bridge
 requirements: [
   item-vanadium/1
 ]
-research: core-legion
+research: core-gulch
