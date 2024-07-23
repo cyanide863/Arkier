@@ -29,7 +29,7 @@ researchCost: [
 ]
 drawer: {
   type: DrawTurret
-  basePrefix: insulated-
+  basePrefix: heated-
   parts: [
     {
       type: RegionPart
