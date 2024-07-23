@@ -2,7 +2,7 @@ type: multicraft.MultiCrafter
 name: Alloy Kiln
 description: Melts down various metals into alloys.
 details: gets the job done though very ineffciently.
-size: 4
+size: 3
 health: 870
 category: crafting
 itemCapacity: 12
