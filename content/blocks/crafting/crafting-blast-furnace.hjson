@@ -1,0 +1,64 @@
+type: multicraft.MultiCrafter
+name: Blast Furnace
+description: Melts highly resistance ores into their pure forms.
+size: 4
+health: 900
+category: crafting
+researchCost: [
+  item-flux-alloy/450
+  item-vanadium/340
+  item-paragonite/400
+]
+category: crafting
+squareSprite: false
+liquidCapacity: 36
+hasLiquids: true
+ambientSound: flux
+ambientSoundVolume: 0.05
+itemCapacity: 12
+requirements: [
+  item-flux-alloy/225
+  item-vanadium/220
+  item-paragonite/200
+]
+recipes: [
+{
+  input: {
+    items: [
+      arc-item-galvanite/3
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-galvanium/0.2
+    ]
+  }
+  craftTime: 70.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 4
+      drawLiquid: molten-galvanium
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      alpha: 0.5
+      glowScale: 8
+      color: 8c9d75
+    }
+  ]
+}
+research: crafting-smelter
