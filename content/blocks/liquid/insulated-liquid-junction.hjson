@@ -1,0 +1,15 @@
+name: Insulated Liquid Junction
+type: LiquidJunction
+description: Functions as a crossing for two separate conduits. Prevents mixing.
+category: liquid
+health: 230
+solid: false
+requirements: [
+  item-vanadium/4
+  item-paragonium/8
+]
+researchCost: [
+  item-vanadium/16
+  item-paragonium/8
+]
+research: insulated-conduit
