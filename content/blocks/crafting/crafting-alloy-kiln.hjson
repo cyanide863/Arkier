@@ -2,16 +2,18 @@ type: multicraft.MultiCrafter
 name: Alloy Kiln
 description: Melts down various metals into alloys.
 details: gets the job done though very ineffciently.
-size: 3
-health: 870
+size: 4
+health: 1000
 category: crafting
 itemCapacity: 12
 requirements: [
   item-paragonite/325
+  item-detrium/270
   item-vanadium/200
 ]
 researchCost: [
   item-paragonite/650
+  item-detrium/540
   item-vanadium/400
 ]
 category: crafting
@@ -21,25 +23,12 @@ ambientSound: glow
 ambientSoundVolume: 0.08
 recipes: [
 {
-  input: {
+   input: {
     items: [
       arc-item-vanadium/2
-      arc-item-paragonite/3
     ]
-    power: 2
-  }
-  output: {
-    items: [
-      arc-item-flux-alloy/2
-    ]
-  }
-  craftTime: 200.0
-}
-{
-  input: {
-    items: [
-      arc-item-vanadium/2
-      arc-item-detrium/3
+    fluids: [
+      arc-liquid-molten-detrium/0.2
     ]
     power: 2
   }
@@ -48,15 +37,65 @@ recipes: [
       arc-item-vanadium-carbide/2
     ]
   }
-  craftTime: 320.0
+  craftTime: 80.0
+}
+{
+   input: {
+    items: [
+      arc-item-paragonite/2
+      arc-item-detrium/2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-paragonium/2
+    ]
+  }
+  craftTime: 80.0
+}
+{
+   input: {
+   item: [
+      arc-item-vandium-carbide/2
+    ]
+   fluids: [
+      arc-liquid-lithonium/0.2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-areonium/2
+    ]
+  }
+  craftTime: 80.0
+}
+{
+   input: {
+   item: [
+      arc-item-galvanium/2
+    ]
+   fluids: [
+      arc-liquid-paragonium/0.2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-galvesteel/2
+    ]
+  }
+  craftTime: 80.0
 }
 ]
+
 drawer: {
   type: DrawMulti
   drawers: [
     {
       type: DrawRegion
-      suffix: -glass
+      suffix: -bottom
     }
     {
       type: DrawCrucibleFlame
@@ -66,4 +105,4 @@ drawer: {
     }
   ]
 }
-research: core-legion
+research: crafting-cooling-tank
