@@ -1,0 +1,117 @@
+type: ContinuousLiquidTurret
+name: Resurgence
+description: Fires a continuous stream of flammable gas at nearby enemies. Pierces armor.
+size: 4
+health: 1645
+category: turret
+range: 175
+squareSprite: false
+shootSound: none
+loopSound: torch
+loopSoundVolume: 1.2
+liquidConsumed: 0.2
+targetInterval: 5
+newTargetInterval: 30
+rotateSpeed: 0.8
+shootY: 3
+outlineColor: 0f0f14
+heatColor: b53f3f
+cooldownTime: 30
+shootCone: 10
+minWarmup: 0.95
+shootWarmupSpeed: 0.15
+recoil: 1
+requirements: [
+  item-vanadium/180
+  item-flux-alloy/230
+  item-vanadium-carbide/150
+  item-torreium/200
+]
+researchCost: [
+  item-vanadium/360
+  item-flux-alloy/460
+  item-vanadium-carbide/300
+  item-torreium/400
+]
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -blade-r
+      mirror: false
+      under: false
+      progress: warmup
+      moveRot: -10
+      moveY: 1
+      moveX: -0.25
+      heatColor: ffcee1
+      layerOffset: -0.1
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -blade-l
+      mirror: false
+      under: false
+      progress: warmup
+      moveRot: 10
+      moveY: -1
+      moveX: 0.25
+      heatColor: ffcee1
+      layerOffset: -0.1
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -lower-blade-r
+      mirror: false
+      under: false
+      progress: warmup
+      moveRot: 5
+      moveY: 1
+      moveX: -0.25
+      heatColor: ffcee1
+      layerOffset: -0.1
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -lower-blade-l
+      mirror: false
+      under: false
+      progress: warmup
+      moveRot: -5
+      moveY: -1
+      moveX: 0.25
+      heatColor: ffcee1
+      layerOffset: -0.1
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+  ]
+}
+ammoTypes: {
+  methane: {
+    type: ContinuousFlameBulletType
+    damage: 50
+    length: 230
+    knockback: 2
+    pierceCap: 3
+    flareColor: e0a0b9
+    lightColor: e0a0b9
+    hitColor: e0a0b9
+    colors: [
+      523648,
+      96607c,
+      e0a0b9,
+      ffcee1,
+      ffffff
+    ]
+  }
+}
+research: implode
