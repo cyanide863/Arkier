@@ -1,0 +1,8 @@
+name: Molten galvanium
+description: Molten, high-temperature galvanium. Can be cooled for use, cant be alloyed due to high ttemprature resistance.
+temperature: 1
+viscosity: 0.85
+effect: melting
+color: 8a86b7
+lightColor: 8a86b768
+research: molten-detrium
