@@ -1,0 +1,161 @@
+type: multicraft.MultiCrafter
+name: Cooling tank
+description: Rapidly takes in air from the surroundings in order to cool down metals into usable sheets.
+details: Despite nitrogen and hydrogen’s low capacity for energy, Abyssus’s atmosphere is cold enough to allow air’s usage as coolant.
+size: 3
+health: 390
+category: crafting
+researchCost: [
+  item-paragonite/120
+  item-vanadium/80
+]
+category: crafting
+squareSprite: false
+liquidCapacity: 18
+hasLiquids: true
+hasItems: true
+itemCapacity: 12
+ambientSound: steam
+ambientSoundVolume: 0.01
+requirements: [
+  item-paragonite/60
+  item-vanadium/40
+]
+
+recipes: [
+{
+  input: {
+    fluids: [
+      arc-molten-detrium/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      arc-item-detrium/1
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    fluids: [
+      arc-liquid-galvanium/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      arc-galvanium/1
+    ]
+  }
+  craftTime: 60.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      
+      //pixels from edge to do it from
+      padding: 6
+      //alternatively use padLeft, padRight, padTop, and padBottom to pad at specific edges
+      
+      //liquid to draw
+      drawLiquid: liquid-molten-detrium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 6
+      drawLiquid: liquid-galavanium
+    }
+    {
+      type: DrawDefault
+    }
+  ]
+}
+
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      baseRotation: 90
+      interp: pow5Out
+      sizeInterp: linear
+      offsetX: -1
+      offsetY: -1
+      length: 7
+      baseLength: 8
+      cone: 10
+      particles: 30
+      lifetime: 240
+      useRotation: false
+      sizeFrom: 1
+      sizeTo: 0.1
+      colorFrom: adadadcc
+      colorTo: cacaca00
+    }
+    {
+      type: ParticleEffect
+      baseRotation: 90
+      interp: pow5Out
+      sizeInterp: linear
+      offsetX: 1
+      offsetY: -1
+      length: 7
+      baseLength: 8
+      cone: 10
+      particles: 30
+      lifetime: 240
+      useRotation: false
+      sizeFrom: 1
+      sizeTo: 0.1
+      colorFrom: adadadcc
+      colorTo: cacaca00
+    }
+    {
+      type: ParticleEffect
+      baseRotation: 90
+      interp: pow5Out
+      sizeInterp: linear
+      offsetX: -1
+      offsetY: 1
+      length: 7
+      baseLength: 8
+      cone: 10
+      particles: 30
+      lifetime: 240
+      useRotation: false
+      sizeFrom: 1
+      sizeTo: 0.1
+      colorFrom: adadadcc
+      colorTo: cacaca00
+    }
+    {
+      type: ParticleEffect
+      baseRotation: 90
+      interp: pow5Out
+      sizeInterp: linear
+      offsetX: 1
+      offsetY: 1
+      length: 7
+      baseLength: 8
+      cone: 10
+      particles: 30
+      lifetime: 240
+      useRotation: false
+      sizeFrom: 1
+      sizeTo: 0.1
+      colorFrom: adadadcc
+      colorTo: cacaca00
+    }
+  ]
+}
+research: liquefaction-vat
