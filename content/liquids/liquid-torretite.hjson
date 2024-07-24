@@ -1,0 +1,7 @@
+name: Molten Aluminum
+description: Molten, high-temperature torretite. Can be cooled for use, or alloyed with other metals.
+temperature: 1
+viscosity: 0.85
+effect: melting
+color: 9c6d3d
+lightColor: e0a0b9
