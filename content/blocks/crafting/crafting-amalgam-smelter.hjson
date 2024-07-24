@@ -1,0 +1,148 @@
+type: multicraft.MultiCrafter
+name: Amalgam Smelter
+description: Mixes various liquefied metals into alloys. Less efficient than an alloy kiln, but necessary for later processes.
+size: 5
+hasItems: true
+itemCapacity: 20
+health: 1320
+category: crafting
+squareSprite: false
+liquidCapacity: 12
+hasLiquids: true
+ambientSound: smelter
+ambientSoundVolume: 0.09
+requirements: [
+  item-flux-alloy/190
+  item-galvanium/165
+  item-lithonium/135
+  item-vanadium/115
+]
+researchCost: [
+  item-flux-alloy/3800
+  item-galvanium/3300
+  item-lithonium/2700
+  item-vanadium/2300
+]
+recipes: [
+{
+  input: {
+    items: [
+      arc-item-vanadium/4
+    ]
+   fluids: [
+      arc-liquid-detrium/0.4
+    ]
+    power: 4
+  }
+  output: {
+    items: [
+      arc-item-vandium-carbide/4
+    ]
+  }
+  craftTime: 60.0
+}
+{
+   input: {
+    items: [
+      arc-item-paragonite/2
+      arc-item-detrium/2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-paragonium/2
+    ]
+  }
+  craftTime: 80.0
+}
+{
+   input: {
+   items: [
+      arc-item-vanadium-carbide/2
+    ]
+   fluids: [
+      arc-liquid-lithonium/0.2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-areonium/2
+    ]
+  }
+  craftTime: 80.0
+}
+{
+   input: {
+   items: [
+      arc-item-galvanium/2
+      arc-item-vanadium-carbide/3
+    ]
+   fluids: [
+      arc-liquid-paragonite/0.2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-galvesteel/2
+    ]
+  }
+  craftTime: 80.0
+}
+{
+   input: {
+   items: [
+      arc-item-galvanium/2
+      arc-item-paragonium/2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-flux-alloy/6
+    ]
+  }
+  craftTime: 80.0
+}
+{
+   input: {
+   items: [
+      arc-item-galvanium/2
+      arc-item-chromium/2
+      arc-item-torretium/3
+    ]
+   fluids: [
+      arc-liquid-paragonite/0.2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-chromatite/2
+    ]
+  }
+  craftTime: 80.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawGlowRegion
+      alpha: 0.5
+      glowScale: 5
+      color: d4b6d2
+    }
+  ]
+}
+research: crafting-pyro-smelter
