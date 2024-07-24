@@ -1,0 +1,8 @@
+name: Strontium
+description: idk.
+cost: 2.4
+color: 889caa
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
