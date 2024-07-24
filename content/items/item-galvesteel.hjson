@@ -1,0 +1,9 @@
+name: Galvesteel
+description:
+cost: 1.2
+color: a65c53
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: item-tritium
