@@ -1,0 +1,17 @@
+name: Insulated Bridge Conduit
+type: DirectionLiquidBridge
+description: Transports fluids over structures and terrain.
+range: 6
+category: liquid
+hasPower: false
+squareSprite: false
+solid: true
+researchCost: [
+  item-vanadium/20
+  item-paragonium/20
+]
+requirements: [
+  item-vanadium/8
+  item-paragonium/8
+]
+research: insulated-fluid-router
