@@ -1,0 +1,90 @@
+type: multicraft.MultiCrafter
+name: Smelter
+description: Melts down ores into their base components.
+size: 3
+health: 340
+category: crafting
+researchCost: [
+  item-vanadium/90
+  item-paragonite/70
+]
+category: crafting
+squareSprite: false
+liquidCapacity: 36
+hasLiquids: true
+ambientSound: flux
+ambientSoundVolume: 0.05
+itemCapacity: 12
+requirements: [
+  item-vanadium/45
+  item-paragonite/35
+]
+recipes: [
+{
+  input: {
+    items: [
+      arc-item-detrite/4
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-molten-detrium/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    items: [
+      arc-item-paragonite/4
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-paragonite/0.2
+    ]
+  }
+  craftTime: 60.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      
+      //pixels from edge to do it from
+      padding: 4
+      //alternatively use padLeft, padRight, padTop, and padBottom to pad at specific edges
+      
+      //liquid to draw
+      drawLiquid: liquid-paragonite
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 4
+      drawLiquid: liquid-molten-detrium
+    }
+    {
+      type: DrawDefault
+    }
+    {
+     type: DrawPlasma
+     plasmas: 3
+    }
+    {
+      type: DrawGlowRegion
+      alpha: 0.5
+      glowScale: 8
+      color: 8c9d75
+    }
+  ]
+}
+research: core-legion
