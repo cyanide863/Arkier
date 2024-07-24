@@ -38,21 +38,6 @@ recipes: [
   }
   craftTime: 120.0
 }
-{
-  input: {
-    items: [
-      arc-item-power-cell/3
-      arc-item-vanadium/3
-    ]
-    power: 2
-  }
-  output: {
-    items: [
-      arc-item-lithonium/2
-    ]
-  }
-  craftTime: 150.0
-}
 ]
 
 drawer: {

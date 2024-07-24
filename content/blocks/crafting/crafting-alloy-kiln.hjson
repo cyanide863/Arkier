@@ -28,7 +28,7 @@ recipes: [
       arc-item-vanadium/2
     ]
     fluids: [
-      arc-liquid-molten-detrium/0.2
+      arc-liquid-detrium/0.2
     ]
     power: 2
   }
@@ -56,8 +56,8 @@ recipes: [
 }
 {
    input: {
-   item: [
-      arc-item-vandium-carbide/2
+   items: [
+      arc-item-vanadium-carbide/2
     ]
    fluids: [
       arc-liquid-lithonium/0.2
@@ -73,17 +73,33 @@ recipes: [
 }
 {
    input: {
-   item: [
+   items: [
       arc-item-galvanium/2
+      arc-item-vanadium-carbide/3
     ]
    fluids: [
-      arc-liquid-paragonium/0.2
+      arc-liquid-paragonite/0.2
     ]
     power: 2
   }
   output: {
     items: [
       arc-item-galvesteel/2
+    ]
+  }
+  craftTime: 80.0
+}
+{
+   input: {
+   items: [
+      arc-item-galvanium/2
+      arc-item-paragonium/2
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-flux-alloy/6
     ]
   }
   craftTime: 80.0

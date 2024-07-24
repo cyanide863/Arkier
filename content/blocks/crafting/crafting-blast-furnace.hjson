@@ -5,7 +5,7 @@ size: 4
 health: 900
 category: crafting
 researchCost: [
-  item-flux-alloy/450
+  item-vanadium-carbide/450
   item-vanadium/340
   item-paragonite/400
 ]
@@ -17,7 +17,7 @@ ambientSound: flux
 ambientSoundVolume: 0.05
 itemCapacity: 12
 requirements: [
-  item-flux-alloy/225
+  item-vanadium-carbide/225
   item-vanadium/220
   item-paragonite/200
 ]
@@ -32,6 +32,20 @@ recipes: [
   output: {
     fluids: [
       arc-liquid-galvanium/0.2
+    ]
+  }
+  craftTime: 70.0
+}
+{
+  input: {
+    items: [
+      arc-item-detrite/3
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-lithonium/0.2
     ]
   }
   craftTime: 70.0
@@ -52,7 +66,7 @@ drawer: {
     {
       type: DrawLiquidTile     
       padding: 3
-      drawLiquid: molten-galvanium
+      drawLiquid: liquid-galvanium
     }
     {
       type: DrawDefault

@@ -29,7 +29,7 @@ recipes: [
   }
   output: {
     fluids: [
-      arc-liquid-molten-detrium/0.2
+      arc-liquid-detrium/0.2
     ]
   }
   craftTime: 60.0
@@ -59,18 +59,13 @@ drawer: {
     }
     {
       type: DrawLiquidTile
-      
-      //pixels from edge to do it from
       padding: 4
-      //alternatively use padLeft, padRight, padTop, and padBottom to pad at specific edges
-      
-      //liquid to draw
       drawLiquid: liquid-paragonite
     }
     {
       type: DrawLiquidTile     
       padding: 4
-      drawLiquid: liquid-molten-detrium
+      drawLiquid: liquid-detrium
     }
     {
       type: DrawDefault

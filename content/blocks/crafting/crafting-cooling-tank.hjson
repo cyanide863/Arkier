@@ -26,7 +26,7 @@ recipes: [
 {
   input: {
     fluids: [
-      arc-molten-detrium/0.1
+      arc-liquid-detrium/0.1
     ]
     power: 1
   }
@@ -46,7 +46,21 @@ recipes: [
   }
   output: {
     items: [
-      arc-galvanium/1
+      arc-item-galvanium/1
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    fluids: [
+      arc-liquid-lithonium/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      arc-item-lithonium/1
     ]
   }
   craftTime: 60.0
@@ -64,16 +78,16 @@ drawer: {
       type: DrawLiquidTile
       
       //pixels from edge to do it from
-      padding: 6
+      padding: 3
       //alternatively use padLeft, padRight, padTop, and padBottom to pad at specific edges
       
       //liquid to draw
-      drawLiquid: liquid-molten-detrium
+      drawLiquid: liquid-detrium
     }
     {
       type: DrawLiquidTile     
-      padding: 6
-      drawLiquid: liquid-galavanium
+      padding: 3
+      drawLiquid: liquid-galvanium
     }
     {
       type: DrawDefault
@@ -89,73 +103,18 @@ craftEffect: {
       baseRotation: 90
       interp: pow5Out
       sizeInterp: linear
-      offsetX: -1
-      offsetY: -1
+      offsetX: 0
+      offsetY: 0
       length: 7
       baseLength: 8
-      cone: 10
+      cone: 15
       particles: 30
       lifetime: 240
       useRotation: false
-      sizeFrom: 1
-      sizeTo: 0.1
-      colorFrom: adadadcc
-      colorTo: cacaca00
-    }
-    {
-      type: ParticleEffect
-      baseRotation: 90
-      interp: pow5Out
-      sizeInterp: linear
-      offsetX: 1
-      offsetY: -1
-      length: 7
-      baseLength: 8
-      cone: 10
-      particles: 30
-      lifetime: 240
-      useRotation: false
-      sizeFrom: 1
-      sizeTo: 0.1
-      colorFrom: adadadcc
-      colorTo: cacaca00
-    }
-    {
-      type: ParticleEffect
-      baseRotation: 90
-      interp: pow5Out
-      sizeInterp: linear
-      offsetX: -1
-      offsetY: 1
-      length: 7
-      baseLength: 8
-      cone: 10
-      particles: 30
-      lifetime: 240
-      useRotation: false
-      sizeFrom: 1
-      sizeTo: 0.1
-      colorFrom: adadadcc
-      colorTo: cacaca00
-    }
-    {
-      type: ParticleEffect
-      baseRotation: 90
-      interp: pow5Out
-      sizeInterp: linear
-      offsetX: 1
-      offsetY: 1
-      length: 7
-      baseLength: 8
-      cone: 10
-      particles: 30
-      lifetime: 240
-      useRotation: false
-      sizeFrom: 1
+      sizeFrom: 1.4
       sizeTo: 0.1
       colorFrom: adadadcc
       colorTo: cacaca00
     }
   ]
 }
-research: liquefaction-vat
