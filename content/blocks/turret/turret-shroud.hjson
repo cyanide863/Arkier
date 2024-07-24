@@ -2,7 +2,7 @@ type: ItemTurret
 name: shroud
 description: Fires fragging artillery shells at nearby enemies.
 size: 4
-health: 1780
+health: 2180
 category: turret
 range: 240
 squareSprite: false
