@@ -1,0 +1,132 @@
+type: multicraft.MultiCrafter
+name: Smelter
+description: Melts down ores into their base components.
+size: 3
+health: 340
+category: crafting
+researchCost: [
+  item-vanadium/560
+  item-paragonite/340
+  item-paragonium/230
+  item-flux-alloy/340
+  item-areonium/430
+]
+category: crafting
+squareSprite: false
+liquidCapacity: 36
+hasLiquids: true
+ambientSound: flux
+ambientSoundVolume: 0.05
+itemCapacity: 12
+requirements: [
+  item-vanadium/280
+  item-paragonite/170
+  item-paragonium/115
+  item-flux-alloy/170
+  item-areonium/215
+]
+recipes: [
+{
+  input: {
+    items: [
+      arc-item-detrite/6
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-detrium/0.4
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    items: [
+      arc-item-paragonite/6
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-paragonite/0.4
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    items: [
+      arc-item-chromite/6
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-chromium/0.4
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    items: [
+      arc-item-torretite/6
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-torretite/0.4
+    ]
+  }
+  craftTime: 60.0
+}
+]
+
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      padding: 2
+      drawLiquid: liquid-paragonite
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 2
+      drawLiquid: liquid-detrium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 2
+      drawLiquid: liquid-torretite
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 2
+      drawLiquid: liquid-chromium
+    }
+    {
+      type: DrawDefault
+    }
+    {
+     type: drawRegion
+     suffix: -rotator
+     rotation: 45
+     spinSprite: true
+     rotateSpeed: 2.4
+    }
+    {
+      type: DrawGlowRegion
+      alpha: 0.5
+      glowScale: 8
+      color: 8c9d75
+    }
+  ]
+}
+research: crafting-blast-furnace
