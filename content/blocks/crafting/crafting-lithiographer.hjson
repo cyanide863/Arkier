@@ -1,9 +1,8 @@
 type: multicraft.MultiCrafter
 name: Component Fabricator
 description: melts alloys and minerals together to make complex modules.
-details: Makes complex alloys 
 size: 4
-health: 1200
+health: 1000
 category: crafting
 itemCapacity: 12
 requirements: [
@@ -28,7 +27,7 @@ recipes: [
   input: {
     items: [
       arc-item-paragonium/1
-      arc-item-cobalite/2
+      arc-item-galvanium/2
     ]
     power: 2
   }
