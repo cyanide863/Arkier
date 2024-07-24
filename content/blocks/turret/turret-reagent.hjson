@@ -1,0 +1,154 @@
+type: ItemTurret
+name: Reagent
+description: Fires piercing shotgun blasts at nearby enemies.
+size: 5
+health: 2890
+category: turret
+range: 300
+squareSprite: false
+reload: 60
+shootSound: mediumCannon
+rotateSpeed: 1.5
+shootY: 11
+outlineColor: 0f0f14
+shake: 4
+heatColor: e0a0b9
+ammoPerShot: 8
+cooldownTime: 60
+recoil: 2
+shootWarmupSpeed: 0.2
+minWarmup: 0.95
+requirements: [
+  item-torrium/140
+  item-flux-alloy/130
+  item-vanadium-carbide/120
+  item-vanadium/230
+]
+researchCost: [
+  item-torrium/280
+  item-flux-alloy/260
+  item-vanadium-carbide/240
+  item-vanadium/460
+]
+consumes: {
+  power: 6
+}
+shoot: {
+  type: ShootSpread
+  shots: 10
+  spread: 2.5
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -blade-r
+      mirror: true
+      progress: recoil
+      heatColor: e0a0b9
+      moveRot: -20
+      moveX: 0.25
+      moveY: -1.5
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -blade-l
+      mirror: true
+      progress: recoil
+      heatColor: e0a0b9
+      moveRot: 20
+      moveX: -0.25
+      moveY: 1.5
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -low
+      mirror: false
+      progress: recoil
+      heatColor: e0a0b9
+      moveX: 0
+      moveY: 0.4
+      layerOffset: 0.003
+      turretHeatLayer: 50.004
+      outlineLayerOffset: -0.004
+    }
+  ]
+}
+ammoTypes: {
+  item-torrium: {
+    type: BasicBulletType
+    lightColor: e0a0b9
+    hitColor: e0a0b9
+    frontColor: e0a0b9
+    backColor: 523648
+    trailEffect: HitSquareColor
+    trailColor: bcac8f
+    trailWidth: 5
+    trailLength: 18
+    width: 24
+    height: 30
+    damage: 160
+    speed: 8
+    lifetime: 48
+    shootEffect: shootBigColor
+    smokeEffect: shootSmokeSquareSparse
+    knockback: 2.5
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: WaveEffect
+          lifetime: 20
+          sizeTo: 17
+          strokeFrom: 1.5
+          interp: pow2Out
+          colorFrom: e0a0b9
+          colorTo: ffffff
+        }
+        {
+          type: ExplosionEffect
+          waveLife: 0
+          smokes: 0
+          sparks: 8
+          sparkColor: f5efdb
+          sparkRad: 20
+          sparkStroke: 2
+          sparkLen: 6
+        }
+      ]
+    }
+    despawnEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: WaveEffect
+          lifetime: 20
+          sizeTo: 16
+          strokeFrom: 1.5
+          interp: pow2Out
+          colorFrom: e0a0b9
+          colorTo: ffffff
+        }
+        {
+          type: ExplosionEffect
+          waveLife: 0
+          smokes: 0
+          sparks: 8
+          sparkColor: f5efdb
+          sparkRad: 20
+          sparkStroke: 2
+          sparkLen: 6
+        }
+      ]
+    }
+  }
+}
+research: implode
