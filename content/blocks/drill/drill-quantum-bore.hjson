@@ -1,0 +1,32 @@
+type: BeamDrill
+name: Quanttum Bore
+size: 4
+health: 670
+description: Fires concentrated quantum beams at ores, yielding trace minerals. Capable of mining from walls.
+details: Uses quantum fluctuations to drill ores by using paragonium.
+requirements: [
+  item-paragonite/120
+  item-vanadium/140
+  item-paragonium/130
+  item-vanadium-carbide/140
+]
+drillTime: 120
+laserWidth: 0.8
+range: 7
+tier: 4
+ambientSound: drill
+ambientSoundVolume: 0.10
+researchCost: [
+  item-paragonite/240
+  item-vanadium/280
+  item-paragonium/260
+  item-vanadium-carbide/280
+]
+category: production
+hasLiquids: false
+itemCapacity: 12
+consumes: {
+  power: 1
+}
+heatColor: 87ceebe6
+research: drill-thermal-bore
