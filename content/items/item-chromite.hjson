@@ -1,0 +1,10 @@
+name: Chromite
+description: Raw chromium.
+cost: 2.2
+color: cde3e8
+charge: 3
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: strontium
