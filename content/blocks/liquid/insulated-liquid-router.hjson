@@ -1,0 +1,18 @@
+name: Insulated Liquid Router
+type: LiquidRouter
+description: Distributes fluids across different directions.
+health: 150
+category: liquid
+liquidCapacity: 40
+squareSprite: false
+liquidPadding: 0.75
+solid: false
+researchCost: [
+  item-vanadium/35
+  item-paragonium/20
+]
+requirements: [
+  item-vanadium/8
+  item-paragonium/4
+]
+research: insulated-fluid-junction
