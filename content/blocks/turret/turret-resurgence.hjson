@@ -2,7 +2,7 @@ type: ContinuousLiquidTurret
 name: Resurgence
 description: Fires a continuous stream of flammable gas at nearby enemies. Pierces armor.
 size: 4
-health: 1645
+health: 2180
 category: turret
 range: 175
 squareSprite: false
