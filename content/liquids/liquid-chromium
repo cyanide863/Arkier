@@ -1,0 +1,8 @@
+name: Molten chromium
+description: Molten, high-temperature chromium. Can be cooled for use, or alloyed with other metals.
+temperature: 1.2
+viscosity: 0.85
+effect: melting
+color: cde3e8
+lightColor: cde3e8
+research: core-gulch
