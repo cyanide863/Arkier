@@ -1,0 +1,19 @@
+name: Insulated Conduit
+type: ArmoredConduit
+description: Moves fluids forward.
+category: liquid
+leaks: false
+liquidCapacity: 30
+liquidPressure: 2.3
+health: 230
+junctionReplacement: insulated-fluid-junction
+rotBridgeReplacement: insulated-bridge-conduit
+researchCost: [
+  item-vanadium/20
+  item-paragonium/20
+]
+requirements: [
+  item-vanadium/1
+  item-paragonium/1
+]
+research: core-legion
