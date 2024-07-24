@@ -135,6 +135,15 @@ drawer: {
       suffix: -bottom
     }
     {
+      type: drawRegion
+      suffix: -rotor
+      spinSprite: true
+      rotateSpeed: 4
+    }
+    {
+      type: DrawCrucibleFlame
+    }
+    {
       type: DrawDefault
     }
     {
