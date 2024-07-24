@@ -1,0 +1,9 @@
+name: Galvanite
+description: Raw, impure galvanium. Must be refined before use.
+cost: 0.8
+color: 3f3560
+hardness: 2
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
