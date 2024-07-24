@@ -46,8 +46,12 @@ drawer: {
       suffix: -bottom
     }
     {
+      type: DrawPlasma
+      plasmas: 4
+    }
+    {
       type: DrawLiquidTile     
-      padding: 4
+      padding: 3
       drawLiquid: molten-galvanium
     }
     {
