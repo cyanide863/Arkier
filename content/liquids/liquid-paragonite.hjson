@@ -1,0 +1,8 @@
+name: Molten paragonite
+description: Molten, high-temperature paragonite. Can be cooled for use.
+temperature: 1
+viscosity: 0.85
+effect: melting
+color: d99073
+lightColor: d9907368
+research: item-paragonite
