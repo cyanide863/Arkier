@@ -1,8 +1,8 @@
 type: multicraft.MultiCrafter
 name: Smelter
-description: Melts down ores into their base components.
-size: 3
-health: 340
+description: Melts down ores into their base components, very effecient.
+size: 4
+health: 670
 category: crafting
 researchCost: [
   item-vanadium/560
@@ -57,6 +57,20 @@ recipes: [
 {
   input: {
     items: [
+      arc-item-galvanite/6
+    ]
+    power: 2
+  }
+  output: {
+    fluids: [
+      arc-liquid-galvanium/0.4
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    items: [
       arc-item-chromite/6
     ]
     power: 2
@@ -104,6 +118,11 @@ drawer: {
     {
       type: DrawLiquidTile     
       padding: 2
+      drawLiquid: liquid-galvanium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 2
       drawLiquid: liquid-torretite
     }
     {
@@ -116,7 +135,7 @@ drawer: {
     }
     {
      type: drawRegion
-     suffix: -rotator
+     suffix: -spinner
      rotation: 45
      spinSprite: true
      rotateSpeed: 2.4
