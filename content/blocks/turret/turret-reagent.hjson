@@ -62,7 +62,7 @@ drawer: {
       progress: recoil
       heatColor: e0a0b9
       moveX: 0
-      moveY: 0.4
+      moveY: 1.25
       layerOffset: 0.003
       turretHeatLayer: 50.004
       outlineLayerOffset: -0.004
