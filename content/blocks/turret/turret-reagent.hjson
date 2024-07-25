@@ -19,13 +19,13 @@ recoil: 2
 shootWarmupSpeed: 0.2
 minWarmup: 0.95
 requirements: [
-  item-torrium/140
+  item-torreium/140
   item-flux-alloy/130
   item-vanadium-carbide/120
   item-vanadium/230
 ]
 researchCost: [
-  item-torrium/280
+  item-torreium/280
   item-flux-alloy/260
   item-vanadium-carbide/240
   item-vanadium/460
@@ -44,26 +44,13 @@ drawer: {
   parts: [
     {
       type: RegionPart
-      suffix: -blade-r
+      suffix: -blade
       mirror: true
       progress: recoil
       heatColor: e0a0b9
       moveRot: -20
       moveX: 0.25
       moveY: -1.5
-      layerOffset: 0.001
-      turretHeatLayer: 50.002
-      outlineLayerOffset: -0.002
-    }
-    {
-      type: RegionPart
-      suffix: -blade-l
-      mirror: true
-      progress: recoil
-      heatColor: e0a0b9
-      moveRot: 20
-      moveX: -0.25
-      moveY: 1.5
       layerOffset: 0.001
       turretHeatLayer: 50.002
       outlineLayerOffset: -0.002
@@ -83,7 +70,7 @@ drawer: {
   ]
 }
 ammoTypes: {
-  item-torrium: {
+  item-torreium: {
     type: BasicBulletType
     lightColor: e0a0b9
     hitColor: e0a0b9
