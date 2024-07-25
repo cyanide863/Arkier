@@ -38,6 +38,36 @@ recipes: [
   }
   craftTime: 120.0
 }
+{
+  input: {
+    items: [
+      arc-item-paragonium/1
+      arc-item-vanadium/1
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-cabling/2
+    ]
+  }
+  craftTime: 120.0
+}
+{
+  input: {
+    items: [
+      arc-item-cabling/2
+      arc-item-galvnium/3
+    ]
+    power: 2
+  }
+  output: {
+    items: [
+      arc-item-basic-circuit/2
+    ]
+  }
+  craftTime: 120.0
+}
 ]
 
 drawer: {
