@@ -1,0 +1,44 @@
+type: UnitFactory
+size: 4
+category: units
+name: Terrestrial Fabricator
+description: Fabricates tank and mech units,uses paragonite in heating coils to weld units
+de
+consumes: {
+  power: 4.5
+}
+requirements: [
+  item-vanadium/300
+  item-detrium/300
+  item-galvanium/225
+  item-paragonite/250
+]
+researchCost: [
+  item-vanadium/900
+  item-detrium/1200
+  item-galvanium/1100
+  item-paragonite/1000
+]
+plans: [
+  {
+    type: UnitPlan
+    unit: unit-link
+    time: 900
+    requirements: [
+      item-detrium/35
+      item-galvanium/40
+      item-basic-circuit/10
+    ]
+  }
+  {
+    type: UnitPlan
+    unit: unit-thorn
+    time: 900
+    requirements: [
+      item-detrium/45
+      item-galvanium/30
+      item-basic-circuit/12
+    ]
+  }
+]
+research: core-legion
