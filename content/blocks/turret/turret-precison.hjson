@@ -1,0 +1,180 @@
+type: ItemTurret
+name: Precision
+description: Launches high-power lances at enemies. Best used at range.
+size: 4
+health: 2040
+category: turret
+range: 360
+squareSprite: false
+reload: 120
+shootSound: laser
+rotateSpeed: 1.2
+shootY: -0.5
+outlineColor: 0f0f14
+shake: 4
+heatColor: 889caa
+ammoPerShot: 6
+cooldownTime: 90
+requirements: [
+  item-vanadium/210
+  item-galvesteel/185
+  item-areonium/170
+  item-chromium/155
+]
+researchCost: [
+  item-vanadium/4200
+  item-galvesteel/3700
+  item-areonium/3400
+  item-chromium/3100
+]
+consumes: {
+  power: 4
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: insulated-
+  parts: [
+     {
+      type: RegionPart
+      suffix: -blade-r
+      mirror: true
+      under: false
+      progress: warmup
+      x: 0
+      y: 0
+      moveRot: 15
+      moveY: 2
+      moveX: -2
+      layerOffset: -0.005
+      heatColor: 979d5a
+    }
+    {
+      type: RegionPart
+      suffix: -blade-l
+      mirror: true
+      under: false
+      progress: warmup
+      x: 0
+      y: 0
+      moveRot: -15
+      moveY: 2
+      moveX: 2
+      layerOffset: -0.005
+      heatColor: 979d5a
+    }
+  ]
+}
+ammoTypes: {
+  item-chromium: {
+    type: BasicBulletType
+    despawnEffect: hitSquaresColor
+    width: 10
+    height: 24
+    hitColor: 889caa
+    trailColor: 889caa
+    frontColor: cdd9e8
+    lightColor: cdd9e8
+    backColor: 889caa
+    speed: 5
+    lifetime: 70
+    trailWidth: 2
+    trailLength: 24
+    trailInterval: 3
+    trailRotation: true
+    damage: 210
+    pierce: true
+    pierceCap: 10
+    bulletInterval: 10
+    intervalRandomSpread: 30
+    intervalBullets: 3
+    intervalDelay: 10
+    fragBullets: 16
+    fragVelocityMin: 0.75
+    fragVelocityMax: 1
+    fragLifeMin: 0.3
+    fragLifeMax: 0.5
+    fragBullet: {
+      type: BasicBulletType
+      homingPower: 0.2
+      homingRange: 90
+      hitColor: 889caa
+      trailColor: 889caa
+      frontColor: cdd9e8
+      lightColor: cdd9e8
+      backColor: 889caa
+      width: 8
+      height: 10
+      trailWidth: 1.5
+      trailLength: 10
+      pierce: false
+      damage: 30
+      despawnEffect: hitSquaresColor
+      hitEffect: hitSquaresColor
+      speed: 2
+      lifetime: 60
+      keepVelocity: false
+    }
+    intervalBullet: {
+      type: BasicBulletType
+      homingPower: 0.2
+      homingRange: 90
+      hitColor: 889caa
+      trailColor: 889caa
+      frontColor: cdd9e8
+      lightColor: cdd9e8
+      backColor: 889caa
+      width: 8
+      height: 10
+      trailWidth: 1.5
+      trailLength: 10
+      pierce: false
+      damage: 30
+      despawnEffect: hitSquaresColor
+      hitEffect: hitSquaresColor
+      speed: 3.5
+      lifetime: 60
+      keepVelocity: false
+    }
+    trailEffect: {
+      type: SeqEffect
+      effects: [
+        {
+          type: ParticleEffect
+          followParent: true
+          rotWithParent: true
+          useRotation: true
+          region: arc-arrow
+          colorFrom: cdd9e8
+          colorTo: cdd9e8
+          lightColor: cdd9e8
+          offsetX: 3
+          particles: 1
+          cone: 0
+          randLength: false
+          length: 35
+          sizeFrom: 2
+          sizeTo: 4
+          lifetime: 16
+        }
+        {
+          type: ParticleEffect
+          followParent: true
+          rotWithParent: true
+          useRotation: true
+          region: arc-arrow
+          colorFrom: cdd9e8
+          colorTo: cdd9e8
+          lightColor: cdd9e8
+          offsetX: 38
+          particles: 1
+          cone: 0
+          randLength: false
+          length: 70
+          sizeFrom: 4
+          sizeTo: 0
+          lifetime: 32
+        }
+      ]
+    }
+  }
+}
