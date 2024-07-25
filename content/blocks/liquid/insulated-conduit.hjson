@@ -6,7 +6,7 @@ leaks: false
 liquidCapacity: 30
 liquidPressure: 2.3
 health: 230
-junctionReplacement: insulated-fluid-junction
+junctionReplacement: insulated-liquid-junction
 rotBridgeReplacement: insulated-bridge-conduit
 researchCost: [
   item-vanadium/20
