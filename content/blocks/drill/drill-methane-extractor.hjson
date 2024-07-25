@@ -6,7 +6,7 @@ size: 5
 hasLiquids: true
 liquidCapacity: 48
 squareSprite: false
-outputLiquid: methane/0.2
+outputLiquid: liquid-methane/0.2
 displayEfficiencyScale: 1
 baseEfficiency: 0
 minEfficiency: 1
