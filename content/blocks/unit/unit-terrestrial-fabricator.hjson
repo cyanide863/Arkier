@@ -3,7 +3,6 @@ size: 4
 category: units
 name: Terrestrial Fabricator
 description: Fabricates tank and mech units,uses paragonite in heating coils to weld units
-de
 consumes: {
   power: 4.5
 }
