@@ -96,9 +96,9 @@ drawer: {
   ]
 }
 ammoTypes: {
-  methane: {
+  liquid-methane: {
     type: ContinuousFlameBulletType
-    damage: 50
+    damage: 70
     length: 230
     knockback: 2
     pierceCap: 3
