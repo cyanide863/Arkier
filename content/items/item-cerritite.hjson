@@ -1,0 +1,10 @@
+name: Cerritite
+description: Impure cerrium crystals. Must be refined before use.
+cost: 2
+color: fbffdb
+hardness: 4
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: item-chromatite
