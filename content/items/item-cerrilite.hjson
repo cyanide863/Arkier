@@ -1,0 +1,9 @@
+name: Cerrium
+description: Durable and unractive slightly explosive. Used in construction.
+cost: 2.4
+color: fbffdb
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: item-cerritite
