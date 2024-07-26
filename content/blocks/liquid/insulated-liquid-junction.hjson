@@ -6,10 +6,10 @@ health: 230
 solid: false
 requirements: [
   item-vanadium/4
-  item-paragonium/8
+  item-paragonite/8
 ]
 researchCost: [
   item-vanadium/16
-  item-paragonium/8
+  item-paragonite/8
 ]
 research: insulated-conduit
