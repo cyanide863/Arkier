@@ -1,0 +1,9 @@
+name: Cerrium plating
+description: highly durable, ceramic and resistant to radiation. used in the making of large structures
+cost: 2.4
+color: 989d72
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
+research: item-cerrilite
