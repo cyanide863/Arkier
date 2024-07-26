@@ -2,6 +2,7 @@ name: Torretite
 description: Volatile, yet hard. Used in alloymaking, Very durable.
 cost: 2.4
 color: e0a0b9
+hardness: 3
 hiddenOnPlanets: [
   serpulo,
   erekir
