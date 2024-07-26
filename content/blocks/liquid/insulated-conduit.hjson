@@ -10,10 +10,10 @@ junctionReplacement: insulated-liquid-junction
 rotBridgeReplacement: insulated-bridge-conduit
 researchCost: [
   item-vanadium/20
-  item-paragonium/20
+  item-paragonite/20
 ]
 requirements: [
   item-vanadium/1
-  item-paragonium/1
+  item-paragonite/1
 ]
 research: core-legion
