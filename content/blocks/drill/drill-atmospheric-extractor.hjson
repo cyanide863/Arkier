@@ -1,0 +1,98 @@
+type: multicraft.MultiCrafter
+name: Atmospheric Extractor
+description: Pulls gases from the atmosphere for use.
+size: 6
+hasLiquids: true
+liquidCapacity: 48
+squareSprite: false
+category: production
+  //placeholder
+requirements: [
+  areonium/165
+]
+researchCost: [
+  areonium/5000
+]
+recipes: [
+  {
+    input: {
+      power: 6
+    }
+    output: {
+      fluids: [
+        nitrogen/0.2
+      ]
+    }
+  }
+  {
+    input: {
+      power: 6
+    }
+    output: {
+      fluids: [
+        hydrogen/0.2
+      ]
+    }
+  }
+]
+drawer: {
+  type: DrawMulti
+  drawers: [
+    {
+      type: DrawRegion
+      suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: nitrogen
+      padding: 6
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: hydrogen
+      padding: 6
+    }
+     {
+      type: drawRegion
+      suffix: -spinner
+      x: 9
+      y: 9
+      spinSprite: true
+      rotateSpeed: -12
+    } 
+    {
+      type: drawRegion
+      suffix: -spinner
+      x: 9
+      y: -9
+      spinSprite: true
+      rotateSpeed: -12
+    } 
+    {
+      type: drawRegion
+      suffix: -spinner
+      x: -9
+      y: -9
+      spinSprite: true
+      rotateSpeed: 12
+    } 
+    {
+      type: drawRegion
+      suffix: -spinner
+      x: -9
+      y: 9
+      spinSprite: true
+      rotateSpeed: 12
+    }   
+    {
+      type: DrawDefault
+    }
+    {
+      type: DrawRegion
+      suffix: -glass
+    }
+  ]
+}
+ambientSound: extractLoop
+ambientSoundVolume: 0.09
+research: electromagnetic-bore
