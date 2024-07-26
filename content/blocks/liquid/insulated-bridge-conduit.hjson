@@ -8,10 +8,10 @@ squareSprite: false
 solid: true
 researchCost: [
   item-vanadium/20
-  item-paragonium/20
+  item-paragonite/20
 ]
 requirements: [
   item-vanadium/8
-  item-paragonium/8
+  item-paragonite/8
 ]
-research: insulated-fluid-router
+research: insulated-liquid-router
