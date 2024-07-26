@@ -1,7 +1,7 @@
 type: multicraft.MultiCrafter
 name: Meld fuser
 description: Mixes various liquefied metals into alloys. Less efficient than an alloy kiln, but necessary for later processes.
-size: 5
+size: 9
 hasItems: true
 itemCapacity: 20
 health: 1320
@@ -189,6 +189,14 @@ drawer: {
      rotation: 67.5
      spinSprite: true
      rotateSpeed: 4.5
+    }
+    {
+     sides: 4
+     angleOffset: 135
+     sinScl: 20
+     sinMag: 12
+     sideOffset: 3.14
+     type: drawPistons
     }
     {
       type: DrawCrucibleFlame
