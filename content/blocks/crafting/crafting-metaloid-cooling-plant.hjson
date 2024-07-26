@@ -1,9 +1,9 @@
 type: multicraft.MultiCrafter
-name: Cooling trough
+name: Metalloid cooling plant
 description: Rapidly takes in air from the surroundings in order to cool down metals into usable sheets.
 details: Despite nitrogen and hydrogen’s low capacity for energy, Abyssus’s atmosphere is cold enough to allow air’s usage as coolant.
 size: 4
-health: 920
+health: 1200
 category: crafting
 researchCost: [
   item-paragonite/540
@@ -110,10 +110,17 @@ drawer: {
     }
     {
      type: drawRegion
-     suffix: -spinner
+     suffix: -rotator
      rotation: 45
      spinSprite: true
      rotateSpeed: 1.9
+    }
+    {
+     type: DrawPistons
+     sides: 4
+     sinMag: 1.6
+     sinScl: 3
+     sideOffset: 10
     }
     {
       type: DrawLiquidTile
