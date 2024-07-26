@@ -1,0 +1,273 @@
+type: ItemTurret
+name: Cipher
+description: Fires piercing shotgun blasts at nearby enemies.
+size: 5
+health: 3200
+category: turret
+range: 300
+squareSprite: false
+reload: 60
+shootSound: mediumCannon
+rotateSpeed: 0.75
+shootY: 11
+outlineColor: 0f0f14
+shake: 5
+heatColor: bcac8f
+ammoPerShot: 8
+cooldownTime: 60
+recoil: 2
+shootWarmupSpeed: 0.3
+minWarmup: 1.2
+requirements: [
+  item-vanadium/600
+  item-flux-alloy/240
+  item-vanadium-carbide/560
+  item-paragonite/600
+  item-galvesteel/300
+  item-galvanite/660
+]
+researchCost: [
+  item-vanadium/3000
+  item-flux-alloy/1200
+  item-vanadium-carbide/2800
+  item-paragonite/3000
+  item-galvesteel/1500
+  item-galvanite/3300
+]
+consumes: {
+  power: 8
+}
+shoot: {
+  type: ShootSpread
+  shots: 20
+  spread: 7.5
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -side
+      mirror: true
+      progress: warmup
+      heatColor: bcac8f
+      moveRot: -10
+      moveX: -1
+      moveY: -2
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -bar
+      mirror: true
+      progress: warmup
+      heatColor: bcac8f
+      moveX: -2
+      moveY: 0
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -spine1
+      mirror: true
+      progress: warmup
+      heatColor: bcac8f
+      moveRot: -30
+      moveX: 4
+      moveY: 0
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -spine
+      mirror: true
+      progress: warmup
+      heatColor: bcac8f
+      moveRot: -35
+      moveX: 6
+      moveY: -1.5
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -spineback
+      mirror: true
+      progress: warmup
+      heatColor: bcac8f
+      moveX: 0
+      moveY: -6
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -bar
+      mirror: true
+      progress: warmup
+      heatColor: bcac8f
+      moveRot: -20
+      moveX: 1.5
+      moveY: 2
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -back
+      mirror: false
+      progress: recoil
+      heatColor: bcac8f
+      moveX: 0
+      moveY: 3
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.002
+    }
+    {
+      type: RegionPart
+      suffix: -mid
+      mirror: false
+      progress: recoil
+      heatColor: bcac8f
+      layerOffset: 0.003
+      turretHeatLayer: 50.004
+      outlineLayerOffset: -0.004
+    }
+    {
+      type: ShapePart
+      progress: warmup
+      layer: 110
+      y: -26
+      circle: true
+      hollow: true
+      radius: 4
+      stroke: -1
+      strokeTo: 2
+      color: 9797cf
+    }
+    {
+      type: ShapePart
+      progress: warmup
+      layer: 110
+      y: -26
+      circle: true
+      hollow: true
+      radius: 10
+      stroke: -1
+      strokeTo: 2
+      color: 9797cf
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      layer: 110
+      y: -26
+      tri: true
+      shapes: 6
+      radius: 3
+      radiusTo: 3
+      triLength: -2
+      triLengthTo: 4
+      haloRadius: 4
+      haloRotateSpeed: 1.5
+      color: 9797cf
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      layer: 110
+      y: -26
+      tri: true
+      shapes: 8
+      radius: 3
+      radiusTo: 3
+      triLength: -2
+      triLengthTo: 4
+      haloRadius: 10
+      haloRotateSpeed: -1.5
+      color: 9797cf
+    }
+  ]
+}
+ammoTypes: {
+  item-power-cell: {
+    type: BasicBulletType
+    lightColor: 9797cf
+    hitColor: 9797cf
+    frontColor: fffff
+    backColor: 9797cf
+    trailColor: 9797cf
+    trailWidth: 16
+    trailLength: 20
+    width: 32
+    height: 40
+    damage: 340
+    speed: 6
+    lifetime: 60
+    homingPower: 0.05
+    homingRange: 90
+    shootEffect: shootBigColor
+    smokeEffect: shootSmokeSquareSparse
+    knockback: 3.2
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: WaveEffect
+          lifetime: 30
+          sizeTo: 20
+          strokeFrom: 1.5
+          interp: pow2Out
+          colorFrom: 9797cf
+          colorTo: ffffff
+        }
+        {
+          type: ExplosionEffect
+          waveLife: 0
+          smokes: 2
+          sparks: 8
+          sparkColor: 9797cf
+          sparkRad: 20
+          sparkStroke: 2
+          sparkLen: 6
+        }
+      ]
+    }
+    despawnEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: WaveEffect
+          lifetime: 35
+          sizeTo: 20
+          strokeFrom: 1.5
+          interp: pow2Out
+          colorFrom: 9797cf
+          colorTo: ffffff
+        }
+        {
+          type: ExplosionEffect
+          waveLife: 0
+          smokes: 0
+          sparks: 12
+          sparkColor: 9797cf
+          sparkRad: 20
+          sparkStroke: 2
+          sparkLen: 6
+        }
+      ]
+    }
+  }
+}
+research: expulse
