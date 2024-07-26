@@ -8,8 +8,8 @@ consumes: {
 }
 requirements: [
   item-vanadium/300
-  item-detrium/300
-  item-galvanium/225
+  item-detrium/150
+  item-galvanium/120
   item-paragonite/250
 ]
 researchCost: [
@@ -37,6 +37,16 @@ plans: [
       item-detrium/45
       item-galvanium/30
       item-basic-circuit/12
+    ]
+  }
+ {
+    type: UnitPlan
+    unit: unit-helix
+    time: 900
+    requirements: [
+      item-detrium/40
+      item-galvanium/20
+      item-basic-circuit/20
     ]
   }
 ]
