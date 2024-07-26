@@ -82,6 +82,10 @@ drawer: {
       suffix: -top
     }
     {
+      type: DrawRegion
+      suffix: -mid
+    }
+    {
       type: DrawCrucibleFlame
     }
     {
