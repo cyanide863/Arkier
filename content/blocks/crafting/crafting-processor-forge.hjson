@@ -10,12 +10,14 @@ requirements: [
   item-paragonite/80
   item-flux-alloy/80
   item-detrium/50
+  item-galvanium/30
 ]
 researchCost: [
   item-vanadium/1100
-  item-paragonite/950
-  item-flux-alloy/800
-  item-detrium/650
+  item-paragonite/990
+  item-flux-alloy/600
+  item-detrium/870
+  item-galvanium/300
 ]
 category: crafting
 squareSprite: false
@@ -79,7 +81,7 @@ recipes: [
   }
   output: {
     items: [
-      arc-item-basic-processor/2
+      arc-item-progressive-circuit/2
     ]
   }
   craftTime: 120.0
