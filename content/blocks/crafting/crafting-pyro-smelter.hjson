@@ -1,7 +1,7 @@
 type: multicraft.MultiCrafter
 name: Pyro Smelter
 description: Melts down ores into their base components, very effecient.
-size: 4
+size: 5
 health: 670
 category: crafting
 researchCost: [
@@ -106,10 +106,6 @@ drawer: {
       suffix: -bottom
     }
     {
-      type: DrawRegion
-      suffix: -top
-    }
-    {
       type: DrawLiquidTile
       padding: 2
       drawLiquid: liquid-paragonite
@@ -142,14 +138,18 @@ drawer: {
      suffix: -spinner
      rotation: 45
      spinSprite: true
-     rotateSpeed: 2.4
+     rotateSpeed: 4.5
     }
     {
      type: drawRegion
      suffix: -spinner
      rotation: 0
      spinSprite: true
-     rotateSpeed: 2.4
+     rotateSpeed: 4.5
+    }
+    {
+      type: DrawRegion
+      suffix: -top
     }
     {
       type: DrawGlowRegion
