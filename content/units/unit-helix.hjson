@@ -16,6 +16,10 @@ groundLayer: 60
 health: 250
 armor: 1
 hitSize: 6
+requirements: {
+  block: unit-aviation-convertor
+  previous: unit-helix
+}
 abilities: [
   {
     type: MoveEffectAbility
