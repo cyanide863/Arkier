@@ -17,6 +17,10 @@ engineSize: 0
 itemCapacity: 0
 hitSize: 6.5
 strafePenalty: 0.6
+requirements: {
+  block: unit-aviation-convertor
+  previous: unit-helix
+}
 abilities: [
   {
     type: MoveEffectAbility
