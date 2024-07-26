@@ -1,5 +1,5 @@
 type: multicraft.MultiCrafter
-name: Smelter
+name: Pyro Smelter
 description: Melts down ores into their base components, very effecient.
 size: 4
 health: 670
@@ -38,7 +38,7 @@ recipes: [
       arc-liquid-detrium/0.4
     ]
   }
-  craftTime: 60.0
+  craftTime: 30.0
 }
 {
   input: {
@@ -52,7 +52,7 @@ recipes: [
       arc-liquid-paragonite/0.4
     ]
   }
-  craftTime: 60.0
+  craftTime: 30.0
 }
 {
   input: {
@@ -66,7 +66,7 @@ recipes: [
       arc-liquid-galvanium/0.4
     ]
   }
-  craftTime: 60.0
+  craftTime: 30.0
 }
 {
   input: {
@@ -80,7 +80,7 @@ recipes: [
       arc-liquid-chromium/0.4
     ]
   }
-  craftTime: 60.0
+  craftTime: 30.0
 }
 {
   input: {
@@ -94,7 +94,7 @@ recipes: [
       arc-liquid-torretite/0.4
     ]
   }
-  craftTime: 60.0
+  craftTime: 30.0
 }
 ]
 
@@ -104,6 +104,10 @@ drawer: {
     {
       type: DrawRegion
       suffix: -bottom
+    }
+    {
+      type: DrawRegion
+      suffix: -top
     }
     {
       type: DrawLiquidTile
@@ -141,10 +145,40 @@ drawer: {
      rotateSpeed: 2.4
     }
     {
+     type: drawRegion
+     suffix: -spinner
+     rotation: 0
+     spinSprite: true
+     rotateSpeed: 2.4
+    }
+    {
       type: DrawGlowRegion
       alpha: 0.5
       glowScale: 8
       color: 8c9d75
+    }
+  ]
+}
+craftEffect: {
+  type: MultiEffect
+  effects: [
+    {
+      type: ParticleEffect
+      baseRotation: 90
+      interp: pow5Out
+      sizeInterp: linear
+      offsetX: 0
+      offsetY: 0
+      length: 12
+      baseLength: 12
+      cone: 20
+      particles: 30
+      lifetime: 340
+      useRotation: false
+      sizeFrom: 2.4
+      sizeTo: 0.1
+      colorFrom: adadadcc
+      colorTo: cacaca00
     }
   ]
 }
