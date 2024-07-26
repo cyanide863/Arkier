@@ -9,10 +9,10 @@ liquidPadding: 0.75
 solid: false
 researchCost: [
   item-vanadium/35
-  item-paragonium/20
+  item-paragonite/20
 ]
 requirements: [
   item-vanadium/8
-  item-paragonium/4
+  item-paragonite/4
 ]
 research: insulated-fluid-junction
