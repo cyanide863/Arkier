@@ -1,0 +1,14 @@
+name: Vanadium Carbide Wall
+description: Blocks enemy projectiles.
+type: Wall
+size: 1
+category: defense
+health: 1000
+armor: 4
+requirements: [
+  item-vanadium-carbide/32
+]
+researchCost: [
+  item-vanadium-carbide/160
+]
+research: wall-paragonite-wall-large
