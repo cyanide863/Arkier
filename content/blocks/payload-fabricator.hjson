@@ -1,0 +1,31 @@
+type: Constructor
+size: 4
+category: units
+name: Payload Fabricator
+description: Fabricates payloads using item input. Necessary for high-tier unit production.
+hasPower: true
+buildSpeed: 1
+maxBlockSize: 3
+consumes: {
+  power: 2
+}
+filter: [
+  treads,
+  plated-armor,
+  power-cell,
+  thruster,
+  fusion-core,
+]
+requirements: [
+  item-vanadium/200
+  item-flux-alloy/120
+  item-galvanium/140
+  item-areonium/120
+]
+researchCost: [
+  item-vanadium/2000
+  item-flux-alloy/1200
+  item-galvanium/1400
+  item-areonium/1200
+]
+research: payload-carrier
