@@ -1,0 +1,19 @@
+type: PayloadRouter
+name: Payload carrier router
+description: Splits large ayloads evenly across three directions.
+category: units
+size: 2
+requirements: [
+  item-vanadium/12
+  item-galvanium/6
+]
+researchCost: [
+ item-vanadium/120
+ item-galvanium/60
+
+]
+moveTime: 35
+moveForce: 130
+canOverdrive: false
+payloadLimit: 4
+research: large-insulated-payload-conveyor
