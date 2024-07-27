@@ -40,7 +40,7 @@ consumes: {
 shoot: {
   type: ShootSpread
   shots: 20
-  spread: 7.5
+  spread: 5
 }
 drawer: {
   type: DrawTurret
