@@ -1,5 +1,5 @@
 type: PayloadConveyor
-name: Payload carrier
+name: Large payload carrier
 description: Moves large payloads forward.
 category: units
 size: 4
