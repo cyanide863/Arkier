@@ -1,4 +1,5 @@
     generator: PlanetGenerator
+    localizedName: Arctican
     parent: sun
     iconColor: 10d7e6,
     orbitRadius: 32,
