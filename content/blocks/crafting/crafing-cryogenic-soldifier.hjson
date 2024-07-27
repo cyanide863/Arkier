@@ -1,8 +1,8 @@
 type: multicraft.MultiCrafter
-name: Metalloid cooling plant
+name: Cyrogenic cooling plant
 description: Rapidly takes in air from the surroundings in order to cool down metals into usable sheets.
 details: Despite nitrogen and hydrogen’s low capacity for energy, Abyssus’s atmosphere is cold enough to allow air’s usage as coolant.
-size: 4
+size: 9
 health: 1200
 category: crafting
 researchCost: [
