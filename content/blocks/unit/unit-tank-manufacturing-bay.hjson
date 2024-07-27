@@ -1,0 +1,54 @@
+type: UnitAssembler
+name: Tank Manufacturing Bay
+description: Fabricates tank units using payload inputs. Requires power for operation.
+detail: This large hangar was used at the start. making giant titans to crush enemies
+size: 6
+category: units
+droneType: unit-manufacturing-drone
+areaSize: 15
+consumes: {
+  power: 4
+}
+requirements: [
+  item-vanadium/300
+  item-flux-alloy/130
+  item-vanadium-carbide/220
+]
+researchCost: [
+  item-vanadium/1500
+  item-flux-alloy/1400
+  item-vanadium-carbide/990
+]
+plans: [
+  {
+    type: AssemblerUnitPlan
+    unit: unit-turmoil
+    time: 3600
+    requirements: [
+    arc-power-cell/1
+    arc-plated-armor/2
+    arc-treads/1
+    ]
+  }
+  {
+    type: AssemblerUnitPlan
+    unit: unit-mayhem
+    time: 3600
+    requirements: [
+    arc-power-cell/1
+    arc-plated-armor/4
+    arc-treads/2
+    ]
+  }
+  {
+    type: AssemblerUnitPlan
+    unit: unit-anarchy
+    time: 3600
+    requirements: [
+    arc-power-cell/2
+    arc-plated-armor/6
+    arc-treads/2
+    ]
+  }
+]
+research: terrestrial-reconstructor
