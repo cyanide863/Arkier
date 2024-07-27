@@ -4,7 +4,7 @@ description: Fires piercing shotgun blasts at nearby enemies.
 size: 5
 health: 3200
 category: turret
-range: 300
+range: 500
 squareSprite: false
 reload: 60
 shootSound: mediumCannon
@@ -78,7 +78,7 @@ drawer: {
       progress: warmup
       heatColor: bcac8f
       moveRot: -30
-      moveX: 4
+      moveX: 6
       moveY: 0
       layerOffset: 0.001
       turretHeatLayer: 50.002
@@ -91,7 +91,7 @@ drawer: {
       progress: warmup
       heatColor: bcac8f
       moveRot: -35
-      moveX: 6
+      moveX: 7
       moveY: -1.5
       layerOffset: 0.001
       turretHeatLayer: 50.002
@@ -104,7 +104,7 @@ drawer: {
       progress: warmup
       heatColor: bcac8f
       moveX: 0
-      moveY: -6
+      moveY: -7
       layerOffset: 0.001
       turretHeatLayer: 50.002
       outlineLayerOffset: -0.002
@@ -116,7 +116,7 @@ drawer: {
       progress: warmup
       heatColor: bcac8f
       moveRot: -20
-      moveX: 1.5
+      moveX: 2.5
       moveY: 2
       layerOffset: 0.001
       turretHeatLayer: 50.002
@@ -129,7 +129,7 @@ drawer: {
       progress: recoil
       heatColor: bcac8f
       moveX: 0
-      moveY: 3
+      moveY: 3.5
       layerOffset: 0.001
       turretHeatLayer: 50.002
       outlineLayerOffset: -0.002
@@ -205,21 +205,21 @@ ammoTypes: {
     type: BasicBulletType
     lightColor: 9797cf
     hitColor: 9797cf
-    frontColor: fffff
+    frontColor: 9797cf
     backColor: 9797cf
     trailColor: 9797cf
-    trailWidth: 16
-    trailLength: 20
-    width: 32
-    height: 40
-    damage: 340
-    speed: 6
-    lifetime: 60
+    trailWidth: 5
+    trailLength: 18
+    width: 24
+    height: 30
+    damage: 180
+    speed: 8
+    lifetime: 48
     homingPower: 0.05
     homingRange: 90
     shootEffect: shootBigColor
     smokeEffect: shootSmokeSquareSparse
-    knockback: 3.2
+    knockback: 4.5
     hitEffect: {
       type: MultiEffect
       effects: [
