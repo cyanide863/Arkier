@@ -1,5 +1,5 @@
 type: UnitAssembler
-name: Mech Manufacturing Bay
+name: Aviation Manufacturing Bay
 description: Fabricates mech units using payload inputs. Requires power for operation.
 detail: This factory used to strike fear in the cores of sharded due to the hail of hellish missiles the units unleash
 size: 6
