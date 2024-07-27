@@ -4,7 +4,7 @@ description: Fabricates mech units using payload inputs. Requires power for oper
 detail: This facility was fabled as light for the sharded during the "war"
 size: 6
 category: units
-droneType: unit-manufacturing-drone2
+droneType: unit-manufacturing-drone
 areaSize: 15
 consumes: {
   power: 6
