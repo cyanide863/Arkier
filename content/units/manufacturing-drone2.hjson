@@ -1,0 +1,32 @@
+type: tether
+name: Manufacturing Drone
+description: Fabricates units in a manufacturing bay.
+flying: true
+drag: 0.09
+accel: 0.09
+speed: 1.5
+health: 210
+engineSize: 2
+engineOffset: 6
+payloadCapacity: 0
+targetable: false
+bounded: false
+outlineColor: 0f0f14
+isEnemy: false
+hidden: true
+useUnitCap: false
+logicControllable: false
+playerControllable: false
+allowedInPayloads: false
+createWreck: false
+controller: AssemblerAI
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    color: ffda91
+  }
+]
