@@ -1,0 +1,14 @@
+name: Large Vanadium Carbide Wall
+description: Blocks enemy projectiles.
+type: Wall
+size: 1
+category: defense
+health: 4000
+armor: 4
+requirements: [
+  item-vanadium-carbide/8
+]
+researchCost: [
+  item-vanadium-carbide/160
+]
+research: wall-vanadium-carbide-wall
