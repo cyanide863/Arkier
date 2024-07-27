@@ -75,32 +75,32 @@ drawer: {
      {
       type: drawRegion
       suffix: -spinner
-      x: 9
-      y: 9
+      x: 8
+      y: 8
       spinSprite: true
       rotateSpeed: -12
     } 
     {
       type: drawRegion
       suffix: -spinner
-      x: 9
-      y: -9
+      x: 8
+      y: -8
       spinSprite: true
       rotateSpeed: -12
     } 
     {
       type: drawRegion
       suffix: -spinner
-      x: -9
-      y: -9
+      x: -8
+      y: -8
       spinSprite: true
       rotateSpeed: 12
     } 
     {
       type: drawRegion
       suffix: -spinner
-      x: -9
-      y: 9
+      x: -8
+      y: 8
       spinSprite: true
       rotateSpeed: 12
     }   
