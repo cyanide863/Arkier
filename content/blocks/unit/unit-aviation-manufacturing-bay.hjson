@@ -1,0 +1,54 @@
+type: UnitAssembler
+name: Mech Manufacturing Bay
+description: Fabricates mech units using payload inputs. Requires power for operation.
+detail: This factory used to strike fear in the cores of sharded due to the hail of hellish missiles the units unleash
+size: 6
+category: units
+droneType: unit-manufacturing-drone
+areaSize: 15
+consumes: {
+  power: 6
+}
+requirements: [
+  item-vanadium/300
+  item-flux-alloy/120
+  item-vanadium-carbide/200
+]
+researchCost: [
+  item-vanadium/1500
+  item-flux-alloy/1300
+  item-vanadium-carbide/880
+]
+plans: [
+  {
+    type: AssemblerUnitPlan
+    unit: unit-quadplex
+    time: 1600
+    requirements: [
+      arc-power-cell/1
+      arc-plated-armor/1
+      arc-thruster/2
+    ]
+  }
+  {
+    type: AssemblerUnitPlan
+    unit: unit-phantom
+    time: 2300
+    requirements: [
+      arc-power-cell/2
+      arc-plated-armor/2
+      arc-thruster/4
+    ]
+  }
+{
+    type: AssemblerUnitPlan
+    unit: unit-hexelex
+    time: 3300
+    requirements: [
+      arc-power-cell/4
+      arc-plated-armor/5
+      arc-thruster/8
+    ]
+  }
+]
+research: unit-aviation-converter
