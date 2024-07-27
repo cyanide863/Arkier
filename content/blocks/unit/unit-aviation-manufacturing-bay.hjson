@@ -4,7 +4,7 @@ description: Fabricates mech units using payload inputs. Requires power for oper
 detail: This factory used to strike fear in the cores of sharded due to the hail of hellish missiles the units unleash
 size: 6
 category: units
-droneType: unit-manufacturing-drone
+droneType: unit-manufacturing-drone3
 areaSize: 15
 consumes: {
   power: 6
