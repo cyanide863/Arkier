@@ -1,0 +1,11 @@
+type: Junction
+name: Treads
+size: 4
+health: 615
+placeablePlayer: false
+researchCostMultiplier: 1.2
+requirements: [
+  item-vanadium/60
+  item-galvanium/60
+]
+research: plated-armor
