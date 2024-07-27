@@ -165,14 +165,10 @@ drawer: {
   drawers: [
     {
      type: drawRegion
-     suffix: -rotator
-     spinSprite: true
-     rotateSpeed: 4.5
-    }
+     suffix:bottom
     {
      type: drawRegion
      suffix: -rotator
-     rotation: 22.5
      spinSprite: true
      rotateSpeed: 4.5
     }
@@ -180,13 +176,6 @@ drawer: {
      type: drawRegion
      suffix: -rotator
      rotation: 45
-     spinSprite: true
-     rotateSpeed: 4.5
-    }
-    {
-     type: drawRegion
-     suffix: -rotator
-     rotation: 67.5
      spinSprite: true
      rotateSpeed: 4.5
     }
