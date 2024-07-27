@@ -32,7 +32,7 @@ plans: [
   }
   {
     type: AssemblerUnitPlan
-    unit: unit-phantom
+    unit: unit-quintelex
     time: 2300
     requirements: [
       arc-power-cell/2
