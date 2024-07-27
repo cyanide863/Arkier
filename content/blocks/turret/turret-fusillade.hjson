@@ -6,18 +6,18 @@ health: 3180
 category: turret
 range: 360
 squareSprite: false
-reload: 15
+reload: 7.5
 shootSound: shootKinetic
 rotateSpeed: 0.9
-shootY: 13
+shootY: 0
 outlineColor: 0f0f14
 shake: 8
 heatColor: 989d72
 ammoPerShot: 5
 cooldownTime: 60
-recoil: 2
+recoil: 3
 shootWarmupSpeed: 0.08
-minWarmup: 0.50
+minWarmup: 0.40
 recoils: 2
 requirements: [
   item-paragonium/1200
@@ -34,23 +34,30 @@ researchCost: [
   item-cerrilite/20250
 ]
 shoot: {
-  type: ShootAlternate
-  spread: 27.5
+type: ShootBarrel
+barrels: [
+ 10, 16, 0,
+ 15, 16, 0,
+ 20, 16, 0,
+ 10, 16, 0,
+-15, 16, 0,
+-20, 16, 0,
+  ]
 }
 drawer: {
   type: DrawTurret
-  basePrefix: insulated-
+  basePrefix: heated-
   parts: [
     {
       type: RegionPart
       suffix: -under
-      mirror: true
+      mirror: false
       progress: warmup
       heatColor: 989d72
       heatProgress: warmup
       y: 0.25
-      moveX: 5
-      moveY: -4
+      moveX: 0
+      moveY: -3
       layerOffset: 0.001
       turretHeatLayer: 50.002
       outlineLayerOffset: -0.001
@@ -97,9 +104,9 @@ drawer: {
       mirror: true
       progress: warmup
       heatColor: 989d72
-      moveRot: 10
+      moveRot: -5
       moveX: 3
-      moveY: -3
+      moveY: 15
       layerOffset: 0.006
       turretHeatLayer: 50.007
       outlineLayerOffset: -0.003
@@ -123,10 +130,10 @@ drawer: {
       mirror: true
       progress: warmup
       heatColor: 989d72
-      moveRot: 15
-      moveX: 7
-      moveY: -3
-      layerOffset: 0.006
+      moveRot: -50
+      moveX: 25
+      moveY: 16
+      layerOffset: -0.006
       turretHeatLayer: 50.007
       outlineLayerOffset: -0.003
     }
@@ -136,10 +143,10 @@ drawer: {
       mirror: true
       progress: warmup
       heatColor: 989d72
-      moveRot: 15
-      moveX: 7
-      moveY: -6
-      layerOffset: 0.006
+      moveRot: -70
+      moveX: 25
+      moveY: 0
+      layerOffset: -0.006
       turretHeatLayer: 50.007
       outlineLayerOffset: -0.003
     }
@@ -149,10 +156,10 @@ drawer: {
       mirror: true
       progress: warmup
       heatColor: 989d72
-      moveRot: 15
-      moveX: 7
-      moveY: -2
-      layerOffset: 0.006
+      moveRot: -100
+      moveX: 25
+      moveY: -10
+      layerOffset: -0.006
       turretHeatLayer: 50.007
       outlineLayerOffset: -0.003
     }
@@ -181,7 +188,7 @@ drawer: {
       sides: 6
       radius: 5
       stroke: -1
-      strokeTo: 2
+      strokeTo: 3
       rotateSpeed: -1.5
     }
     {
@@ -313,7 +320,7 @@ ammoTypes: {
     damage: 350
     splashDamage: 229
     splashDamageRadius: 34
-    speed: 7
+    speed: 12
     lifetime: 50
     frontColor: d6dbb1
     lightColor: d6dbb1
@@ -406,4 +413,4 @@ ammoTypes: {
     }
   }
 }
-research: adumbrate
+research: turret-cipher
