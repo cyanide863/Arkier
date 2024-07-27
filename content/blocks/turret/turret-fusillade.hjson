@@ -1,0 +1,409 @@
+type: ItemTurret
+name: Fusillade
+description: Launches piercing explosive rounds at nearby foes.
+size: 5
+health: 3180
+category: turret
+range: 360
+squareSprite: false
+reload: 15
+shootSound: shootKinetic
+rotateSpeed: 0.9
+shootY: 13
+outlineColor: 0f0f14
+shake: 8
+heatColor: 989d72
+ammoPerShot: 5
+cooldownTime: 60
+recoil: 2
+shootWarmupSpeed: 0.08
+minWarmup: 0.50
+recoils: 2
+requirements: [
+  item-paragonium/1200
+  item-cerrium-plating/800
+  item-galvanite/670
+  item-vanadium/990
+  item-cerrilite/230
+]
+researchCost: [
+  item-paragonium/6000
+  item-cerrium-plating/1200
+  item-galvanite/25425
+  item-vanadium/23175
+  item-cerrilite/20250
+]
+shoot: {
+  type: ShootAlternate
+  spread: 27.5
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: insulated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -under
+      mirror: true
+      progress: warmup
+      heatColor: 989d72
+      heatProgress: warmup
+      y: 0.25
+      moveX: 5
+      moveY: -4
+      layerOffset: 0.001
+      turretHeatLayer: 50.002
+      outlineLayerOffset: -0.001
+    }
+    {
+      type: RegionPart
+      suffix: -mid
+      mirror: false
+      heatColor: 989d72
+      layerOffset: 0.004
+      turretHeatLayer: 50.005
+      outlineLayerOffset: -0.001
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-l
+      mirror: false
+      progress: warmup
+      heatColor: 989d72
+      moveRot: 15
+      moveX: -7
+      moveY: -4
+      layerOffset: 0.006
+      turretHeatLayer: 50.007
+      outlineLayerOffset: -0.003
+      recoilIndex: 0
+    }
+    {
+      type: RegionPart
+      suffix: -back
+      mirror: true
+      progress: warmup
+      heatColor: 989d72
+      moveRot: -20
+      moveX: 2
+      moveY: -3
+      layerOffset: 0.006
+      turretHeatLayer: 50.007
+      outlineLayerOffset: -0.003
+    }
+    {
+      type: RegionPart
+      suffix: -side
+      mirror: true
+      progress: warmup
+      heatColor: 989d72
+      moveRot: 10
+      moveX: 3
+      moveY: -3
+      layerOffset: 0.006
+      turretHeatLayer: 50.007
+      outlineLayerOffset: -0.003
+    }
+    {
+      type: RegionPart
+      suffix: -blade
+      mirror: true
+      progress: warmup
+      heatColor: 989d72
+      moveRot: 15
+      moveX: 4
+      moveY: -6
+      layerOffset: 0.006
+      turretHeatLayer: 50.007
+      outlineLayerOffset: -0.003
+    }
+    {
+      type: RegionPart
+      suffix: -spine
+      mirror: true
+      progress: warmup
+      heatColor: 989d72
+      moveRot: 15
+      moveX: 7
+      moveY: -3
+      layerOffset: 0.006
+      turretHeatLayer: 50.007
+      outlineLayerOffset: -0.003
+    }
+    {
+      type: RegionPart
+      suffix: -spine1
+      mirror: true
+      progress: warmup
+      heatColor: 989d72
+      moveRot: 15
+      moveX: 7
+      moveY: -6
+      layerOffset: 0.006
+      turretHeatLayer: 50.007
+      outlineLayerOffset: -0.003
+    }
+    {
+      type: RegionPart
+      suffix: -spine2
+      mirror: true
+      progress: warmup
+      heatColor: 989d72
+      moveRot: 15
+      moveX: 7
+      moveY: -2
+      layerOffset: 0.006
+      turretHeatLayer: 50.007
+      outlineLayerOffset: -0.003
+    }
+    {
+      type: RegionPart
+      suffix: -barrel-r
+      mirror: false
+      progress: warmup
+      heatColor: 989d72
+      moveRot: -15
+      moveX: 7
+      moveY: -4
+      layerOffset: 0.006
+      turretHeatLayer: 50.007
+      outlineLayerOffset: -0.003
+      recoilIndex: 1
+    }
+    {
+      type: ShapePart
+      progress: warmup
+      color: d6dbb1
+      layer: 110
+      y: -23
+      circle: false
+      hollow: true
+      sides: 6
+      radius: 5
+      stroke: -1
+      strokeTo: 2
+      rotateSpeed: -1.5
+    }
+    {
+      type: ShapePart
+      progress: warmup
+      color: d6dbb1
+      layer: 110
+      y: -23
+      circle: false
+      hollow: true
+      sides: 6
+      radius: 10
+      stroke: -1
+      strokeTo: 2
+      rotateSpeed: 1.5
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      color: d6dbb1
+      layer: 110
+      shapes: 2
+      y: -23
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 110
+      triLength: -10
+      triLengthTo: 20
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      color: d6dbb1
+      layer: 110
+      shapes: 2
+      y: -23
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 110
+      shapeRotation: 180
+      triLength: -1.5
+      triLengthTo: 3
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      color: d6dbb1
+      layer: 110
+      shapes: 2
+      y: -23
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 90
+      triLength: -10
+      triLengthTo: 20
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      color: d6dbb1
+      layer: 110
+      shapes: 2
+      y: -23
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 90
+      shapeRotation: 180
+      triLength: -1.5
+      triLengthTo: 3
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      color: d6dbb1
+      layer: 110
+      shapes: 2
+      y: -23
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 70
+      triLength: -10
+      triLengthTo: 20
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      color: d6dbb1
+      layer: 110
+      shapes: 2
+      y: -23
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 70
+      shapeRotation: 180
+      triLength: -1.5
+      triLengthTo: 3
+    }
+  ]
+}
+ammoTypes: {
+  item-cerrilite: {
+    type: BasicBulletType
+    pierce: true
+    pierceCap: 4
+    damage: 350
+    splashDamage: 229
+    splashDamageRadius: 34
+    speed: 7
+    lifetime: 50
+    frontColor: d6dbb1
+    lightColor: d6dbb1
+    trailColor: 989d72
+    backColor: 989d72
+    hitColor: 989d72
+    width: 16
+    height: 24
+    trailWidth: 2.5
+    trailLength: 20
+    hitEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: WaveEffect
+          lifetime: 20
+          sizeTo: 16
+          strokeFrom: 1.5
+          interp: pow2Out
+          colorFrom: d6dbb1
+          colorTo: ffffff
+        }
+        {
+          type: ExplosionEffect
+          waveLife: 0
+          smokes: 0
+          sparks: 8
+          sparkColor: d6dbb1
+          sparkRad: 20
+          sparkStroke: 2
+          sparkLen: 6
+        }
+      ]
+    }
+    despawnEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: WaveEffect
+          lifetime: 20
+          sizeTo: 30
+          strokeFrom: 1.5
+          interp: pow2Out
+          colorFrom: fbffdb
+          colorTo: ffffff
+        }
+        {
+          type: ExplosionEffect
+          waveLife: 0
+          smokes: 0
+          sparks: 12
+          sparkColor: fbffdb
+          sparkRad: 25
+          sparkStroke: 2
+          sparkLen: 6
+        }
+      ]
+    }
+    shootEffect: {
+      type: MultiEffect
+      effects: [
+        {
+          type: ParticleEffect
+          lifetime: 18
+          line: true
+          cone: 18
+          length: 35
+          particles: 10
+          lightColor: fbffdb
+          colorFrom: ffffff
+          colorTo: d6dbb1
+          strokeFrom: 3
+          strokeTo: 0
+          lenFrom: 8
+          lenTo: 4
+        }
+        {
+          type: ParticleEffect
+          lifetime: 40
+          cone: 25
+          length: 40
+          particles: 20
+          lightColor: ffffff00
+          colorFrom: fbffdb
+          colorTo: ffffffbf
+          sizeFrom: 2
+          sizeTo: 0
+        }
+      ]
+    }
+  }
+}
+research: adumbrate
