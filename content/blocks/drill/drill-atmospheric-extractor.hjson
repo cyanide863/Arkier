@@ -6,14 +6,29 @@ hasLiquids: true
 liquidCapacity: 48
 squareSprite: false
 category: production
-  //placeholder
 requirements: [
-  areonium/165
+  item-areonium/440
+  item-vanadium/1000
+  item-vanadium-carbide/240
+  item-paragonium/1600
 ]
 researchCost: [
-  areonium/5000
+  item-areonium/2200
+  item-vanadium/5000
+  item-vanadium-carbide/1200
+  item-paragonium/3200
 ]
 recipes: [
+ {
+    input: {
+      power: 6
+    }
+    output: {
+      fluids: [
+        liquid-o2/0.2
+      ]
+    }
+  }
   {
     input: {
       power: 6
@@ -41,6 +56,11 @@ drawer: {
     {
       type: DrawRegion
       suffix: -bottom
+    }
+    {
+      type: DrawLiquidTile
+      drawLiquid: liquid-o2
+      padding: 6
     }
     {
       type: DrawLiquidTile
