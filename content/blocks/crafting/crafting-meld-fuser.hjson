@@ -166,6 +166,7 @@ drawer: {
     {
      type: drawRegion
      suffix:bottom
+    }
     {
      type: drawRegion
      suffix: -rotator
