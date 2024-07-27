@@ -1,6 +1,6 @@
 name: Desolate chunks
 type: TallBlock
-variants: 3
+variants: 2
 clipSize: 64
 shadowAlpha: 0.5
 shadowOffset: -2.5
