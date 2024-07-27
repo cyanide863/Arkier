@@ -1,0 +1,5 @@
+type: OreBlock
+name: cerritite
+description: Raw, impure cerrium. Must be refined before use.
+itemDrop: cerritite
+variants: 3
