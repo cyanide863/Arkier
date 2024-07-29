@@ -26,7 +26,7 @@ recipes: [
 {
   input: {
     items: [
-      arc-item-paragonium/1
+      arc-item-paragonite/1
       arc-item-galvanium/2
     ]
     power: 2
