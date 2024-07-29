@@ -2,7 +2,7 @@
     localizedName: Arctican
     parent: sun
     iconColor: 10d7e6,
-    orbitRadius: 32,
+    orbitRadius: 78,
     hasAtmosphere: true,
     updateLighting: false,
     atmosphereRadIn: 0.01,
@@ -98,11 +98,11 @@ mesh: [
     //mesh size - 1 is serpulo
     radius: 1.2
     //first colour to use 
-    color1: 805861
+    color1: 6b5370
     //second
-    color2: 753939
+    color2: 241e24
     //mesh shape values - just mess around with these until they stop exploding, i still do not know how they work
-    octaves: 4.6
+    octaves: 3.4
     persistence: 0.9
     scale: 0.65
     mag: 1
@@ -117,8 +117,8 @@ mesh: [
     type: NoiseMesh
     divisions: 6
     radius: 0.895
-    color1: 0f0f12
-    color2: 1b1b21
+    color1: 782d2d
+    color2: ffba60
     octaves: 4.6
     persistence: 0.9
     scale: 0.65
@@ -133,8 +133,8 @@ mesh: [
     type: NoiseMesh
     divisions: 6
     radius: 0.83
-    color1: 2b242b
-    color2: 1a161a
+    color1: 1b1b21
+    color2: 5e5e70
     octaves: 4.6
     persistence: 0.9
     scale: 0.65
@@ -149,8 +149,8 @@ mesh: [
     type: NoiseMesh
     divisions: 6
     radius: 0.74
-    color1: 3d3737
-    color2: 3d3737
+    color1: 1b1b21
+    color2: 5e5e70
     octaves: 4.6
     persistence: 0.9
     scale: 0.65
