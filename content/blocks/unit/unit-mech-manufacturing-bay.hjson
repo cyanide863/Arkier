@@ -44,7 +44,7 @@ plans: [
     unit: unit-javelin
     time: 8800
     requirements: [
-      arc-power-cells/5
+      arc-power-cell/5
       arc-fusion-core/2
       arc-plated-armor/8
     ]
