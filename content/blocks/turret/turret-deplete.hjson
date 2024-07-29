@@ -37,8 +37,6 @@ drawer: {
       mirror: false
       under: true
       progress: recoil
-      x: 4.25
-      y: 5.5
       recoilIndex: 1
       moveY: -2.4
     }
@@ -48,8 +46,6 @@ drawer: {
       mirror: false
       under: true
       progress: recoil
-      x: -4.25
-      y: 5.5
       recoilIndex: 0
       moveY: -2.4
     }
@@ -59,7 +55,7 @@ ammoTypes: {
   item-flux-alloy: {
     type: BasicBulletType
     damage: 35
-    speed: 4
+    speed: 6
     lifetime: 42.5
     width: 8
     hitSize: 7
@@ -67,6 +63,7 @@ ammoTypes: {
     shootEffect: shootSmallColor
     smokeEffect: shootBigSmoke
     ammoMultiplier: 1
+    rangeChange: 50
     pierceCap: 3
     pierce: true
     pierceBuilding: true
