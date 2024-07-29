@@ -79,11 +79,11 @@ drawer: {
     }
     {
       type: DrawRegion
-      suffix: -top
+      suffix: -mid
     }
     {
       type: DrawRegion
-      suffix: -mid
+      suffix: -top
     }
     {
       type: DrawCrucibleFlame
