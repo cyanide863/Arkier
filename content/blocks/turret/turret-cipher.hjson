@@ -16,8 +16,8 @@ heatColor: bcac8f
 ammoPerShot: 8
 cooldownTime: 60
 recoil: 2
-shootWarmupSpeed: 0.3
-minWarmup: 1.2
+shootWarmupSpeed: 0.15
+minWarmup: 0.95
 requirements: [
   item-vanadium/600
   item-flux-alloy/240
@@ -80,7 +80,7 @@ drawer: {
       moveRot: -30
       moveX: 6
       moveY: 0
-      layerOffset: 0.001
+      layerOffset: -0.001
       turretHeatLayer: 50.002
       outlineLayerOffset: -0.002
     }
@@ -93,7 +93,7 @@ drawer: {
       moveRot: -35
       moveX: 7
       moveY: -1.5
-      layerOffset: 0.001
+      layerOffset: -0.001
       turretHeatLayer: 50.002
       outlineLayerOffset: -0.002
     }
@@ -105,7 +105,7 @@ drawer: {
       heatColor: bcac8f
       moveX: 0
       moveY: -7
-      layerOffset: 0.001
+      layerOffset: -0.001
       turretHeatLayer: 50.002
       outlineLayerOffset: -0.002
     }
@@ -209,17 +209,17 @@ ammoTypes: {
     backColor: 9797cf
     trailColor: 9797cf
     trailWidth: 5
-    trailLength: 18
+    trailLength: 24
     width: 24
     height: 30
-    damage: 180
-    speed: 8
+    damage: 160
+    speed: 6
     lifetime: 48
     homingPower: 0.05
     homingRange: 90
     shootEffect: shootBigColor
     smokeEffect: shootSmokeSquareSparse
-    knockback: 4.5
+    knockback: 2.5
     hitEffect: {
       type: MultiEffect
       effects: [
