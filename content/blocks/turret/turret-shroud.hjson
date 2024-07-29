@@ -42,13 +42,11 @@ drawer: {
     }
     {
       type: RegionPart
-      suffix: -side
+      suffix: -blade
       mirror: true
       under: false
       progress: warmup
-      x: 8.75
-      y: 0
-      moveRot: -20
+      moveRot: -50
       moveY: -3
       moveX: -2
       layerOffset: -0.005
@@ -60,8 +58,8 @@ ammoTypes: {
   item-paragonium: {
     type: ArtilleryBulletType
     sprite: shell
-    lifetime: 100
-    speed: 4
+    lifetime: 120
+    speed: 5
     splashDamage: 200
     splashDamageRadius: 32
     despawnEffect: none
@@ -183,7 +181,7 @@ ammoTypes: {
         }
       ]
     }
-    fragBullets: 6
+    fragBullets: 9
     fragBullet: {
       type: BasicBulletType
       splashDamage: 40
