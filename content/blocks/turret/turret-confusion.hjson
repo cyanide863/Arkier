@@ -1,0 +1,107 @@
+type: ItemTurret
+name: Confusion
+description: Fires fragmenting bullets at enemies.
+size: 3
+health: 1325
+category: turret
+range: 200
+squareSprite: false
+reload: 60
+shootSound: bang
+inaccuracy: 15
+rotateSpeed: 3
+shootCone: 15
+shootY: 7.5
+outlineColor: 0f0f14
+recoils: 1
+shake: 1
+targetAir: false
+requirements: [
+  item-detrium/90
+  item-paragonite/40
+  item-vanadium/120
+]
+researchCost: [
+  item-detrium/800
+  item-paragonite/620
+  item-vanadium/550
+]
+shoot: {
+type: ShootBarrel
+barrels: [
+ 2, 5, 0,
+ 0, 5, 0,
+ -2, 5, 0,
+  ]
+}
+drawer: {
+  type: DrawTurret
+  basePrefix: heated-
+  parts: [
+    {
+      type: RegionPart
+      suffix: -barrel
+      mirror: false
+      under: false
+      progress: recoil
+      moveY: -2
+    }
+  ]
+}
+ammoTypes: {
+  item-detrium: {
+    type: FlakBulletType
+    damage: 6
+    splashDamage: 40
+    splashDamageRadius: 16
+    speed: 5
+    lifetime: 30
+    width: 6
+    hitSize: 7
+    height: 9
+    shootEffect: shootSmallColor
+    smokeEffect: shootBigSmoke
+    pierce: false
+    pierceBuilding: false
+    hitColor: 8a587b
+    trailColor: 8a587b
+    frontColor: be8cb5
+    lightColor: be8cb5
+    backColor: 8a587b
+    trailWidth: 2
+    trailLength: 6
+    collidesAir: true
+    collidesGround: true
+    hitEffect: {
+      type: ExplosionEffect
+      waveColor: be8cb5
+      smokeColor: 573a53
+      sparkColor: be8cb5
+      waveStroke: 4
+      waveRad: 20
+    }
+    despawnEffect: hitBulletColor
+    fragBullets: 3
+    fragBullet: {
+      damage: 6
+      splashDamage: 6
+      splashDamageRadius: 8
+      type: BasicBulletType
+      width: 6
+      height: 6
+      shrinkY: 2
+      lifetime: 15
+      hitColor: 8a587b
+      trailColor: 8a587b
+      frontColor: be8cb5
+      backColor: 8a587b
+      trailWidth: 1
+      trailLength: 3
+      hitEffect: shootSmallColor
+      despawnEffect: hitBulletColor
+      collidesAir: true
+      collidesGround: true
+    }
+  }
+}
+research: turret-deplete
