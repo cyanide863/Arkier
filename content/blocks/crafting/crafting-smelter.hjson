@@ -26,6 +26,7 @@ recipes: [
       arc-item-detrite/4
     ]
     power: 2
+    heat: 10
   }
   output: {
     fluids: [
@@ -71,8 +72,8 @@ drawer: {
       type: DrawDefault
     }
     {
-     type: DrawPlasma
-     plasmas: 3
+      type: DrawHeatInput
+      suffix: -heat
     }
     {
       type: DrawGlowRegion
