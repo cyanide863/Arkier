@@ -12,6 +12,7 @@ drillTime: 130
 tier: 2
 ambientSound: drill
 ambientSoundVolume: 0.10
+drawRim: true
 squareSprite: false
 researchCost: [
   item-vanadium/320
