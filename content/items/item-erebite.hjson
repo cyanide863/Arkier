@@ -1,0 +1,9 @@
+name: Erebite
+description: Raw Luminite with other trace minerals. Must be refined before use.
+cost: 0.5
+color: ffbc64
+hardness: 1
+hiddenOnPlanets: [
+  serpulo,
+  erekir
+]
