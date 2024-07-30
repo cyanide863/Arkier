@@ -1,12 +1,11 @@
 type: multicraft.MultiCrafter
 name: Cooling tank
-description: Rapidly takes in air from the surroundings in order to cool down metals into usable sheets.
-details: Despite nitrogen and hydrogen’s low capacity for energy, Abyssus’s atmosphere is cold enough to allow air’s usage as coolant.
+description: Rapidly intakes air to cool down metals.
+details: Despite hydrogen, nitrogen and oxygen low energy but Arctican's atmosphere is cold enough to be used as a coolant.
 size: 3
 health: 390
 category: crafting
 researchCost: [
-  item-paragonite/120
   item-vanadium/80
 ]
 category: crafting
@@ -18,7 +17,6 @@ itemCapacity: 12
 ambientSound: steam
 ambientSoundVolume: 0.01
 requirements: [
-  item-paragonite/60
   item-vanadium/40
 ]
 
@@ -65,6 +63,34 @@ recipes: [
   }
   craftTime: 60.0
 }
+{
+  input: {
+    fluids: [
+      arc-liquid-flux-alloy/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      arc-item-flux-alloy/1
+    ]
+  }
+  craftTime: 60.0
+}
+{
+  input: {
+    fluids: [
+      arc-liquid-luminite/0.1
+    ]
+    power: 1
+  }
+  output: {
+    items: [
+      arc-item-paragonite/1
+    ]
+  }
+  craftTime: 60.0
+}
 ]
 
 drawer: {
@@ -90,6 +116,21 @@ drawer: {
       drawLiquid: liquid-galvanium
     }
     {
+      type: DrawLiquidTile     
+      padding: 2
+      drawLiquid: liquid-lithonium
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 2
+      drawLiquid: liquid-flux-alloy
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 2
+      drawLiquid: liquid-paragonite
+    }
+    {
       type: DrawDefault
     }
   ]
@@ -103,15 +144,69 @@ craftEffect: {
       baseRotation: 90
       interp: pow5Out
       sizeInterp: linear
-      offsetX: 0
-      offsetY: 0
+      offsetX: 7.5
+      offsetY: -7.5
       length: 7
       baseLength: 8
       cone: 15
       particles: 30
       lifetime: 240
       useRotation: false
-      sizeFrom: 1.4
+      sizeFrom: 1.2
+      sizeTo: 0.1
+      colorFrom: adadadcc
+      colorTo: cacaca00
+    }
+    {
+      type: ParticleEffect
+      baseRotation: 90
+      interp: pow5Out
+      sizeInterp: linear
+      offsetX: 7.5
+      offsetY: 7.5
+      length: 7
+      baseLength: 8
+      cone: 15
+      particles: 30
+      lifetime: 240
+      useRotation: false
+      sizeFrom: 1.2
+      sizeTo: 0.1
+      colorFrom: adadadcc
+      colorTo: cacaca00
+    }
+    {
+      type: ParticleEffect
+      baseRotation: 90
+      interp: pow5Out
+      sizeInterp: linear
+      offsetX: -7.5
+      offsetY: -7.5
+      length: 7
+      baseLength: 8
+      cone: 15
+      particles: 30
+      lifetime: 240
+      useRotation: false
+      sizeFrom: 1.2
+      sizeTo: 0.1
+      colorFrom: adadadcc
+      colorTo: cacaca00
+    }
+    {
+      type: ParticleEffect
+      baseRotation: 90
+      interp: pow5Out
+      sizeInterp: linear
+      offsetX: -7.5
+      offsetY: 7.5
+      length: 7
+      baseLength: 8
+      cone: 15
+      particles: 30
+      lifetime: 240
+      useRotation: false
+      sizeFrom: 1.2
       sizeTo: 0.1
       colorFrom: adadadcc
       colorTo: cacaca00
