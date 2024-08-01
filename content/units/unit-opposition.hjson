@@ -28,16 +28,16 @@ parts: [
 ]
 treadRects: [
   {
-    x: 20
-    y: 40
+    x: -89
+    y: -109
     width: 52
-    height: 20
+    height: 216
   }
   {
-    x: 20
-    y: -20
+    x: -26
+    y: -115
     width: 52
-    height: 20
+    height: 228
   }
 ]
 weapons: [
@@ -48,7 +48,7 @@ weapons: [
     layerOffset: 0.0001
     shootSound: largeCannon
     shootCone: 5
-    shootY: 29
+    shootY: 40
     recoil: 5
     rotate: true
     rotateSpeed: 0.3
@@ -80,7 +80,7 @@ weapons: [
       smokeEffect: shootBigSmoke
       shootEffect: {
         type: ExplosionEffect
-        lifetime: 40
+        lifetime: 60
         waveStroke: 4
         waveRad: 15
         smokeSize: 5
@@ -95,7 +95,7 @@ weapons: [
         smokeColor: fff8a6
       }
       width: 20
-      speed: 17
+      speed: 40
       height: 26
       lifetime: 30
       lightColor: fff8a6
@@ -109,8 +109,106 @@ weapons: [
       backColor: fff8a6
       frontColor: ffffff
       trailRotation: true
-      trailInterval: 2.5
-      trailEffect: hitSquaresColor
+      trailInterval: 1.5
+		trailEffect: [
+{
+particles: 1
+lifetime: 15
+length: -35
+baseLength: 8
+cone: 25
+interp: pow10Out
+sizeInterp: linear
+sizeFrom: 15
+sizeTo: 0
+colorFrom: fff8a6
+colorTo: fff8a6
+}
+{
+particles: 1
+lifetime: 25
+length: -35
+baseLength: 8
+cone: 25
+interp: pow10Out
+sizeInterp: linear
+sizeFrom: 20
+sizeTo: 0
+colorFrom: f2a15f
+colorTo: f2a15f
+layer: 109
+}
+{
+particles: 1
+lifetime: 35
+length: -35
+baseLength: 8
+cone: 25
+interp: pow10Out
+sizeInterp: linear
+sizeFrom: 20
+sizeTo: 0
+colorFrom: 787878
+colorTo: 787878
+layer: 99
+}
+{
+particles: 1
+lifetime: 35
+length: -54
+baseLength: 8
+cone: 45
+interp: pow10Out
+sizeInterp: linear
+sizeFrom: 8
+sizeTo: 0
+colorFrom: 787878
+colorTo: 787878
+layer: 99
+}
+{
+// darker trail thingie
+type: radialEffect
+amount: 1
+lengthOffset: -8
+effect: [
+{
+line: true
+strokeFrom: 4
+strokeTo: 0
+lenFrom: 12
+lenTo: 12
+baseRotation: 10
+layer: 80.6
+colorFrom: 656565
+colorTo: 656565
+spin: 2.5
+lifetime: 75
+length: 85
+interp: linear
+sizeInterp: pow10Out
+particles: 2
+cone: 20
+}
+{
+line: true
+strokeFrom: 4
+strokeTo: 0
+lenFrom: 12
+lenTo: 9
+baseRotation: -10
+spin: 2.5
+colorFrom: 656565
+colorTo: 656565
+lifetime: 75
+length: 85
+layer: 80.6
+interp: linear
+sizeInterp: pow10Out
+particles: 2
+cone: 20
+}
+]
       hitEffect: hitSquaresColor
       despawnEffect: {
         type: ExplosionEffect
@@ -141,7 +239,7 @@ weapons: [
     recoil: 5
     rotate: true
     rotateSpeed: 0.3
-    mirror: false
+    mirror: true
     reload: 150
     heatColor: fff8a6
     inaccuracy: 4
