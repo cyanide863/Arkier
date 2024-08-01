@@ -1,0 +1,222 @@
+name: Opposition
+description: Tears into the enemy frontline with cascading shotgun blasts. Can trample structures.
+type: tank
+lightColor: fff8a6
+template: ErekirUnitType
+treadPullOffset: 3
+omniMovement: false
+faceTarget: false
+rotateMoveFirst: true
+rotateSpeed: 0.8
+speed: 0.5
+outlineColor: 0f0f14
+health: 67080
+armor: 25
+itemCapacity: 0
+hitSize: 70
+crushDamage: 8
+treadFrames: 100
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: fal
+    color: ffc092
+  }
+]
+treadRects: [
+  {
+    x: 20
+    y: 40
+    width: 52
+    height: 20
+  }
+  {
+    x: 20
+    y: -20
+    width: 52
+    height: 20
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: 0
+    name: unit-opposition-gun
+    layerOffset: 0.0001
+    shootSound: largeCannon
+    shootCone: 5
+    shootY: 29
+    recoil: 5
+    rotate: true
+    rotateSpeed: 0.3
+    mirror: false
+    reload: 150
+    heatColor: fff8a6
+    inaccuracy: 4
+    cooldownTime: 75
+    shoot: {
+      type: ShootSpread
+      shots: 35
+      spread: 0.5
+    }
+    parts: [
+      {
+        type: RegionPart
+        suffix: -glow
+        blending: additive
+        layer: 2
+        outline: false
+        color: fff8a6
+     }
+    ]
+    bullet: {
+      type: BasicBulletType
+      damage: 240
+      splashDamage: 60
+      splashDamageRadius: 24
+      smokeEffect: shootBigSmoke
+      shootEffect: {
+        type: ExplosionEffect
+        lifetime: 40
+        waveStroke: 4
+        waveRad: 15
+        smokeSize: 5
+        smokes: 1
+        smokeSizeBase: 0
+        sparks: 1
+        sparkRad: 40
+        sparkLen: 4
+        sparkStroke: 3
+        waveColor: fff8a6
+        sparkColor: fff8a6
+        smokeColor: fff8a6
+      }
+      width: 20
+      speed: 17
+      height: 26
+      lifetime: 30
+      lightColor: fff8a6
+      hitSize: 20
+      pierce: true
+      pierceCap: 3
+      trailWidth: 4
+      trailLength: 12
+      hitColor: fff8a6
+      trailColor: fff8a6
+      backColor: fff8a6
+      frontColor: ffffff
+      trailRotation: true
+      trailInterval: 2.5
+      trailEffect: hitSquaresColor
+      hitEffect: hitSquaresColor
+      despawnEffect: {
+        type: ExplosionEffect
+        lifetime: 50
+        waveStroke: 4
+        waveRad: 15
+        smokeSize: 5
+        smokes: 3
+        smokeSizeBase: 0
+        sparks: 2
+        sparkRad: 40
+        sparkLen: 4
+        sparkStroke: 2
+        waveColor: feb380
+        sparkColor: feb380
+        smokeColor: feb380
+      }
+    }
+  }
+    {
+    x: 50
+    y: -40
+    name: unit-turmoil-gun
+    layerOffset: 0.0001
+    shootSound: largeCannon
+    shootCone: 5
+    shootY: 29
+    recoil: 5
+    rotate: true
+    rotateSpeed: 0.3
+    mirror: false
+    reload: 150
+    heatColor: fff8a6
+    inaccuracy: 4
+    cooldownTime: 75
+    shoot: {
+      type: ShootSpread
+      shots: 5
+      spread: 0.25
+    }
+    parts: [
+      {
+        type: RegionPart
+        suffix: -glow
+        blending: additive
+        layer: 2
+        outline: false
+        color: fff8a6
+     }
+    ]
+    bullet: {
+      type: BasicBulletType
+      damage: 50
+      splashDamage: 60
+      splashDamageRadius: 24
+      smokeEffect: shootBigSmoke
+      shootEffect: {
+        type: ExplosionEffect
+        lifetime: 40
+        waveStroke: 4
+        waveRad: 15
+        smokeSize: 5
+        smokes: 1
+        smokeSizeBase: 0
+        sparks: 1
+        sparkRad: 40
+        sparkLen: 4
+        sparkStroke: 3
+        waveColor: fff8a6
+        sparkColor: fff8a6
+        smokeColor: fff8a6
+      }
+      width: 20
+      speed: 17
+      height: 26
+      lifetime: 30
+      lightColor: fff8a6
+      hitSize: 20
+      pierce: true
+      pierceCap: 3
+      trailWidth: 4
+      trailLength: 12
+      hitColor: fff8a6
+      trailColor: fff8a6
+      backColor: fff8a6
+      frontColor: ffffff
+      trailRotation: true
+      trailInterval: 2.5
+      trailEffect: hitSquaresColor
+      hitEffect: hitSquaresColor
+      despawnEffect: {
+        type: ExplosionEffect
+        lifetime: 50
+        waveStroke: 4
+        waveRad: 15
+        smokeSize: 5
+        smokes: 3
+        smokeSizeBase: 0
+        sparks: 2
+        sparkRad: 40
+        sparkLen: 4
+        sparkStroke: 2
+        waveColor: feb380
+        sparkColor: feb380
+        smokeColor: feb380
+      }
+    }
+  }
+]
