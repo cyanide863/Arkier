@@ -9,7 +9,7 @@ speed: 0.8
 drag: 0.11
 hitSize: 10
 rotateSpeed: 3.4
-health: 340
+health: 450
 armor: 2
 legStraightness: 0.35
 stepShake: 0
