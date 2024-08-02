@@ -70,7 +70,7 @@ weapons: [
     minWarmup: 0.9
     shootSound: powerBlastsmol
     recoil: 0
-    shake: 18
+    shake: 6
     bullet: {
       type: LaserBulletType
       damage: 50
