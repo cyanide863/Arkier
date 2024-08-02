@@ -63,34 +63,6 @@ recipes: [
   }
   craftTime: 60.0
 }
-{
-  input: {
-    fluids: [
-      arc-liquid-flux-alloy/0.1
-    ]
-    power: 1
-  }
-  output: {
-    items: [
-      arc-item-flux-alloy/1
-    ]
-  }
-  craftTime: 60.0
-}
-{
-  input: {
-    fluids: [
-      arc-liquid-luminite/0.1
-    ]
-    power: 1
-  }
-  output: {
-    items: [
-      arc-item-paragonite/1
-    ]
-  }
-  craftTime: 60.0
-}
 ]
 
 drawer: {
@@ -119,16 +91,6 @@ drawer: {
       type: DrawLiquidTile     
       padding: 2
       drawLiquid: liquid-lithonium
-    }
-    {
-      type: DrawLiquidTile     
-      padding: 2
-      drawLiquid: liquid-flux-alloy
-    }
-    {
-      type: DrawLiquidTile     
-      padding: 2
-      drawLiquid: liquid-paragonite
     }
     {
       type: DrawDefault
