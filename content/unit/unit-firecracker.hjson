@@ -101,5 +101,6 @@ weapons: [
       }
     }
   }
+]
 research: terrestrial-fabricator
 researchCostMultiplier: 0
