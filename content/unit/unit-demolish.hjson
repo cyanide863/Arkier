@@ -50,32 +50,32 @@ parts: [
       }
       {
        suffix: -side
-       moveY: -1
-       moveX: -1
+       moveY: -6
+       moveX: -6
        rotation: 45
        progress: warmup
        mirror: false
      }
      {
        suffix: -side
-       moveY: 1
-       moveX: -1
+       moveY: 6
+       moveX: -6
        rotation: 135
        progress: warmup
        mirror: false
      }
      {
        suffix: -side
-       moveY: 1
-       moveX: 1
+       moveY: 6
+       moveX: 6
        rotation: 225
        progress: warmup
        mirror: false
      }
      {
        suffix: -side
-       moveY: -1
-       moveX: 1
+       moveY: -6
+       moveX: 6
        rotation: 315
        progress: warmup
        mirror: false
