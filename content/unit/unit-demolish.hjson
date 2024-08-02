@@ -1,0 +1,179 @@
+name: Demolish
+description: obliterates enemies by large atom-splitting busts.
+detail: Almost pure neutron star power,an artileery platform.
+type: legs
+template: ErekirUnitType
+lightColor: 9db9ed
+outlineColor: 0f0f14
+itemCapacity: 0
+speed: 0.6
+drag: 0.11
+hitSize: 10
+rotateSpeed: 2.3
+health: 400
+armor: 2
+legStraightness: 0.35
+stepShake: 0
+legCount: 6
+legLength: 20
+lockLegBase: true
+legContinuousMove: true
+legExtension: -2
+legBaseOffset: 3
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.95
+legForwardScl: 1.11
+legGroupSize: 3
+rippleScale: 0.2
+legMoveSpace: 1
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.1
+groundLayer: 74
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    color: 9db9ed
+  }
+      {
+       suffix: -front
+       moveY: 12
+       moveX: 0
+       progress: warmup
+       mirror: false
+      }
+      {
+       suffix: -side
+       moveY: -1
+       moveX: -1
+       rotation: 45
+       progress: warmup
+       mirror: false
+     }
+     {
+       suffix: -side
+       moveY: 1
+       moveX: -1
+       rotation: 135
+       progress: warmup
+       mirror: false
+     }
+     {
+       suffix: -side
+       moveY: 1
+       moveX: 1
+       rotation: 225
+       progress: warmup
+       mirror: false
+     }
+     {
+       suffix: -side
+       moveY: -1
+       moveX: 1
+       rotation: 315
+       progress: warmup
+       mirror: false
+     }
+]
+weapons: [
+  {
+    x: 0
+    y: -4
+    shootY: 24
+    mirror: false
+    reload: 160
+    parts: [
+      {
+        type: ShapePart
+        radius: 9.9
+        stroke: 1.5
+        circle: true
+        hollow: true
+        color: 7382f0
+        layer: 110
+      }
+      {
+        type: ShapePart
+        radius: 6.5
+        circle: true
+        color: 7382f088
+        layer: 110
+      {
+       suffix: -front
+       moveY: 12
+       moveX: 0
+       progress: warmup
+       mirror: false
+      }
+    ]
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.9
+    shootSound: powerBlastbig
+    shootStatus: unmoving
+    recoil: 0
+    shake: 8
+    bullet: {
+      type: LaserBulletType
+      damage: 1500
+      length: 540
+      width: 40
+      lifetime: 80
+      statusDuration: 1
+      colors: [7b92bb70, b6cbf390, ffffff]
+      sideLength: 70
+      smokeEffect: {
+        followParent: false
+        particles: 1
+        length: 20
+        baseLength: 24
+        randLength: false
+        lifetime: 70
+        cone: 0
+        offset: 90
+        region: arc-pulsewave
+        sizeFrom: 40
+        sizeTo: 80
+        colorFrom: 7382f0
+        colorTo: 7382f000
+      }
+      {
+        followParent: false
+        particles: 1
+        length: 20
+        baseLength: 24
+        randLength: false
+        lifetime: 70
+        cone: 0
+        offset: 140
+        region: arc-pulsewave
+        sizeFrom: 30
+        sizeTo: 50
+        colorFrom: 7382f0
+        colorTo: 7382f000
+      }
+      {
+        followParent: false
+        particles: 1
+        length: 20
+        baseLength: 24
+        randLength: false
+        lifetime: 70
+        cone: 0
+        offset: 200
+        region: arc-pulsewave
+        sizeFrom: 10
+        sizeTo: 30
+        colorFrom: 7382f0
+        colorTo: 7382f000
+      }
+    }
+  }
+]
+research: terrestrial-fabricator
+researchCostMultiplier: 0
