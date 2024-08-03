@@ -88,7 +88,7 @@ weapons: [
       {
        suffix: -front
        moveY: -1
-       moveX: -1
+       moveX: -9
        moveRot: 12
        progress: warmup
        mirror: true
@@ -98,7 +98,7 @@ weapons: [
        suffix: -blade
        moveY: -1
        moveX: -1
-       moveRot: 12
+       moveRot: -14
        progress: warmup
        mirror: true
        layer: -110
@@ -107,7 +107,7 @@ weapons: [
        suffix: -side
        moveY: -1
        moveX: -1
-       moveRot: 12
+       moveRot: -12
        progress: warmup
        mirror: true
        layer: -110
