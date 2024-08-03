@@ -337,8 +337,11 @@ weapons: [
    mirror: false
    reload: 300
    shoot: {
-    shots: 12
+    shots: 3
     shotDelay: 10
+    type: ShootSpread
+    shots: 3
+    spread: 3
    }
    type: LightningBulletType
    damage: 12
@@ -360,7 +363,7 @@ weapons: [
     inaccuracy: 7
     shoot: {
       shots: 7
-      shotDelay: 5
+      shotDelay: 
     }
     parts: [
       {
