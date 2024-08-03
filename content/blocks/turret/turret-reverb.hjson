@@ -145,4 +145,5 @@ ammoTypes: {
       ]
     }
   }
+}
 research: turret-spread
