@@ -39,55 +39,19 @@ parts: [
     blending: additive
     layer: -1
     outline: false
-    color: 9db9ed
+    progress: warmup
+    color: fffff00
+    colorTo: 7382f0
   }
-      {
-       suffix: -front
-       moveY: 12
-       moveX: 0
-       progress: warmup
-       mirror: false
-      }
-      {
-       suffix: -side
-       moveY: -6
-       moveX: -6
-       rotation: 45
-       progress: warmup
-       mirror: false
-     }
-     {
-       suffix: -side
-       moveY: 6
-       moveX: -6
-       rotation: 135
-       progress: warmup
-       mirror: false
-     }
-     {
-       suffix: -side
-       moveY: 6
-       moveX: 6
-       rotation: 225
-       progress: warmup
-       mirror: false
-     }
-     {
-       suffix: -side
-       moveY: -6
-       moveX: 6
-       rotation: 315
-       progress: warmup
-       mirror: false
-     }
 ]
 weapons: [
   {
+    name: unit-demolish-gun
     x: 0
     y: -4
     shootY: 24
     mirror: false
-    reload: 160
+    reload: 220
     parts: [
       {
         type: ShapePart
@@ -104,12 +68,14 @@ weapons: [
         circle: true
         color: 7382f088
         layer: 110
+      }
       {
        suffix: -front
        moveY: 12
        moveX: 0
        progress: warmup
        mirror: false
+       layer: -110
       }
     ]
     shootWarmupSpeed: 0.02
@@ -121,7 +87,7 @@ weapons: [
     bullet: {
       type: LaserBulletType
       damage: 1500
-      length: 540
+      length: 350
       width: 40
       lifetime: 80
       statusDuration: 1
@@ -139,36 +105,6 @@ weapons: [
         region: arc-pulsewave
         sizeFrom: 40
         sizeTo: 80
-        colorFrom: 7382f0
-        colorTo: 7382f000
-      }
-      {
-        followParent: false
-        particles: 1
-        length: 20
-        baseLength: 24
-        randLength: false
-        lifetime: 70
-        cone: 0
-        offset: 140
-        region: arc-pulsewave
-        sizeFrom: 30
-        sizeTo: 50
-        colorFrom: 7382f0
-        colorTo: 7382f000
-      }
-      {
-        followParent: false
-        particles: 1
-        length: 20
-        baseLength: 24
-        randLength: false
-        lifetime: 70
-        cone: 0
-        offset: 200
-        region: arc-pulsewave
-        sizeFrom: 10
-        sizeTo: 30
         colorFrom: 7382f0
         colorTo: 7382f000
       }
