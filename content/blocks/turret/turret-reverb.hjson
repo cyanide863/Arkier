@@ -24,10 +24,6 @@ researchCost: [
   item-vanadium/600
   item-flux-alloy/800
 ]
-shoot: {
-shots: 5
-shotDelay: 3
-}
 consumes: {
   power: 1.6
 }
@@ -52,57 +48,102 @@ drawer: {
   ]
 }
 ammoTypes: {
-  item-flux-alloy: {
-trailRotation: true
-type: railBulletType
-length: 450
-damage: 160
-pointEffectSpace: 5
-ammoMultiplier: 1
-shootEffect: none
-smokeEffect: {
-line: true
-cone: 60
-particles: 4
-lenFrom: 7
-lifetime: 80
-lenTo: 0
-strokeFrom: 2
-colorFrom: e6a48a
-colorTo: e6a48a
-rotWithParent: true
-baseRotation: 0
-}
-endEffect: {
-line: true
-cone: 60
-particles: 4
-lenFrom: 7
-lifetime: 80
-lenTo: 0
-sizeFrom: 10
-sizeTo: 0
-colorFrom: e6a48a
-colorTo: e6a48a
-rotWithParent: true
-baseRotation: 0
-}
-pointEffect: {
-line: true
-cone: 0
-particles: 1
-lenFrom: 10
-lifetime: 60
-lenTo: 0
-sizeFrom: 10
-sizeTo: 0
-colorFrom: e6a48a
-colorTo: e6a48a
-rotWithParent: true
-baseRotation: 0
-}
-}
-knockback: 1.2
-}
+    type: BasicBulletType
+    despawnEffect: none
+    width: 10
+    height: 20
+    hitColor: a65c53
+    trailColor: a65c53
+    frontColor: d99073
+    backColor: a65c53
+    speed: 4
+    lifetime: 40
+    trailWidth: 2
+    trailLength: 17
+    trailInterval: 5
+    trailRotation: true
+    damage: 90
+    pierce: true
+    pierceCap: 10
+    fragBullets: 1
+    fragRandomSpread: 0
+    fragVelocityMin: 1
+    fragVelocityMax: 1
+    fragBullet: {
+      type: BasicBulletType
+      width: 10
+      height: 20
+      hitColor: a65c53
+      trailColor: a65c53
+      frontColor: d99073
+      backColor: a65c53
+      speed: 8
+      lifetime: 20
+      pierce: true
+      pierceCap: 10
+      damage: 180
+      smokeEffect: {
+        followParent: false
+        particles: 1
+        length: 20
+        baseLength: 24
+        randLength: false
+        lifetime: 70
+        cone: 0
+        offset: 90
+        region: arc-pulsewave
+        sizeFrom: 20
+        sizeTo: 30
+        colorFrom: d99073
+        colorTo: ffc6a5000
+      }
+      trailWidth: 2
+      trailLength: 17
+      trailInterval: 4
+      trailRotation: true
+      trailEffect: sparkShoot
+    }
+    trailEffect: {
+      type: SeqEffect
+      effects: [
+        {
+          type: ParticleEffect
+          followParent: true
+          rotWithParent: true
+          useRotation: true
+          region: arc-arrow
+          colorFrom: d99073
+          colorTo: ffc6a53000
+          lightColor: d99073
+          offsetX: 3
+          particles: 1
+          cone: 0
+          randLength: false
+          length: 35
+          sizeFrom: 2
+          sizeTo: 4
+          lifetime: 16
+        }
+        {
+          type: ParticleEffect
+          followParent: true
+          rotWithParent: true
+          useRotation: true
+          region: arc-arrow
+          colorFrom: d99073
+          colorTo: ffc6a5000
+          lightColor: d99073
+          offsetX: 38
+          particles: 1
+          cone: 0
+          randLength: false
+          length: 70
+          sizeFrom: 4
+          sizeTo: 0
+          lifetime: 32
+        }
+      ]
+    }
+  }
 }
 research: turret-spread
