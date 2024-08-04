@@ -1,14 +1,13 @@
 type: ItemTurret
 name: Reverb
-description: Launches high-speed rounds at near by enemies.
+description: Launches javelin rounds at enemies. Best used at range.
 size: 3
-health: 1850
+health: 1680
 category: turret
-range: 450
+range: 400
 squareSprite: false
-reload: 60
-ammoUseEffect: casing2
-shootSound: bolt
+reload: 90
+shootSound: laser
 rotateSpeed: 1.5
 shootY: -2.5
 outlineColor: 0f0f14
@@ -17,15 +16,15 @@ heatColor: a65c53
 ammoPerShot: 3
 cooldownTime: 60
 requirements: [
-  item-vanadium/60
-  item-flux-alloy/80
+  item-vanadium/90
+  item-flux-alloy/75
 ]
 researchCost: [
-  item-vanadium/600
-  item-flux-alloy/800
+  item-vanadium/900
+  item-flux-alloy/750
 ]
 consumes: {
-  power: 1.6
+  power: 2.5
 }
 drawer: {
   type: DrawTurret
@@ -33,21 +32,16 @@ drawer: {
   parts: [
     {
       type: RegionPart
-      suffix: -blade
-      progress: recoil
-      mirror: true
-      under: true
-      moveX: 4
-      moveY: -4
-      moveRot: -10
-      heatColor: a65c53
-      turretHeatLayer: 49.999
-      layerOffset: -0.002
-      blending: additive
+      suffix: -barrel
+      mirror: false
+      under: false
+      progress: warmup
+      moveY: 9
     }
   ]
 }
 ammoTypes: {
+  thermic-alloy: {
     type: BasicBulletType
     despawnEffect: none
     width: 10
@@ -82,21 +76,6 @@ ammoTypes: {
       pierce: true
       pierceCap: 10
       damage: 180
-      smokeEffect: {
-        followParent: false
-        particles: 1
-        length: 20
-        baseLength: 24
-        randLength: false
-        lifetime: 70
-        cone: 0
-        offset: 90
-        region: arc-pulsewave
-        sizeFrom: 20
-        sizeTo: 30
-        colorFrom: d99073
-        colorTo: ffc6a5000
-      }
       trailWidth: 2
       trailLength: 17
       trailInterval: 4
@@ -113,7 +92,7 @@ ammoTypes: {
           useRotation: true
           region: arc-arrow
           colorFrom: d99073
-          colorTo: ffc6a53000
+          colorTo: d99073
           lightColor: d99073
           offsetX: 3
           particles: 1
@@ -131,7 +110,7 @@ ammoTypes: {
           useRotation: true
           region: arc-arrow
           colorFrom: d99073
-          colorTo: ffc6a5000
+          colorTo: d99073
           lightColor: d99073
           offsetX: 38
           particles: 1
