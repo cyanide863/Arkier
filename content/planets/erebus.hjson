@@ -1,8 +1,8 @@
     generator: PlanetGenerator
     localizedName: Erebus
-    parent: null
+    parent: sun
     iconColor: 10d7e6,
-    orbitRadius: 135,
+    orbitRadius: 400,
     hasAtmosphere: true,
     updateLighting: false,
     atmosphereRadIn: 0.01,
