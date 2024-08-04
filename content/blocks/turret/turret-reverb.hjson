@@ -41,7 +41,7 @@ drawer: {
   ]
 }
 ammoTypes: {
-  thermic-alloy: {
+  flux-alloy: {
     type: BasicBulletType
     despawnEffect: none
     width: 10
