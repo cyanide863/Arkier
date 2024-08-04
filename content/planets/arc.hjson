@@ -11,7 +11,7 @@
     drawOrbit: true,
     accessible: true,
     alwaysUnlocked: true,
-    defaultCore: "core-legion",
+    defaultCore: "core-veil",
     sectorSeed: 69,
     startSector: 1,
     sectorSize: 3.0,
