@@ -10,7 +10,7 @@ speed: 0.4
 drag: 0.11
 hitSize: 40
 rotateSpeed: 1.2
-health: 3200
+health: 5600
 armor: 3
 legStraightness: 0.50
 stepShake: 8
@@ -88,7 +88,7 @@ weapons: [
       {
        suffix: -front
        moveY: -1
-       moveX: -9
+       moveX: -1
        moveRot: 12
        progress: warmup
        mirror: true
@@ -98,7 +98,7 @@ weapons: [
        suffix: -blade
        moveY: -1
        moveX: -1
-       moveRot: -14
+       moveRot: 12
        progress: warmup
        mirror: true
        layer: -110
@@ -107,7 +107,7 @@ weapons: [
        suffix: -side
        moveY: -1
        moveX: -1
-       moveRot: -12
+       moveRot: 12
        progress: warmup
        mirror: true
        layer: -110
@@ -134,7 +134,7 @@ weapons: [
       progress: warmup
       color: b6cbf3
       layer: 110
-      shapes: 2
+      shapes: 3
       y: -30
       tri: true
       hollow: false
@@ -152,7 +152,7 @@ weapons: [
       progress: warmup
       color: b6cbf3
       layer: 110
-      shapes: 2
+      shapes: 3
       y: -30
       tri: true
       hollow: false
@@ -169,7 +169,7 @@ weapons: [
       progress: warmup
       color: b6cbf3
       layer: 110
-      shapes: 2
+      shapes: 3
       y: -30
       tri: true
       hollow: false
@@ -187,7 +187,7 @@ weapons: [
       progress: warmup
       color: b6cbf3
       layer: 110
-      shapes: 2
+      shapes: 3
       y: -30
       tri: true
       hollow: false
@@ -221,14 +221,13 @@ weapons: [
     shootWarmupSpeed: 0.02
     minWarmup: 0.9
     chargeSound: lasercharge2
-    shootSound: powerBlastsmol
-    shootStatus: unmoving
+    shootSound: laserBlast
     recoil: 1.2
     shake: 8
     bullet: {
       type: LaserBulletType
       damage: 800
-      length: 400
+      length: 560
       width: 55
       lifetime: 80
       statusDuration: 1
