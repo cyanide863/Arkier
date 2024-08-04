@@ -1,11 +1,11 @@
 type: CoreBlock
-name: Core: legion
+name: Core: Veil
 isFirstTier: true
 size: 4
 incinerateNonBuildable: true
 squareSprite: false
 alwaysUnlocked: true
-unitType: unit-helm
+unitType: unit-
 health: 3000
 itemCapacity: 3000
 unitCapModifier: 10
