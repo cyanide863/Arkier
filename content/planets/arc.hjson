@@ -1,13 +1,13 @@
     generator: PlanetGenerator
     localizedName: Arctican
-    parent: sun
+    parent: erebus
     iconColor: 10d7e6,
-    orbitRadius: 78,
+    orbitRadius: 135,
     hasAtmosphere: true,
     updateLighting: false,
     atmosphereRadIn: 0.01,
     atmosphereRadOut: 0.3,
-    atmosphereColor: 661616,
+    atmosphereColor: 242226,
     drawOrbit: true,
     accessible: true,
     alwaysUnlocked: true,
