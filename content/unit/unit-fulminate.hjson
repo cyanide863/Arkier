@@ -10,27 +10,30 @@ speed: 0.4
 drag: 0.11
 hitSize: 40
 rotateSpeed: 1.2
-health: 3200
+health: 22000
 armor: 3
-legStraightness: 0.50
+legStraightness: 0.90
 stepShake: 8
-legCount: 4
-legLength: 24
+legCount: 8
+legLength: 60
 lockLegBase: true
 legContinuousMove: true
-legExtension: -2
-legBaseOffset: 3
+drownTimeMultiplier: 3.4
+legExtension: -20
+legBaseOffset: 8
 legMaxLength: 1.1
 legMinLength: 0.2
 legLengthScl: 0.95
 legForwardScl: 1.11
 legGroupSize: 3
-rippleScale: 0.2
+rippleScale: 4.5
+legSplashDamage: 34
+legSplashRange: 40
 legMoveSpace: 1
 allowLegStep: true
 hovering: true
 legPhysicsLayer: false
-shadowElevation: 0.1
+shadowElevation: 0.3
 groundLayer: 74
 parts: [
   {
@@ -51,11 +54,11 @@ weapons: [
     y: -4
     shootY: 24
     mirror: false
-    reload: 300
+    reload: 350
     shoot: {
       firstShotDelay: 180
       shots: 3
-      shotDelay: 10
+      shotDelay: 20
     }
     parts: [
       {
@@ -212,10 +215,10 @@ weapons: [
     ]
     shootWarmupSpeed: 0.02
     minWarmup: 0.9
-    chargeSound: lasercharge2
+    chargeSound: HeavyCharge
     shootSound: powerBlastlarge
     recoil: 1.2
-    shake: 8
+    shake: 18
     bullet: {
       type: LaserBulletType
       damage: 800
@@ -251,9 +254,9 @@ weapons: [
             baseLength: 2
             colorFrom: 6f83a8
             colorTo: aac3f1
-            sizeFrom: 2.1
+            sizeFrom: 12
             baseRotation: 46
-            sizeTo: 0.6
+            sizeTo: 0.3
             lifetime: 110
             interp: pow2In
             sizeInterp: pow2
@@ -262,22 +265,32 @@ weapons: [
           }
           {  
             type: WaveEffect
-            sides: 3
+            sides: 5
             lifetime: 110
-            sizeFrom: 12
-            sizeTo: 1
-            strokeFrom: 1.1
-            strokeTo: 0.3
+            sizeFrom: 40
+            sizeTo: 30
+            strokeFrom: 4
+            strokeTo: 2
             followParent: true
           }
           {  
             type: WaveEffect
-            sides: 4
+            sides: 6
             lifetime: 110
             strokeFrom: 1.1
-            strokeTo: 0.3
-            sizeFrom: 1
-            sizeTo: 13
+            strokeTo: 4
+            sizeFrom: 2
+            sizeTo: 30
+            followParent: true
+          }
+          {  
+            type: WaveEffect
+            sides: 8
+            lifetime: 110
+            strokeFrom: 1.1
+            strokeTo: 4
+            sizeFrom: 2
+            sizeTo: 35
             followParent: true
           }
           {
@@ -287,9 +300,9 @@ weapons: [
             baseLength: 12
             colorFrom: 6f83a8
             colorTo: aac3f1
-            sizeFrom: 0.6
+            sizeFrom: 3
             baseRotation: 46
-            sizeTo: 2.1
+            sizeTo: 8
             lifetime: 110
             interp: pow2Out
             sizeInterp: pow2Out
@@ -309,7 +322,7 @@ weapons: [
         offset: 90
         region: arc-pulsewave
         sizeFrom: 40
-        sizeTo: 80
+        sizeTo: 100
         colorFrom: 7382f0
         colorTo: 7382f000
         intervalRandomSpread: 12
@@ -330,40 +343,16 @@ weapons: [
     }
   }
   {
-   name: rah
-   x: 0
-   y: -4
-   shootY: 24
-   mirror: false
-   reload: 300
-   shoot: {
-    shots: 3
-    shotDelay: 10
-    type: ShootSpread
-    shots: 3
-    spread: 3
-   }
-   type: LightningBulletType
-   damage: 12
-   lightningColor: f3e979
-   lightningLength: 8
-   hitSound: spark
-   despawnSound: spark
-   pierce: true
-   pierceCap: 2
-   buildingDamageMultiplier: 0.65
-  }
-  {
     name: unit-erupt-blaster
     x: 24
     y: -6
     shootY: 5
     mirror: true
-    reload: 60
+    reload: 80
     inaccuracy: 7
     shoot: {
       shots: 7
-      shotDelay: 
+      shotDelay: 7
     }
     parts: [
       {
@@ -403,7 +392,7 @@ weapons: [
     inaccuracy: 7
     shoot: {
       shots: 7
-      shotDelay: 5
+      shotDelay: 7
     }
     parts: [
       {
@@ -434,15 +423,12 @@ weapons: [
     }
   }
   {
-    name: unit-erupt-blaster
+    name: unit-fulminate-equip
     x: 14
     y: -12
     shootY: 5
     mirror: true
     reload: 30
-    shoot: {
-     firstShotDelay: 120            
-    }
     parts: [
       {
        suffix: -barrel
@@ -470,7 +456,7 @@ weapons: [
     speed: 5
     hitShake: 4
     lifetime: 75
-    trailWidth: 20
+    trailWidth: 3
     trailLength: 30
     splashDamage: 150
     splashDamageRadius: 40
@@ -511,14 +497,15 @@ weapons: [
         splashDamageRadius: 12
         width: 12
         height: 12
-        hitColor: c1975c
-        trailColor: c1975c
-        frontColor: e9d164
-        lightColor: e9d164
-        backColor: c1975c
+        hitColor: 6f83a8
+        trailColor: 6f83a8
+        frontColor: 6f83a8
+        lightColor: b6cbf3
+        backColor: b6cbf3
         speed: 2
         lifetime: 20
         collidesAir: false
+        }
       }
     }
   }
