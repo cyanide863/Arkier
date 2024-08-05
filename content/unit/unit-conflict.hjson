@@ -1,0 +1,103 @@
+name: Conflict
+description: Launches missiles at a long range.
+type: tank
+lightColor: ca6a65
+template: ErekirUnitType
+treadPullOffset: 5
+omniMovement: false
+faceTarget: false
+rotateMoveFirst: true
+rotateSpeed: 1.75
+speed: 0.74
+outlineColor: 0f0f14
+health: 9500
+armor: 15
+itemCapacity: 0
+hitSize: 30
+crushDamage: 2
+treadFrames: 30
+treadRects: [
+  {
+    x: -17
+    y: 30
+    width: 34
+    height: 32
+  }
+  {
+    x: -17
+    y: -58
+    width: 34
+    height: 32
+  }
+  {
+    x: -44
+    y: 0
+    width: 34
+    height: 32
+  }
+]
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    color: ffc092
+  }
+]
+weapons: [
+  {
+    name: qsentrex-launcher
+    reload: 250
+    layerOffset: 1
+    x: 0
+    y: -2
+    shoot: {
+      type: ShootBarrel
+      shots: 15
+      shotDelay: 8
+      barrels: [
+        10, 0, 0,
+        6, 0, 0, 
+        0, 0, 0,
+        -6, 0, 0,
+        -10, 0, 0
+      ]
+    }
+    shootSound: missileLarge
+    shake: 3
+    shoot
+    bullet: {
+      type: BulletType
+      spawnUnit: arc-unit-cruise-missile
+      hitEffect: none
+      despawnEffect: none
+      shootEffect: {
+        line: true
+        length: 45
+        cone: 25
+        lifetime: 20
+        particles: 12
+        interp: pow5Out
+        sizeInterp: linear
+        lenFrom: 8
+        lenTo: 0
+        strokeFrom: 4
+        strokeTo: 1
+        cap: false
+        colorFrom: ca6a65
+        colorTo: dc907e
+      }
+      smokeEffect: [
+        shootBigSmoke2
+        {
+          type: RadialEffect
+          lengthOffset: 70
+          rotationOffset: 180
+          amount: 2
+          effect: shootBigSmoke2
+        }
+      ]
+    }
+  }       
