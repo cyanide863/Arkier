@@ -60,16 +60,16 @@ weapons: [
       shots: 3
       shotDelay: 15
       barrels: [
-        -10, 7, 0,
+        -7, 7, 0,
          0, 7, 0,
-         10, 7, 0,
+         7, 7, 0,
       ]
     }
     parts: [
       {
         suffix: -barrel
         y: 0
-        x: -10
+        x: -7
         moveY: -6
         recoilIndex: 0
         progress: {
@@ -95,9 +95,9 @@ weapons: [
       {
         suffix: -barrel
         y: 0
-        x: 10
+        x: 7
         moveY: -6
-        recoilIndex: 1
+        recoilIndex: 2
         progress: {
           type: recoil
           op: compress
@@ -116,18 +116,18 @@ weapons: [
     heatColor: ca6a65
     bullet: {
       type: ArtilleryBulletType
-      rangeOverride: 540
-      sprite: tankShellSmall
       collidesAir: false
-      collides: false 
+      collides: false
       speed: 3
       width: 8
       height: 6
       shrinkY: -2
       shrinkX: -1
       shrinkInterp: pow3In
-      lifetime: 90
-      damage: 600
+      lifetime: 120
+      damage: 120
+      splashDamage: 600
+      splashDamageRadius: 20
       trailLength: 16
       trailWidth: 2
       trailChance: 0.3
@@ -151,7 +151,7 @@ weapons: [
       fragBullet: {
         type: ArtilleryBulletType
         collidesAir: false
-        collides: false 
+        collides: true
         drag: -0.008
         speed: 4
         width: 3
