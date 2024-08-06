@@ -1,0 +1,309 @@
+name: Erupt
+description: A large annhilator fires atom-splitting tearing the enemies.
+detail: fueled by a small neutron star a little fragile.
+type: legs
+template: ErekirUnitType
+lightColor: 9db9ed
+outlineColor: 0f0f14
+itemCapacity: 0
+speed: 0.4
+drag: 0.11
+hitSize: 40
+rotateSpeed: 1.2
+health: 5600
+armor: 3
+legStraightness: 0.50
+stepShake: 8
+legCount: 4
+legLength: 24
+lockLegBase: true
+legContinuousMove: true
+legExtension: -2
+legBaseOffset: 3
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.95
+legForwardScl: 1.11
+legGroupSize: 3
+rippleScale: 0.2
+legMoveSpace: 1
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.1
+groundLayer: 74
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    progress: warmup
+    color: fffff00
+    colorTo: 7382f0
+  }
+]
+weapons: [
+  {
+    name: unit-erupt-gun
+    x: 0
+    y: -4
+    shootY: 24
+    mirror: false
+    reload: 300
+    shoot: {
+      shots: 3
+      shotDelay: 10
+    }
+    parts: [
+      {
+       type: ShapePart
+       progress: warmup
+       color: b6cbf3
+       layer: 110
+       y: -30
+       circle: false
+       hollow: true
+       sides: 6
+       radius: 5
+       stroke: -1
+       strokeTo: 2
+       rotateSpeed: -1.5
+      }
+      {
+       type: ShapePart
+       progress: warmup
+       color: b6cbf388
+       layer: 110
+       y: -30
+       circle: false
+       hollow: true
+       sides: 6
+       radius: 10
+       stroke: -1
+       strokeTo: 2
+       rotateSpeed: 1.5
+      }
+      {
+       suffix: -front
+       moveY: -1
+       moveX: -1
+       moveRot: 12
+       progress: warmup
+       mirror: true
+       layer: -110
+      }
+      {
+       suffix: -blade
+       moveY: -1
+       moveX: -1
+       moveRot: 12
+       progress: warmup
+       mirror: true
+       layer: -110
+     }
+     {
+       suffix: -side
+       moveY: -1
+       moveX: -1
+       moveRot: 12
+       progress: warmup
+       mirror: true
+       layer: -110
+     }
+     {
+      type: HaloPart
+      progress: warmup
+      color: b6cbf3
+      layer: 110
+      shapes: 2
+      y: -30
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 110
+      triLength: -10
+      triLengthTo: 20
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      color: b6cbf3
+      layer: 110
+      shapes: 3
+      y: -30
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 110
+      shapeRotation: 180
+      triLength: -1.5
+      triLengthTo: 3
+    }
+    {
+      type: HaloPart
+      progress: warmup
+      color: b6cbf3
+      layer: 110
+      shapes: 3
+      y: -30
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 90
+      triLength: -10
+      triLengthTo: 20
+     }
+     {
+      type: HaloPart
+      progress: warmup
+      color: b6cbf3
+      layer: 110
+      shapes: 3
+      y: -30
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 90
+      shapeRotation: 180
+      triLength: -1.5
+      triLengthTo: 3
+     }
+     {
+      type: HaloPart
+      progress: warmup
+      color: b6cbf3
+      layer: 110
+      shapes: 3
+      y: -30
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 70
+      triLength: -10
+      triLengthTo: 20
+     }
+     {
+      type: HaloPart
+      progress: warmup
+      color: b6cbf3
+      layer: 110
+      shapes: 2
+      y: -30
+      tri: true
+      hollow: false
+      radius: 4
+      radiusTo: 4
+      haloRadius: 15
+      haloRadiusTo: 15
+      haloRotation: 70
+      shapeRotation: 180
+      triLength: -1.5
+      triLengthTo: 3
+     }
+    ]
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.9
+    chargeSound: lasercharge2
+    shootSound: laserBlast
+    recoil: 1.2
+    shake: 8
+    bullet: {
+      type: LaserBulletType
+      damage: 800
+      length: 560
+      width: 55
+      lifetime: 80
+      statusDuration: 1
+      colors: [7b92bb70, b6cbf390, ffffff]
+      sideLength: 70
+      smokeEffect: {
+        followParent: false
+        particles: 1
+        length: 20
+        baseLength: 24
+        randLength: false
+        lifetime: 70
+        cone: 0
+        offset: 90
+        region: arc-pulsewave
+        sizeFrom: 40
+        sizeTo: 80
+        colorFrom: 7382f0
+        colorTo: 7382f000
+        intervalRandomSpread: 12
+        intervalBullets: 2
+        intervalSpread: 90
+        intervalBullet: {
+         type: LightningBulletType
+         damage: 30
+         lightningColor: b6cbf3
+         lightningLength: 20
+         hitSound: laser
+         despawnSound: laser
+         pierce: true
+         pierceCap: 2
+         buildingDamageMultiplier: 0.65
+        }
+      }
+    }
+  }
+  {
+    name: unit-erupt-blaster
+    x: 13
+    y: -12
+    shootY: 5
+    mirror: true
+    reload: 60
+    inaccuracy: 7
+    shoot: {
+      shots: 7
+      shotDelay: 5
+    }
+    parts: [
+      {
+       suffix: -front
+       moveY: -2
+       moveX: 2
+       moveRot: -15
+       progress: warmup
+       mirror: true
+       layer: -110
+     }
+    ]
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.9
+    shootSound: laser
+    recoil: 0.2
+    shake: 3
+    bullet: {
+      type: LaserBulletType
+      damage: 40
+      length: 120
+      width: 20
+      lifetime: 30
+      statusDuration: 1
+      colors: [7b92bb70, b6cbf390, ffffff]
+      sideLength: 70
+      smokeEffect: shootSmokeSquareSparse 
+    }
+  }
+]
+research: terrestrial-fabricator
+researchCostMultiplier: 0

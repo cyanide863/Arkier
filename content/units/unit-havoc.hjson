@@ -1,0 +1,72 @@
+name: Strife
+description: Fires small bullets at enemy targets.
+type: tank
+lightColor: ca6a65
+template: ErekirUnitType
+treadPullOffset: 3
+omniMovement: false
+faceTarget: false
+rotateMoveFirst: true
+rotateSpeed: 3
+speed: 1
+outlineColor: 0f0f14
+health: 560
+armor: 3
+itemCapacity: 0
+hitSize: 11
+treadRects: [
+  {
+    x: 8
+    y: -25
+    width: 11
+    height: 52
+  }
+]
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    color: ffc092
+  }
+]
+weapons: [
+  {
+    x: 0
+    y: 0
+    name: havoc-gun
+    shootSound: shootAlt
+    shootY: 4
+    recoil: 1
+    rotate: true
+    rotateSpeed: 2
+    mirror: false
+    reload: 20
+    layerOffset: 0.0001
+    bullet: {
+      type: BasicBulletType
+      damage: 30
+      lightColor: feb380
+      smokeEffect: shootSmallSmoke
+      shootEffect: shootSmallColor
+      width: 5
+      speed: 5
+      height: 10
+      lifetime: 40
+      hitSize: 4
+      trailWidth: 1.2
+      trailLength: 6
+      hitColor: feb380
+      trailColor: feb380
+      backColor: feb380
+      frontColor: ffffff
+      despawnEffect: hitBulletColor
+      hitEffect: hitBulletColor
+      hitSound: dullExplosion
+    }
+  }
+]
+research: terrestrial-constructor
+researchCostMultiplier: 0
