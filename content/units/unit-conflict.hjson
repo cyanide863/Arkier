@@ -67,6 +67,7 @@ weapons: [
     }
     shootSound: missileLarge
     shake: 3
+    shoot
     bullet: {
       type: BulletType
       spawnUnit: arc-unit-cruise-missile
@@ -92,12 +93,11 @@ weapons: [
         shootBigSmoke2
         {
           type: RadialEffect
-          lengthOffset: 10
+          lengthOffset: 70
           rotationOffset: 180
-          amount: 1
+          amount: 2
           effect: shootBigSmoke2
         }
       ]
     }
   }       
-]
