@@ -1,0 +1,285 @@
+type: tank
+template: TankUnitType
+shadowElevation: 0.3
+groundLayer: 85
+crushDamage: 5
+hitSize: 96
+health: 34000
+armor: 20
+faceTarget: false
+speed: 0.7
+accel: 0.1
+drag: 0.1
+drownTimeMultiplier: 7
+treadPullOffset: 0
+treadFrames: 30
+treadRects: [
+  {
+    x: 95
+    y: -56
+    width: 63
+    height: 240
+  }
+  {
+    x: 16
+    y: -191
+    width: 63
+    height: 176
+  }
+]
+rotateSpeed: 1
+outlineColor: 0f0f14
+weapons: [
+  {
+    name: unit-siege-cannon
+    layerOffset: 1
+    mirror: false
+    x: 0
+    y: 0
+    shadow: 120
+    shootY: 67
+    reload: 300
+    recoilTime: 90
+    recoils: 5
+    shoot: {
+      type: ShootBarrel
+      shots: 5
+      shotDelay: 15
+      barrels: [
+        -6, 12, 0,
+        0, 12, 0,
+        6, 12, 0,
+        3, 6, 0,
+        -3, 6, 0
+      ]
+    }
+    parts: [
+      {
+        suffix: -barrel
+        y: 0
+        x: -6
+        moveY: -7
+        recoilIndex: 0
+        progress: {
+          type: recoil
+          op: compress
+          start: 0.5
+          end: 1
+        }
+      }
+      {
+        suffix: -barrel
+        y: 0
+        x: 0
+        moveY: -7
+        recoilIndex: 1
+        progress: {
+          type: recoil
+          op: compress
+          start: 0.5
+          end: 1
+        }
+      }
+      {
+        suffix: -barrel
+        y: 0
+        x: 6
+        moveY: -7
+        recoilIndex: 2
+        progress: {
+          type: recoil
+          op: compress
+          start: 0.5
+          end: 1
+        }
+      }
+      {
+        suffix: -barrel
+        y: -3
+        x: -5.75
+        moveY: -7
+        recoilIndex: 3
+        progress: {
+          type: recoil
+          op: compress
+          start: 0.5
+          end: 1
+        }
+      }
+      {
+        suffix: -barrel
+        y: 3
+        x: -5.75
+        moveY: -7
+        recoilIndex: 4
+        progress: {
+          type: recoil
+          op: compress
+          start: 0.5
+          end: 1
+        }
+      }
+      {
+        suffix: -top
+      }
+    ]
+    rotate: true
+    rotateSpeed: 0.3
+    inaccuracy: 16
+    velocityRnd: 0.2
+    shootSound: mediumCannon
+    shake: 7
+    bullet: {
+      type: ArtilleryBulletType
+      rangeOverride: 540
+      collidesAir: false
+      collides: false 
+      speed: 2
+      width: 12
+      height: 8
+      shrinkY: -2
+      shrinkInterp: pow3In
+      lifetime: 180
+      damage: 1400
+      splashDamage: 90
+      splashDamageRadius: 30
+      trailLength: 16
+      trailWidth: 4
+      trailChance: 0.3
+      trailEffect: {
+        length: 18
+        particles: 4
+        lifetime: 40
+        interp: pow3Out
+        sizeInterp: pow5In
+        sizeFrom: 4
+        sizeTo: 0
+        colorFrom: dc907e
+        colorTo: 787878
+      }
+      fragBullets: 7
+      fragVelocityMin: 0
+      fragRandomSpread: 45
+      fragBullet: {
+        type: ArtilleryBulletType
+        collidesAir: false
+        collides: false 
+        drag: -0.008
+        speed: 4
+        width: 5
+        height: 9
+        shrinkY: 1
+        shrinkX: 0.25
+        shrinkInterp: pow5Out
+        lifetime: 90
+        damage: 250
+        trailLength: 18
+        trailWidth: 2
+        trailChance: 0.3
+        trailEffect: {
+          length: 10
+          particles: 3
+          lifetime: 40
+          interp: pow3Out
+          sizeInterp: pow5In
+          sizeFrom: 2
+          sizeTo: 0
+          colorFrom: dc907e
+          colorTo: 787878
+        }
+        fragBullets: 7
+        fragBullet: {
+          speed: 9
+          lifetime: 35
+          drag: 0.06
+          damage: 36
+          pierce: true
+          pierceBuilding: true
+          setDefaults: false
+          despawnHit: false
+          despawnEffect: none
+          width: 11
+          height: 14
+          shrinkY: 1
+          trailWidth: 1.2
+          trailLength: 4
+          trailEffect: {
+          length: 10
+          particles: 3
+          lifetime: 40
+          interp: pow3Out
+          sizeInterp: pow5In
+          sizeFrom: 1.5
+          sizeTo: 0
+          colorFrom: dc907e
+          colorTo: 787878
+          }
+          fragBullets: 3
+          fragRandomSpread: 45
+          fragVelocityMin: 0.5
+          fragBullet: {
+            speed: 6
+            lifetime: 15
+            damage: 12
+            pierce: true
+            pierceBuilding: true
+            width: 7
+            height: 14
+            shrinkX: 1
+            shrinkY: 1
+            hitEffect: none
+            despawnEffect: none
+          }
+        }
+      }
+      hitEffect: [
+        {
+          type: WaveEffect
+          lifetime: 5
+          sizeFrom: 20
+          sizeTo: 45
+          strokeFrom: 4
+          colorFrom: ffd2ae
+          colorTo: e58956
+        }
+        {
+          length: 40
+          lifetime: 50
+          particles: 20
+          colorFrom: 787878
+          colorTo: 787878
+          sizeFrom: 6
+          sizeTo: 0
+          interp: pow3Out
+          sizeInterp: pow2In
+        }
+        {
+          length: 55
+          lifetime: 40
+          particles: 20
+          colorFrom: 787878
+          colorTo: 787878
+          sizeFrom: 2
+          sizeTo: 0
+          interp: pow3Out
+          sizeInterp: pow2In
+        }
+        {
+          line: true
+          length: 65
+          lifetime: 30
+          particles: 8
+          interp: pow3Out
+          sizeInterp: linear
+          lenFrom: 8
+          lenTo: 0
+          strokeFrom: 2
+          strokeTo: 1
+          cap: false
+          colorFrom: ca6a65
+          colorTo: dc907e
+        }
+      ]
+    }
+  }
+]
