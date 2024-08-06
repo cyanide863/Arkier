@@ -67,7 +67,6 @@ weapons: [
     }
     shootSound: missileLarge
     shake: 3
-    shoot
     bullet: {
       type: BulletType
       spawnUnit: arc-unit-cruise-missile
