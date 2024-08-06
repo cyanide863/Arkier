@@ -92,11 +92,12 @@ weapons: [
         shootBigSmoke2
         {
           type: RadialEffect
-          lengthOffset: 70
+          lengthOffset: 10
           rotationOffset: 180
-          amount: 2
+          amount: 1
           effect: shootBigSmoke2
         }
       ]
     }
   }       
+]
