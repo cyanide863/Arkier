@@ -29,11 +29,11 @@ drawer: {
       type: DrawDefault
     }
     {
-      type: Drawregion
-      suffix-bottom
+      type: DrawRegion
+      suffix: -bottom
     }
     {
-      type: Drawregion
+      type: DrawRegion
       suffix: -spinner
       spinSprite: true
       rotateSpeed: 3
