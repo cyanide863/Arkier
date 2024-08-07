@@ -82,7 +82,7 @@ weapons: [
     bullet: {
       type: ArtilleryBulletType
       collides: true 
-      sprite: heavy-shell
+      sprite: mortar-shell
       collidesTiles: true
       damage: 2200
       lifetime: 90
