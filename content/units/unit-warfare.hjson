@@ -111,7 +111,7 @@ weapons: [
         {
           length: 0
           lifetime: 35
-          region: allure-shootspike
+          region: a-shootspike
           colorTo: f5a17d
           sizeFrom: 100
           sizeTo: 0
@@ -178,6 +178,79 @@ weapons: [
           colorTo: 656565
           interp: pow5Out
           sizeInterp: pow3In
+        }
+      ]
+      hitEffect: [
+        {
+          type: WaveEffect
+          lifetime: 45
+          interp: pow3Out
+          sizeFrom: 20
+          sizeTo: 120
+          strokeFrom: 32
+          colorFrom: ffd2ae
+          colorTo: e58956
+        }
+        {
+          length: 140
+          lifetime: 70
+          particles: 20
+          colorFrom: 303030
+          colorTo: 3030303
+          sizeFrom: 14
+          sizeTo: 0
+          interp: pow3Out
+          sizeInterp: pow2In
+          layer: 105
+        }
+        {
+          length: 110
+          lifetime: 80
+          particles: 20
+          colorFrom: 787878
+          colorTo: 787878
+          sizeFrom: 6
+          sizeTo: 0
+          interp: pow3Out
+          sizeInterp: pow2In
+          layer: 105
+        }
+        {
+         length: 110
+         baseLength: 40
+         lifetime: 80
+         particles: 34
+         colorFrom: ffd2aebb
+         colorTo: e58956bb
+         sizeFrom: 24
+         sizeTo: 0
+         interp: pow3Out
+         sizeInterp: pow2In
+        }
+        {
+         line: true
+         length: 180
+         lifetime: 30
+         particles: 8
+         interp: pow3Out
+         sizeInterp: linear
+         lenFrom: 24
+         lenTo: 12
+         strokeFrom: 4
+         strokeTo: 0
+         cap: false
+         colorFrom: ffd2ae
+         colorTo: e58956
+        }
+        {
+          length: 0
+          offset: -35
+          lifetime: 35
+          region: arc-condensation-ring
+          colorFrom: f5a17d
+          colorTo: ffffff
+          sizeFrom: 0
+          sizeTo: 340
         }
       ]
       fragBullets:5
