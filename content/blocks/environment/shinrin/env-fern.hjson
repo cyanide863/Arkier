@@ -1,5 +1,6 @@
 type: TreeBlock
 size: 2
+varients: 3
 update: true
 customShadow: false
 solid: true
