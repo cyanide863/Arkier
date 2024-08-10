@@ -137,7 +137,7 @@ recipes: [
     ]
   }
   craftTime: 80.0
-}{
+{
    input: {
    items: [
       arc-item-galvasteel/12
