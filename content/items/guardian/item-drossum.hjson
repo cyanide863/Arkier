@@ -1,0 +1,10 @@
+color: ad5b2f
+radioactivity: 0.1
+explosiveness: 0.4
+flammability: 0.2
+charge: 0.1
+hiddenOnPlanets: [
+  erekir, 
+  serpulo
+]
+research: core-threshold
