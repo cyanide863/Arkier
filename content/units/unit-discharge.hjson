@@ -1,122 +1,44 @@
 type: flying
 template: ErekirUnitType
-name: Bolt
+name: Discharge
 description: very fast generates lighting bolts at enemies uses tesla coils 
 lightColor: cca8fa
 outlineColor: b2f0ff
 lowAltitude: false
 flying: true
 drag: 0.08
-speed: 4
-rotateSpeed: 2.24
+speed: 6
+rotateSpeed: 1.3
 accel: 0.015
-health: 230
+omniMovement: false
+circleTarget: true
+health: 1200
 armor: 5
 engineSize: 0
 itemCapacity: 0
 hitSize: 4
 strafePenalty: 0.8
+engines: [
   {
     x: 0
-    y: -7
-    rotate: true
-    rotateSpeed: 0
-    rotation: 180
-    shootY: 0
-    reload: 2
-    alwaysShooting: true
-    shootCone: 360
-    alternate: false
-    shootSound: missileLoop
-    recoil: -1
-    display: false
-    bullet: {
-      type: ContinuousFlameBulletType
-      layer: -91.5
-      lifetime: 14
-      collides: false
-      length: 8
-      width: 3
-      colors: [5f5ebe, 7192d9, 84c0eb, 98d4ff, b2f0ff, ffffff]
-      drawFlare: false
-      shootEffect: none
-      smokeEffect: none
-      lengthInterp: pow10Out
-      oscScl: 2.5
-      oscMag: 0.1
-      hitEffect: none
-      lightColor: 5f5ebe
-      lightStroke: 6
-      lightOpacity: 0.25
-    }
+    y: -35
+    radius: 6
+    rotation: -90
+    engineColor: 7b8bff
   }
   {
-    x: 9
-    y: -7
-    rotate: true
-    rotateSpeed: 0
-    rotation: 180
-    shootY: 0
-    reload: 2
-    alwaysShooting: true
-    shootCone: 360
-    alternate: false
-    shootSound: missileLoop
-    recoil: -1
-    display: false
-    bullet: {
-      type: ContinuousFlameBulletType
-      layer: -91.5
-      lifetime: 14
-      collides: false
-      length: 6
-      width: 3
-      colors: [5f5ebe, 7192d9, 84c0eb, 98d4ff, b2f0ff, ffffff]
-      drawFlare: false
-      shootEffect: none
-      smokeEffect: none
-      lengthInterp: pow10Out
-      oscScl: 2.5
-      oscMag: 0.1
-      hitEffect: none
-      lightColor: 5f5ebe
-      lightStroke: 6
-      lightOpacity: 0.25
-    }
+    x: 26
+    y: -35
+    radius: 4
+    rotation: -90
+    engineColor: 7b8bff
   }
   {
-    x: -9
-    y: -7
-    rotate: true
-    rotateSpeed: 0
-    rotation: 180
-    shootY: 0
-    reload: 2
-    alwaysShooting: true
-    shootCone: 360
-    alternate: false
-    shootSound: missileLoop
-    recoil: -1
-    display: false
-    bullet: {
-      type: ContinuousFlameBulletType
-      layer: -91.5
-      lifetime: 14
-      collides: false
-      length: 6
-      width: 3
-      colors: [5f5ebe, 7192d9, 84c0eb, 98d4ff, b2f0ff, ffffff]
-      drawFlare: false
-      shootEffect: none
-      smokeEffect: none
-      lengthInterp: pow10Out
-      oscScl: 2.5
-      oscMag: 0.1
-      hitEffect: none
-      lightColor: 5f5ebe
-      lightStroke: 6
-      lightOpacity: 0.25
-    }
+    x: 26
+    y: -35
+    radius: 4
+    rotation: -90
+    engineColor: 7b8bff
   }
 ]
 abilities: [
