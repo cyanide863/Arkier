@@ -41,7 +41,7 @@ recipes: [
       arc-item-detrium/5
     ]
   }
-  craftTime: 20.0
+  craftTime: 5.0
 }
 {
   input: {
@@ -55,7 +55,7 @@ recipes: [
       arc-item-galvanium/5
     ]
   }
-  craftTime: 20.0
+  craftTime: 5.0
 }
 {
   input: {
@@ -69,7 +69,7 @@ recipes: [
       arc-item-lithonium/5
     ]
   }
-  craftTime: 20.0
+  craftTime: 5.0
 }
 {
   input: {
@@ -83,7 +83,7 @@ recipes: [
       arc-item-chromium/5
     ]
   }
-  craftTime: 20.0
+  craftTime: 5.0
 }
 {
   input: {
@@ -97,7 +97,7 @@ recipes: [
       arc-item-cerrilite/5
     ]
   }
-  craftTime: 20.0
+  craftTime: 5.0
 }
     {
   input: {
@@ -111,7 +111,7 @@ recipes: [
       arc-item-torretium/5
     ]
   }
-  craftTime: 20.0
+  craftTime: 5.0
 }
 ]
 
@@ -155,6 +155,11 @@ drawer: {
       type: DrawLiquidTile     
       padding: 2
       drawLiquid: liquid-torretite
+    }
+    {
+      type: DrawLiquidTile     
+      padding: 2
+      drawLiquid: liquid-lithonium
     }
     {
       type: DrawDefault
