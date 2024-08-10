@@ -1,0 +1,9 @@
+cost: 1.4
+color: 7382f0
+charge: 0.3
+hiddenOnPlanets: [
+  erekir, 
+  serpulo
+]
+research: core-threshold
+healthScaling: 0.7
