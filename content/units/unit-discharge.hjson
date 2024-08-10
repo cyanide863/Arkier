@@ -16,7 +16,7 @@ health: 1200
 armor: 5
 engineSize: 0
 itemCapacity: 0
-hitSize: 4
+hitSize: 30
 strafePenalty: 0.8
 engines: [
   {
