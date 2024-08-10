@@ -125,6 +125,25 @@ recipes: [
   }
   craftTime: 80.0
 }
+{
+   input: {
+   items: [
+      arc-item-galvasteel/2
+      arc-item-chromatite/2
+      arc-item-cerrilite/3
+    ]
+   fluids: [
+      arc-liquid-paragonite/1.2
+    ]
+    power: 12
+  }
+  output: {
+    items: [
+      arc-item-cerrium-plating/3
+    ]
+  }
+  craftTime: 80.0
+}
 ]
 
 drawer: {
