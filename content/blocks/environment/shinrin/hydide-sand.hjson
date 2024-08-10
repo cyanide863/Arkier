@@ -1,0 +1,9 @@
+type: Floor
+liquidDrop: liquid-hydride
+liquidMultiplier: 0.8
+isLiquid: true
+shallow: true
+cacheLayer: water
+attributes: {
+  sand: 2
+}
