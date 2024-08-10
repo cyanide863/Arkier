@@ -1,6 +1,6 @@
 type: Drill
-name: Fluctuation drill
-size: 8
+name: Quantum drill
+size: 6
 health: 5320
 description: Induces quantum fluctuations in the ore below, rapidly extracting it. Requires nitrogen as a thermal isolator.
 requirements: [
