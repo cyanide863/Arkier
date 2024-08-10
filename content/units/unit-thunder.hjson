@@ -16,7 +16,7 @@ engineSize: 0
 itemCapacity: 0
 hitSize: 14
 strafePenalty: 0.8
-weapon: [
+weapons: [
   {
     name: thunder-weapon
     mirror: true
