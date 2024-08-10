@@ -1,0 +1,16 @@
+name: severe energy Damage
+effect: {
+type: ParticleEffect
+particles: 3
+region: "arc-shootspike"
+lifetime: 15
+length: 2
+sizeFrom: 2
+sizeTo: 1
+colorFrom: 6c7ae0
+colorTo: ffffff
+cone: 360
+}
+outline: false
+speedMultiplier: 0.5
+damage: 100
