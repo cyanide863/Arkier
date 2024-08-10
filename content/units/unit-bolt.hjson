@@ -7,7 +7,7 @@ outlineColor: b2f0ff
 lowAltitude: false
 flying: true
 drag: 0.08
-speed: 2
+speed: 3
 rotateSpeed: 3.75
 accel: 0.015
 health: 60
