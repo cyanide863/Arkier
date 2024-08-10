@@ -1,6 +1,10 @@
 type: Floor
-speedMultiplier: 0.7
+speedMultiplier: 0.5
+drownTime: 220
 variants: 0
+status: arc-regen-1
+statusDuration: 60
 cacheLayer: water
-liquidDrop: liquid-hydride
 isLiquid: true
+liquidDrop: liquid-hydride
+liquidMultiplier: 1.1
