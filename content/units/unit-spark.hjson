@@ -55,7 +55,7 @@ abilities: [
   {
     type: MoveLightningAbility
     heatRegion: arc-spark-heat
-    y: 24
+    y: 5
     chance: 0.25
     length: 6
     damage: 10
@@ -63,17 +63,5 @@ abilities: [
     stausDuration: 30
     minSpeed: 0.8
     maxSpeed: 5
-  }
-  {
-    type: MoveLightningAbility
-    x: 8
-    y: 20
-    chance: 0.2
-    length: 6
-    damage: 10
-    status: arc-energy-damage-1
-    stausDuration: 30
-    minSpeed: 0.8
-    maxSpeed: 2
   }
 ]
