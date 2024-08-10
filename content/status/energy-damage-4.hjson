@@ -1,4 +1,4 @@
-name: high energy Damage
+name: intensive energy Damage
 effect: {
 type: ParticleEffect
 particles: 3
