@@ -7,8 +7,10 @@ outlineColor: b2f0ff
 lowAltitude: false
 flying: true
 drag: 0.08
-speed: 2
-rotateSpeed: 3.75
+omniMovement: false
+circleTarget: true
+speed: 4
+rotateSpeed: 2.2
 accel: 0.015
 health: 60
 armor: 5
