@@ -1,0 +1,315 @@
+type: flying
+template: ErekirUnitType
+name: Thunder
+description: very fast generates lighting bolts at enemies uses tesla coils 
+lightColor: cca8fa
+outlineColor: b2f0ff
+lowAltitude: false
+flying: true
+drag: 0.08
+speed: 5.6
+rotateSpeed: 1.2
+accel: 0.025
+health: 4500
+armor: 5
+engineSize: 0
+itemCapacity: 0
+hitSize: 14
+strafePenalty: 0.8
+weapon: [
+  {
+    name: thunder-weapon
+    mirror: true
+    x: 48
+    reload: 80
+    recoil: 0
+    minShootVelocity: 3.5
+    shootY: 36
+    shootCone: 45
+    shoot: {
+      type: ShootBarrel
+      shots: 20
+      shotDelay: 2
+      barrels: [
+        6, 0, 0,
+        8, 0, 0,
+        -6, 0, 0,
+        12, 0, 0,
+        -8, 0, 0,
+      ]
+    }
+    inaccuracy: 2
+    shootSound: shockBlast
+    shake: 12
+    cooldownTime: 120
+    bullet: {
+      type: LightningBulletType
+      lightningLength: 20
+      lightningLengthRand: 30
+      damage: 100
+      recoil: 0.2
+      shootEffect: {
+        line: true
+        particles: 3
+        cone: 40
+        length: 60
+        lifetime: 25
+        interp: pow2Out
+        sizeInterp: linear
+        lenFrom: 6
+        lenTo: 3
+        strokeFrom: 2
+        strokeTo: 0
+        colorTo: a9d8ff
+      }
+    }
+  }
+  {
+    baseRotation: -180
+    rotate: false
+    rotateSpeed: 0
+    alternate: false
+    reload: 200
+    x: 40
+    y: -20
+    shootSound: missileLoop
+    continuous: true
+    shake: 3
+    bullet: {
+      type: BulletType
+      collides: false
+      hittable: false
+      absorbable: false
+      lifetime: 20
+      recoil: 1
+      hitEffect: none
+      despawnEffect: none
+      smokeEffect: none
+      shootEffect: [
+        {
+          rotWithParent: true
+          particles: 1
+          baseLength: 5
+          randLength: false
+          cone: 0
+          length: 0
+          baseRotation: 90
+          offset: -90
+          layer: 116
+          region: arc-shootspike
+          sizeFrom: 40
+          sizeTo: 0
+          interp: pow5In
+          colorFrom: a9d8ff
+          colorTo: a9d8ff
+        }
+        {
+          rotWithParent: true
+          particles: 1
+          baseLength: -5
+          randLength: false
+          cone: 0
+          length: 0
+          baseRotation: 90
+          offset: -90
+          layer: 116
+          region: arc-shootspike
+          sizeFrom: 40
+          sizeTo: 0
+          interp: pow5In
+          colorFrom: a9d8ff
+          colorTo: a9d8ff
+        }
+        {
+          rotWithParent: true
+          particles: 1
+          baseLength: 5
+          randLength: false
+          cone: 0
+          length: 0
+          baseRotation: 90
+          offset: -90
+          layer: 117
+          region: arc-shootspike
+          sizeFrom: 25
+          sizeTo: 0
+          interp: pow5In
+        }
+        {
+          rotWithParent: true
+          particles: 1
+          baseLength: -5
+          randLength: false
+          cone: 0
+          length: 0
+          baseRotation: 90
+          offset: -90
+          layer: 117
+          region: arc-shootspike
+          sizeFrom: 25
+          sizeTo: 0
+          interp: pow5In
+        }
+      ]
+    }
+  }
+  {
+    baseRotation: -180
+    rotate: false
+    rotateSpeed: 0
+    alternate: false
+    reload: 200
+    x: -40
+    y: -20
+    shootSound: missileLoop
+    continuous: true
+    shake: 3
+    bullet: {
+      type: BulletType
+      collides: false
+      hittable: false
+      absorbable: false
+      lifetime: 20
+      recoil: 1
+      hitEffect: none
+      despawnEffect: none
+      smokeEffect: none
+      shootEffect: [
+        {
+          rotWithParent: true
+          particles: 1
+          baseLength: 5
+          randLength: false
+          cone: 0
+          length: 0
+          baseRotation: 90
+          offset: -90
+          layer: 116
+          region: arc-shootspike
+          sizeFrom: 40
+          sizeTo: 0
+          interp: pow5In
+          colorFrom: a9d8ff
+          colorTo: a9d8ff
+        }
+        {
+          rotWithParent: true
+          particles: 1
+          baseLength: -5
+          randLength: false
+          cone: 0
+          length: 0
+          baseRotation: 90
+          offset: -90
+          layer: 116
+          region: arc-shootspike
+          sizeFrom: 40
+          sizeTo: 0
+          interp: pow5In
+          colorFrom: a9d8ff
+          colorTo: a9d8ff
+        }
+        {
+          rotWithParent: true
+          particles: 1
+          baseLength: 5
+          randLength: false
+          cone: 0
+          length: 0
+          baseRotation: 90
+          offset: -90
+          layer: 117
+          region: arc-shootspike
+          sizeFrom: 25
+          sizeTo: 0
+          interp: pow5In
+        }
+        {
+          rotWithParent: true
+          particles: 1
+          baseLength: -5
+          randLength: false
+          cone: 0
+          length: 0
+          baseRotation: 90
+          offset: -90
+          layer: 117
+          region: arc-shootspike
+          sizeFrom: 25
+          sizeTo: 0
+          interp: pow5In
+        }
+      ]
+    }
+  }
+]
+abilities: [
+  {
+    type: MoveLightningAbility
+    x: 35
+    y: 0
+    chance: 0.1
+    length: 20
+    damage: 30
+    status: arc-energy-damage-4
+    stausDuration: 30
+    minSpeed: 2
+    maxSpeed: 3
+  }
+  {
+    type: MoveLightningAbility
+    x: -35
+    y: 0
+    chance: 0.2
+    length: 20
+    damage: 30
+    status: arc-energy-damage-4
+    stausDuration: 30
+    minSpeed: 0.8
+    maxSpeed: 2
+  }
+  {
+    type: MoveEffectAbility
+    minVelocity: 2
+    x: 30
+    y: -30
+    rotateEffect: true
+    effect: [
+      {
+        particles: 1
+        lifetime: 50
+        length: 0
+        baseLength: 3
+        interp: pow10Out
+        sizeInterp: linear
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: a9d8ff
+        colorTo: ffffff
+        layer: -115.01
+      }
+    ]
+  }
+  {
+    type: MoveEffectAbility
+    minVelocity: 2
+    x: -30
+    y: -30
+    rotateEffect: true
+    effect: [
+      {
+        particles: 1
+        lifetime: 50
+        length: 0
+        baseLength: 3
+        interp: pow10Out
+        sizeInterp: linear
+        sizeFrom: 3
+        sizeTo: 0
+        colorFrom: a9d8ff
+        colorTo: ffffff
+        layer: -115.01
+      }
+    ]
+  }
+]
