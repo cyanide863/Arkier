@@ -126,7 +126,9 @@ abilities: [
     y: 2
     chance: 0.2
     length: 6
-    damage: 10
+    damage: 15
+    status: arc-energy-damage-2
+    stausDuration: 30
     minSpeed: 0.8
     maxSpeed: 5
   }
@@ -137,6 +139,8 @@ abilities: [
     chance: 0.1
     length: 6
     damage: 10
+    status: arc-energy-damage-1
+    stausDuration: 30
     minSpeed: 0.8
     maxSpeed: 2
   }
