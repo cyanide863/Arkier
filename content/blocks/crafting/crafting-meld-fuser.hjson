@@ -1,6 +1,6 @@
 type: multicraft.MultiCrafter
 name: Meld fuser
-description: Mixes various liquefied metals into alloys. Less efficient than an alloy kiln, but necessary for later processes.
+description: fuses metals into alloys at an astronomical rate.
 size: 9
 hasItems: true
 itemCapacity: 20
@@ -165,7 +165,7 @@ drawer: {
   drawers: [
     {
      type: drawRegion
-     suffix:bottom
+     suffix: -bottom
     }
     {
      type: drawRegion
@@ -183,13 +183,28 @@ drawer: {
     {
      sides: 4
      angleOffset: 135
-     sinScl: 20
-     sinMag: 12
+     sinScl: 10
+     sinMag: 10
      sideOffset: 3.14
      type: drawPistons
     }
     {
-      type: DrawCrucibleFlame
+     type: drawCrucibleFlame
+     particleLife: 180
+     particleRad: 16
+     particleSize: 2.5
+     rotateScl: 4.5
+     flameColor: f9938a
+     particleInterp: pow5Out
+     particles: 120
+    }
+    {
+     type: drawCells
+     range: 16
+     particles: 100
+     particleColorFrom: 444b49
+     particleColorTo: 232826
+     color: a9554d
     }
     {
       type: DrawDefault
