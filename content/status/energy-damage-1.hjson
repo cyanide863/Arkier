@@ -1,0 +1,4 @@
+name: Energy Damage
+outline: false
+speedMultiplier: 0.8
+damage: 1 
