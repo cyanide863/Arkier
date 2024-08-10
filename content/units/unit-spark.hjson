@@ -56,7 +56,7 @@ abilities: [
     type: MoveLightningAbility
     heatRegion: arc-spark-heat
     y: 5
-    chance: 0.25
+    chance: 0.02
     length: 6
     damage: 10
     status: arc-energy-damage-1
