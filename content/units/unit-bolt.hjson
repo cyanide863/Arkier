@@ -123,7 +123,7 @@ abilities: [
   {
     type: MoveLightningAbility
     heatRegion: arc-bolt-heat
-    y: 2
+    y: 8
     chance: 0.2
     length: 6
     damage: 15
@@ -135,7 +135,7 @@ abilities: [
   {
     type: MoveLightningAbility
     x: 8
-    y: 2
+    y: 0
     chance: 0.1
     length: 6
     damage: 10
