@@ -1,8 +1,0 @@
-name: Molten Luminite
-description: Molten, high-temperature Luminite. Can be cooled for use, or alloyed with other metals.
-temperature: 0.9
-viscosity: 0.85
-effect: melting
-color: ffbc64
-lightColor: ffbc64
-research: item-detrite

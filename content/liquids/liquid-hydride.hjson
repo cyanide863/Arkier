@@ -1,0 +1,7 @@
+name: Hydride
+description: A green liquid has a composition of water and some other metals.
+temperature: -0.2
+viscosity: 0.1
+effect: arc-regen
+color: ffbc64
+lightColor: ffbc64
