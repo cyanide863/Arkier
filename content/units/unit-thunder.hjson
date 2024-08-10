@@ -14,7 +14,7 @@ health: 4500
 armor: 5
 engineSize: 0
 itemCapacity: 0
-hitSize: 14
+hitSize: 45
 strafePenalty: 0.8
 weapons: [
   {
@@ -249,9 +249,9 @@ abilities: [
     x: 35
     y: 0
     chance: 0.1
-    length: 20
+    length: 25
     damage: 30
-    status: arc-energy-damage-4
+    status: arc-energy-damage-2
     stausDuration: 30
     minSpeed: 2
     maxSpeed: 3
@@ -261,9 +261,9 @@ abilities: [
     x: -35
     y: 0
     chance: 0.2
-    length: 20
+    length: 25
     damage: 30
-    status: arc-energy-damage-4
+    status: arc-energy-damage-2
     stausDuration: 30
     minSpeed: 0.8
     maxSpeed: 2
