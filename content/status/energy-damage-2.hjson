@@ -1,0 +1,4 @@
+name: medium energy Damage
+outline: false
+speedMultiplier: 0.8
+damage: 10 
