@@ -1,0 +1,7 @@
+type: TreeBlock
+size: 2
+varients: 2
+update: true
+customShadow: false
+solid: true
+clipSize: 110
