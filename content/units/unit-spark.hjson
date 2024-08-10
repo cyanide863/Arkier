@@ -59,6 +59,8 @@ abilities: [
     chance: 0.25
     length: 6
     damage: 10
+    status: arc-energy-damage-1
+    stausDuration: 30
     minSpeed: 0.8
     maxSpeed: 5
   }
@@ -69,6 +71,8 @@ abilities: [
     chance: 0.2
     length: 6
     damage: 10
+    status: arc-energy-damage-1
+    stausDuration: 30
     minSpeed: 0.8
     maxSpeed: 2
   }
