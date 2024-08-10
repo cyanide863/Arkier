@@ -1,16 +1,18 @@
 type: Drill
 name: Quantum drill
 size: 6
-health: 5320
+health: 1500
 description: Induces quantum fluctuations in the ore below, rapidly extracting it. Requires nitrogen as a thermal isolator.
 requirements: [
-  item-vanadium/3400
-  item-flux-alloy/91500
+  item-vanadium/1200
+  item-flux-alloy/200
+  item-galvesteel/400
+  item-
 ]
 // placeholder
 researchCost: [
   item-vanadium/3400
-  item-flux-alloy/91500
+  item-flux-alloy/6000
 ]
 drillTime: 5
 tier: 4
@@ -18,7 +20,7 @@ updateEffect: pulverizeRed
 updateEffectChance: 0.06
 drillEffect: mineHuge
 rotateSpeed: 15
-warmupSpeed: 0.0025
+warmupSpeed: 0.008
 ambientSound: drill
 ambientSoundVolume: 0.5
 squareSprite: false
@@ -30,7 +32,7 @@ itemCapacity: 72
 consumes: {
   power: 40
   liquids: [
-    nitrogen/1.5
+    liquid-methane/1.5
   ]
 }
 liquidBoostIntensity: 1
