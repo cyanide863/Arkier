@@ -8,18 +8,18 @@ outlineColor: 0f0f14
 itemCapacity: 0
 speed: 0.6
 drag: 0.11
-hitSize: 10
-rotateSpeed: 2.3
-health: 400
+hitSize: 25
+rotateSpeed: 1.2
+health: 2400
 armor: 2
 legStraightness: 0.35
 stepShake: 0
 legCount: 6
-legLength: 20
+legLength: 21
 lockLegBase: true
 legContinuousMove: true
-legExtension: -1
-legBaseOffset: 3
+legExtension: -10
+legBaseOffset: 10
 legMaxLength: 1.1
 legMinLength: 0.2
 legLengthScl: 0.95
@@ -30,79 +30,51 @@ legMoveSpace: 1
 allowLegStep: true
 hovering: true
 legPhysicsLayer: false
-shadowElevation: 0.1
-groundLayer: 74
-parts: [
-  {
-    type: RegionPart
-    suffix: -glow
-    blending: additive
-    layer: -1
-    outline: false
-    color: 9db9ed
-  }
-  {
-   suffix: -front
-   moveY: 15
-   moveX: 0
-   progress: warmup
-   under: true
-   mirror: false
-  }
-]
+shadowElevation: 0.2
+groundLayer: 75
 weapons: [
   {
-    x: 0
-    y: -4
-    shootY: 24
-    mirror: false
-    reload: 160
-    parts: [
-      {
-        type: ShapePart
-        radius: 9.9
-        stroke: 1.5
-        circle: true
-        hollow: true
-        color: 7382f0
-        layer: -110
-      }
-      {
-        type: ShapePart
-        radius: 9.9
-        circle: true
-        color: 7382f088
-        layer: -110
-      }
-    ]
-    shootWarmupSpeed: 0.02
-    minWarmup: 0.9
-    shootSound: powerBlastsmol
+    name: unit-demolish-railgun
+    shootSound: railgun
+    reload: 80
+    layer: -0.0001
+    x: 16
+    y: 0
     recoil: 0
-    shake: 8
+    shake: 1
     bullet: {
-      type: LaserBulletType
-      damage: 1200
-      length: 620
-      width: 40
-      lifetime: 80
-      statusDuration: 1
-      colors: [7b92bb70, b6cbf390, ffffff]
-      sideLength: 70
-      smokeEffect: {
-        followParent: false
-        particles: 1
-        length: 20
-        baseLength: 24
-        randLength: false
-        lifetime: 70
-        cone: 0
-        offset: 90
-        region: arc-pulsewave
-        sizeFrom: 40
-        sizeTo: 80
-        colorFrom: 7382f0
-        colorTo: 7382f000
+      speed: 18
+      sprite: arc-rail-bullet
+      lifetime: 35
+      damage: 70
+      pierceDamageFactor: 0.7
+      pierce: true
+      pierceCap: 2
+      pierceBuilding: true
+      splashDamage: 35
+      splashDamageRadius: 20
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareBig
+      width: 11
+      height: 16
+      frontColor: ffffff
+      backColor: 8ca9e8
+      hitColor: 8ca9e8
+      trailColor: 8ca9e8
+      trailWidth: 3
+      trailLength: 9
+      trailChance: 0
+      despawnEffect: none
+      hitEffect: {
+        type: ExplosionEffect
+        waveColor: 8ca9e8
+        smokeColor: 8ca9e8
+        sparkColor: 8ca9e8
+        waveLife: 8
+        waveStroke: 2
+        waveRad: 20
+        waveRadBase: 4
+        sparks: 12
       }
     }
   }
