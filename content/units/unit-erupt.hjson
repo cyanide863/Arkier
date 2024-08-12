@@ -45,227 +45,69 @@ parts: [
   }
 ]
 weapons: [
-  {
-    name: unit-erupt-gun
-    x: 0
-    y: -4
-    shootY: 24
-    mirror: false
-    reload: 300
+    {
+    name: needs a sprite
+    rotationLimit: 30
+    rotateSpeed: 2
+    rotate: true
+    x: 12
+    y: -7
+    shootY: 16
+    inaccuracy: 3
+    velocityRnd: 0.25
+    recoil: 2
+    reload: 8
+    cooldownTime: 35
+    shake: 1
+    layerOffset: 0.02
+    shadow: 20
+    heatColor: ff0000
+    minWarmup: 0.75
+    shootSound: shootSmite
+    chargeSound: laserCharge
     shoot: {
-      shots: 3
-      shotDelay: 10
-    }
-    parts: [
-      {
-       type: ShapePart
-       progress: warmup
-       color: b6cbf3
-       layer: 110
-       y: -30
-       circle: false
-       hollow: true
-       sides: 6
-       radius: 5
-       stroke: -1
-       strokeTo: 2
-       rotateSpeed: -1.5
-      }
-      {
-       type: ShapePart
-       progress: warmup
-       color: b6cbf388
-       layer: 110
-       y: -30
-       circle: false
-       hollow: true
-       sides: 6
-       radius: 10
-       stroke: -1
-       strokeTo: 2
-       rotateSpeed: 1.5
-      }
-      {
-       suffix: -front
-       moveY: -1
-       moveX: -1
-       moveRot: 12
-       progress: warmup
-       mirror: true
-       layer: -110
-      }
-      {
-       suffix: -blade
-       moveY: -1
-       moveX: -1
-       moveRot: 12
-       progress: warmup
-       mirror: true
-       layer: -110
-     }
-     {
-       suffix: -side
-       moveY: -1
-       moveX: -1
-       moveRot: 12
-       progress: warmup
-       mirror: true
-       layer: -110
-     }
-     {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 2
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 110
-      triLength: -10
-      triLengthTo: 20
-    }
-    {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 110
-      shapeRotation: 180
-      triLength: -1.5
-      triLengthTo: 3
-    }
-    {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 90
-      triLength: -10
-      triLengthTo: 20
-     }
-     {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 90
-      shapeRotation: 180
-      triLength: -1.5
-      triLengthTo: 3
-     }
-     {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 70
-      triLength: -10
-      triLengthTo: 20
-     }
-     {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 2
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 70
-      shapeRotation: 180
-      triLength: -1.5
-      triLengthTo: 3
-     }
-    ]
-    shootWarmupSpeed: 0.02
-    minWarmup: 0.9
-    chargeSound: lasercharge2
-    shootSound: laserBlast
-    recoil: 1.2
-    shake: 8
+    type: shootPattern
+    firstShotDelay: 90
+    shots: 6
     bullet: {
-      type: LaserBulletType
-      damage: 800
-      length: 560
-      width: 55
-      lifetime: 80
-      statusDuration: 1
-      colors: [7b92bb70, b6cbf390, ffffff]
-      sideLength: 70
-      smokeEffect: {
-        followParent: false
-        particles: 1
-        length: 20
-        baseLength: 24
-        randLength: false
-        lifetime: 70
-        cone: 0
-        offset: 90
-        region: arc-pulsewave
-        sizeFrom: 40
-        sizeTo: 80
-        colorFrom: 7382f0
-        colorTo: 7382f000
-        intervalRandomSpread: 12
-        intervalBullets: 2
-        intervalSpread: 90
-        intervalBullet: {
-         type: LightningBulletType
-         damage: 30
-         lightningColor: b6cbf3
-         lightningLength: 20
-         hitSound: laser
-         despawnSound: laser
-         pierce: true
-         pierceCap: 2
-         buildingDamageMultiplier: 0.65
-        }
+      speed: 4.5
+      sprite: large-orb
+      lifetime: 64
+      damage: 80
+      pierceDamageFactor: 0.7
+      pierce: true
+      pierceBuilding: true
+      homingRange: 40
+      homingPower: 0.05
+      homingDelay: 10
+      splashDamage: 35
+      splashDamageRadius: 20
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareBig
+      width: 20
+      height: 20
+      frontColor: ffffff
+      backColor: 8ca9e8
+      hitColor: 8ca9e8
+      trailColor: 8ca9e8
+      trailWidth: 3
+      trailLength: 9
+      trailChance: 0
+      despawnEffect: none
+      hitEffect: {
+        type: ExplosionEffect
+        waveColor: 8ca9e8
+        smokeColor: 8ca9e8
+        sparkColor: 8ca9e8
+        waveLife: 8
+        waveStroke: 2
+        waveRad: 20
+        waveRadBase: 4
+        sparks: 12
       }
     }
-  }
   {
-    name: unit-erupt-blaster
+    name: energy-rifle
     x: 13
     y: -12
     shootY: 5
@@ -273,35 +115,65 @@ weapons: [
     reload: 60
     inaccuracy: 7
     shoot: {
-      shots: 7
-      shotDelay: 5
+      shots: 3
+      shotDelay: 4
     }
-    parts: [
-      {
-       suffix: -front
-       moveY: -2
-       moveX: 2
-       moveRot: -15
-       progress: warmup
-       mirror: true
-       layer: -110
-     }
-    ]
     shootWarmupSpeed: 0.02
     minWarmup: 0.9
     shootSound: laser
     recoil: 0.2
     shake: 3
     bullet: {
-      type: LaserBulletType
-      damage: 40
-      length: 120
-      width: 20
-      lifetime: 30
-      statusDuration: 1
-      colors: [7b92bb70, b6cbf390, ffffff]
-      sideLength: 70
-      smokeEffect: shootSmokeSquareSparse 
+    bullet: {
+      type: BasicBulletType
+      shootEffect: sparkShoot
+      smokeEffect: shootSmokeSquareSparse
+      trailEffect: hitSquaresColor
+      trailInterval: 3
+      height: 7
+      width: 5
+      trailWidth: 1.2
+      trailLength: 15
+      backColor: 9db9ed
+      frontColor: ffffff
+      trailColor: 9db9ed
+      hitColor: 9db9ed
+      lifetime: 45
+      speed: 6
+      damage: 75
+      splashDamage: 24
+      splashDamageRadius: 12
+      pierce: true
+      pierceCap: 3
+      lightColor: 9db9ed
+      despawnEffect: {
+        type: ExplosionEffect
+        lifetime: 15
+        waveStroke: 2
+        waveColor: 9db9ed
+        sparkColor: 9db9ed
+        sparks: 6
+        sparkRad: 20
+        sparkLen: 3
+        sparkStroke: 1.2
+        smokeSize: 0
+        smokeSizeBase: 0
+        smokes: 0
+      }
+      hitEffect: {
+        type: ExplosionEffect
+        lifetime: 15
+        waveStroke: 2
+        waveColor: 9db9ed
+        sparkColor: 9db9ed
+        sparks: 6
+        sparkRad: 20
+        sparkLen: 3
+        sparkStroke: 1.2
+        smokeSize: 0
+        smokeSizeBase: 0
+        smokes: 0
+      }
     }
   }
 ]
