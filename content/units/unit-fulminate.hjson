@@ -14,22 +14,21 @@ health: 22000
 armor: 3
 legStraightness: 0.90
 stepShake: 8
-legCount: 8
-legLength: 60
+legCount: 6
+legLength: 50
 lockLegBase: true
 legContinuousMove: true
 drownTimeMultiplier: 3.4
-legExtension: -20
 legBaseOffset: 8
-legMaxLength: 1.1
-legMinLength: 0.2
+legMoveSpace: 0.85
+legMaxLength: 1.6
+legExtension: -15
 legLengthScl: 0.95
 legForwardScl: 1.11
 legGroupSize: 3
 rippleScale: 4.5
-legSplashDamage: 34
+legSplashDamage: 50
 legSplashRange: 40
-legMoveSpace: 1
 allowLegStep: true
 hovering: true
 legPhysicsLayer: false
@@ -49,186 +48,54 @@ parts: [
 ]
 weapons: [
   {
-    name: unit-fulminate-gun
+    name: hehe
+    rotationLimit: 30
+    rotateSpeed: 2
+    rotate: true
     x: 0
-    y: -4
-    shootY: 24
-    mirror: false
-    reload: 350
+    y: 30
+    shootY: 16
+    velocityRnd: 0.25
+    recoil: 2
+    reload: 8
+    cooldownTime: 35
+    shake: 1
+    layerOffset: 0.02
+    shadow: 20
+    heatColor: ff0000
+    minWarmup: 0.75
+    chargeSound: laserCharge
+    shootSound: shootSmite
     shoot: {
-      firstShotDelay: 180
-      shots: 3
-      shotDelay: 20
-    }
-    parts: [
-      {
-       type: ShapePart
-       progress: warmup
-       color: b6cbf3
-       layer: 110
-       y: -30
-       circle: false
-       hollow: true
-       sides: 6
-       radius: 5
-       stroke: -1
-       strokeTo: 2
-       rotateSpeed: -1.5
-      }
-      {
-       type: ShapePart
-       progress: warmup
-       color: b6cbf388
-       layer: 110
-       y: -30
-       circle: false
-       hollow: true
-       sides: 6
-       radius: 10
-       stroke: -1
-       strokeTo: 2
-       rotateSpeed: 1.5
-      }
-      {
-       suffix: -front
-       moveY: 0
-       moveX: 0
-       moveRot: -6
-       progress: warmup
-       mirror: true
-       layer: -110
-      }
-      {
-       suffix: -blade
-       moveY: -1
-       moveX: -1
-       moveRot: -20
-       progress: warmup
-       mirror: true
-       layer: -110
-     }
-     {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 110
-      triLength: -10
-      triLengthTo: 20
-    }
-    {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: -110
-      shapeRotation: 180
-      triLength: -1.5
-      triLengthTo: 3
-    }
-    {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 90
-      triLength: -10
-      triLengthTo: 20
-     }
-     {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 90
-      shapeRotation: 180
-      triLength: -1.5
-      triLengthTo: 3
-     }
-     {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 70
-      triLength: -10
-      triLengthTo: 20
-     }
-     {
-      type: HaloPart
-      progress: warmup
-      color: b6cbf3
-      layer: 110
-      shapes: 3
-      y: -30
-      tri: true
-      hollow: false
-      radius: 4
-      radiusTo: 4
-      haloRadius: 15
-      haloRadiusTo: 15
-      haloRotation: 70
-      shapeRotation: 180
-      triLength: -1.5
-      triLengthTo: 3
-     }
-    ]
-    shootWarmupSpeed: 0.02
-    minWarmup: 0.9
-    chargeSound: HeavyCharge
-    shootSound: powerBlastlarge
-    recoil: 1.2
-    shake: 18
+      type: shootPattern
+      firstShotDelay: 80
+      shots: 12
+   }
     bullet: {
-      type: LaserBulletType
-      damage: 800
-      length: 660
-      width: 60
-      lifetime: 80
-      statusDuration: 1
-      colors: [7b92bb70, b6cbf390, ffffff]
-      sideLength: 70
-            chargeEffect: {
+      speed: 9
+      lifetime: 37
+      damage: 80
+      pierceDamageFactor: 0.7
+      pierce: true
+      pierceBuilding: true
+      homingRange: 40
+      homingPower: 0.05
+      homingDelay: 10
+      splashDamage: 35
+      splashDamageRadius: 20
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareBig
+      width: 15
+      height: 40
+      frontColor: ffffff
+      backColor: 8ca9e8
+      hitColor: 8ca9e8
+      trailColor: 8ca9e8
+      trailWidth: 3
+      trailLength: 9
+      trailChance: 0
+      despawnEffect: none
+      chargeEffect: {
         type: MultiEffect
         lifetime: 110
         effects: [
@@ -308,23 +175,9 @@ weapons: [
             sizeInterp: pow2Out
             followParent: true
             rotWithParent: false
-          }
-        ]
-      }
-      smokeEffect: {
-        followParent: false
-        particles: 1
-        length: 20
-        baseLength: 24
-        randLength: false
-        lifetime: 70
-        cone: 0
-        offset: 90
-        region: arc-pulsewave
-        sizeFrom: 40
-        sizeTo: 100
-        colorFrom: 7382f0
-        colorTo: 7382f000
+            }
+          ]
+        }
         intervalRandomSpread: 12
         intervalBullets: 2
         intervalSpread: 90
@@ -343,28 +196,238 @@ weapons: [
     }
   }
   {
-    name: unit-erupt-blaster
+    name: unit-fulminate-gun
+    rotationLimit: 25
+    rotateSpeed: 0.2
+    rotate: true
+    x: 34
+    y: 0
+    shootY: 16
+    inaccuracy: 3
+    velocityRnd: 0.25
+    recoil: 2
+    reload: 8
+    cooldownTime: 35
+    shake: 1
+    layerOffset: 0.02
+    shadow: 20
+    heatColor: ff0000
+    minWarmup: 0.75
+    shoot: {
+      type: shootPattern
+      shots: 6
+    }
+    shootSound: shootSmite
+    bullet: {
+      speed: 9
+      lifetime: 37
+      damage: 80
+      pierceDamageFactor: 0.7
+      pierce: true
+      pierceBuilding: true
+      homingRange: 40
+      homingPower: 0.05
+      homingDelay: 10
+      splashDamage: 35
+      splashDamageRadius: 20
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareBig
+      width: 15
+      height: 40
+      frontColor: ffffff
+      backColor: 8ca9e8
+      hitColor: 8ca9e8
+      trailColor: 8ca9e8
+      trailWidth: 3
+      trailLength: 9
+      trailChance: 0
+      despawnEffect: none
+      hitEffect: {
+        type: ExplosionEffect
+        waveColor: 8ca9e8
+        smokeColor: 8ca9e8
+        sparkColor: 8ca9e8
+        waveLife: 8
+        waveStroke: 2
+        waveRad: 20
+        waveRadBase: 4
+        sparks: 12
+      }
+    }
+    //definitely do this with recursive math in java
+    parts: [
+      {
+        type: RegionPart
+        suffix: -blade1
+        outline: false
+        layer: -75.01
+        moveX: 6
+        heatProgress: {
+          type: warmup
+          ops: [
+            {
+              op: add
+              amount: 0.3
+            }
+            {
+              op: min
+              other: heat
+            }
+          ]
+        }
+        heatColor: 8ca9e8
+        moves: [
+         {
+          x: -5
+          progress: {
+            type: reload
+            op: compress
+            start: 0.8
+            end: 1
+          }
+        }
+      ]
+    }
+  }
+      {
+        type: RegionPart
+        suffix: -blade2
+        outline: false
+        layer: -75.01
+        moveX: 4.5
+        heatProgress: {
+          type: warmup
+          ops: [
+            {
+              op: add
+              amount: 0.3
+            }
+            {
+              op: min
+              other: heat
+            }
+          ]
+        }
+        heatColor: 8ca9e8
+        moves: [
+         {
+          x: -5
+          progress: {
+            type: reload
+            op: compress
+            start: 0.8
+            end: 1
+          }
+        }
+      ]
+    }
+  }
+      {
+        type: RegionPart
+        suffix: -blade3
+        outline: false
+        layer: -75.01
+        moveX: 4
+        heatProgress: {
+          type: warmup
+          ops: [
+            {
+              op: add
+              amount: 0.3
+            }
+            {
+              op: min
+              other: heat
+            }
+          ]
+        }
+        heatColor: 8ca9e8
+        moves: [
+         {
+          x: -4
+          progress: {
+            type: reload
+            op: compress
+            start: 0.8
+            end: 1
+          }
+        }
+      ]
+    }
+  }
+      {
+        type: RegionPart
+        suffix: -blade4
+        outline: false
+        layer: -75.01
+        moveX: 3
+        heatProgress: {
+          type: warmup
+          ops: [
+            {
+              op: add
+              amount: 0.3
+            }
+            {
+              op: min
+              other: heat
+            }
+          ]
+        }
+        heatColor: 8ca9e8
+        moves: [
+         {
+          x: -3
+          progress: {
+            type: reload
+            op: compress
+            start: 0.8
+            end: 1
+          }
+        }
+      ]
+    }
+  }
+      {
+        type: RegionPart
+        suffix: -blade5
+        outline: false
+        layer: -75.01
+        moveX: 2
+        heatProgress: {
+          type: warmup
+          ops: [
+            {
+              op: add
+              amount: 0.3
+            }
+            {
+              op: min
+              other: heat
+            }
+          ]
+        }
+        heatColor: 8ca9e8
+        moves: [
+         {
+          x: -2
+          progress: {
+            type: reload
+            op: compress
+            start: 0.8
+            end: 1
+          }
+        }
+      ]
+    }
+  }
+  {
+    name: energy-repulser
     x: 24
     y: -6
     shootY: 5
     mirror: true
-    reload: 80
-    inaccuracy: 7
-    shoot: {
-      shots: 7
-      shotDelay: 7
-    }
-    parts: [
-      {
-       suffix: -front
-       moveY: -2
-       moveX: 2
-       moveRot: -15
-       progress: warmup
-       mirror: true
-       layer: -110
-      }
-    ]
+    reload: 40
     shootWarmupSpeed: 0.02
     minWarmup: 0.9
     shootSound: laser
@@ -372,39 +435,24 @@ weapons: [
     shake: 3
     bullet: {
       type: LaserBulletType
-      damage: 40
-      length: 120
-      width: 20
+      damage: 30
+      length: 60
+      width: 40
       lifetime: 30
       statusDuration: 1
       colors: [7b92bb70, b6cbf390, ffffff]
-      sideLength: 70
+      sideLength: 0
       smokeEffect: shootSmokeSquareSparse 
     }
   }
   {
-    name: unit-erupt-blaster
+    name: energy-repulser
     x: 17
     y: 11
     shootY: 5
     mirror: true
     reload: 60
-    inaccuracy: 7
-    shoot: {
-      shots: 7
-      shotDelay: 7
-    }
-    parts: [
-      {
-       suffix: -front
-       moveY: -2
-       moveX: 2
-       moveRot: -15
-       progress: warmup
-       mirror: true
-       layer: -110
-     }
-    ]
+    inaccuracy: 0
     shootWarmupSpeed: 0.02
     minWarmup: 0.9
     shootSound: laser
@@ -412,40 +460,34 @@ weapons: [
     shake: 3
     bullet: {
       type: LaserBulletType
-      damage: 40
-      length: 120
+      damage: 30
+      length: 100
       width: 20
       lifetime: 30
       statusDuration: 1
       colors: [7b92bb70, b6cbf390, ffffff]
-      sideLength: 70
+      sideLength: 0
       smokeEffect: shootSmokeSquareSparse 
     }
   }
   {
-    name: unit-fulminate-equip
+    name: energy-gunner
     x: 14
     y: -12
     shootY: 5
     mirror: true
     reload: 30
-    parts: [
-      {
-       suffix: -barrel
-       moveY: -3
-       moveX: 0
-       progress: recoil
-       mirror: true
-       layer: -110
-      }
-    ]
     shootWarmupSpeed: 0.02
     minWarmup: 0.9
-    shootSound: powerBlastsmol
+    shootSound: blaster
     recoil: 0.2
-    shake: 3
+    shake: 2
+    shoot: {
+    type: shootPattern
+    shots: 3
+    }
     bullet: {
-    type: ArtilleryBulletType
+    type: basicBulletType
     width: 20
     height: 20
     hitColor: 6f83a8
@@ -460,53 +502,40 @@ weapons: [
     trailLength: 30
     splashDamage: 150
     splashDamageRadius: 40
-    fragSpread: 90
-    fragBullets: 4
-    fragVelocityMin: 1
-    fragVelocityMax: 1
-    fragLifeMin: 1
-    fragLifeMax: 1
-    fragBullet: {
-      type: BasicBulletType
-      hitEffect: hitBulletColor
-      despawnEffect: hitBulletColor
-      splashDamage: 60
-      splashDamageRadius: 20
-      width: 18
-      height: 18
-      hitColor: 6f83a8
-      trailColor: 6f83a8
-      frontColor: 6f83a8
-      lightColor: b6cbf3
-      backColor: b6cbf3
-      speed: 2
-      lifetime: 20
-      collidesAir: false
-      fragBullets: 4
-      fragSpread: 45
-      fragRandomSpread: 0
-      fragVelocityMin: 1
-      fragVelocityMax: 1
-      fragLifeMin: 1
-      fragLifeMax: 1
-      fragBullet: {
-        type: BasicBulletType
-        hitEffect: hitBulletColor
-        despawnEffect: hitBulletColor
-        splashDamage: 24
-        splashDamageRadius: 12
-        width: 12
-        height: 12
-        hitColor: 6f83a8
-        trailColor: 6f83a8
-        frontColor: 6f83a8
-        lightColor: b6cbf3
-        backColor: b6cbf3
-        speed: 2
-        lifetime: 20
-        collidesAir: false
-        }
-      }
+    }
+  }
+  {
+    name: energy-gunner
+    x: 10
+    y: -14
+    shootY: 5
+    mirror: true
+    reload: 30
+    shootWarmupSpeed: 0.01
+    minWarmup: 0.8
+    shootSound: blaster
+    recoil: 0.2
+    shake: 2
+    shoot: {
+    type: shootPattern
+    shots: 3
+    }
+    bullet: {
+    type: basicBulletType
+    width: 20
+    height: 20
+    hitColor: 6f83a8
+    trailColor: 6f83a8
+    frontColor: 6f83a8
+    lightColor: b6cbf3
+    backColor: b6cbf3
+    speed: 5
+    hitShake: 4
+    lifetime: 75
+    trailWidth: 3
+    trailLength: 30
+    splashDamage: 150
+    splashDamageRadius: 40
     }
   }
 ]
