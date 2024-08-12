@@ -25,7 +25,9 @@ legMinLength: 0.2
 legLengthScl: 0.95
 legForwardScl: 1.11
 legGroupSize: 3
-rippleScale: 0.2
+rippleScale: 2
+legSplashDamage: 22
+legSplashRange: 30
 legMoveSpace: 1
 allowLegStep: true
 hovering: true
