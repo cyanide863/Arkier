@@ -1,0 +1,222 @@
+name: Erupt
+description: A large annhilator fires atom-splitting tearing the enemies.
+detail: fueled by a small neutron star a little fragile.
+type: legs
+template: ErekirUnitType
+lightColor: 9db9ed
+outlineColor: 0f0f14
+itemCapacity: 0
+speed: 0.4
+drag: 0.11
+hitSize: 40
+rotateSpeed: 1.2
+health: 5600
+armor: 3
+legStraightness: 0.50
+stepShake: 8
+legCount: 4
+legLength: 24
+lockLegBase: true
+legContinuousMove: true
+legExtension: -2
+legBaseOffset: 3
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.95
+legForwardScl: 1.11
+legGroupSize: 3
+rippleScale: 0.2
+legMoveSpace: 1
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.1
+groundLayer: 74
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    progress: warmup
+    color: fffff00
+    colorTo: 7382f0
+  }
+]
+weapons: [
+  {
+    name: hehe
+    rotationLimit: 30
+    rotateSpeed: 2
+    rotate: true
+    x: 0
+    y: 30
+    shootY: 16
+    velocityRnd: 0.25
+    recoil: 2
+    reload: 200
+    cooldownTime: 35
+    shake: 1
+    layerOffset: 0.02
+    shadow: 20
+    heatColor: ff0000
+    minWarmup: 0.75
+    chargeSound: laserCharge
+    shootSound: shootSmite
+    shoot: {
+      type: shootPattern
+      firstShotDelay: 80
+      shots: 8
+   }
+    bullet: {
+      speed: 9
+      lifetime: 37
+      damage: 50
+      pierceDamageFactor: 0.7
+      pierce: true
+      pierceBuilding: true
+      homingRange: 40
+      homingPower: 0.05
+      homingDelay: 10
+      splashDamage: 35
+      splashDamageRadius: 20
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareBig
+      width: 15
+      height: 15
+      frontColor: ffffff
+      backColor: 8ca9e8
+      hitColor: 8ca9e8
+      trailColor: 8ca9e8
+      trailWidth: 3
+      trailLength: 9
+      trailChance: 0
+      despawnEffect: none
+      chargeEffect: {
+        type: MultiEffect
+        lifetime: 110
+        effects: [
+          {
+            type: ParticleEffect
+            particles: 6
+            length: 12
+            baseLength: 2
+            colorFrom: 6f83a8
+            colorTo: aac3f1
+            sizeFrom: 2.1
+            sizeTo: 0.6
+            lifetime: 50
+            interp: pow2In
+            sizeInterp: pow2
+            followParent: true
+            rotWithParent: false
+          }
+          {
+            type: ParticleEffect
+            particles: 6
+            length: 12
+            baseLength: 2
+            colorFrom: 6f83a8
+            colorTo: aac3f1
+            sizeFrom: 12
+            baseRotation: 46
+            sizeTo: 0.3
+            lifetime: 110
+            interp: pow2In
+            sizeInterp: pow2
+            followParent: true
+            rotWithParent: false
+          }
+          {  
+            type: WaveEffect
+            sides: 5
+            lifetime: 110
+            sizeFrom: 40
+            sizeTo: 30
+            strokeFrom: 4
+            strokeTo: 2
+            followParent: true
+          }
+          {  
+            type: WaveEffect
+            sides: 6
+            lifetime: 110
+            strokeFrom: 1.1
+            strokeTo: 4
+            sizeFrom: 2
+            sizeTo: 30
+            followParent: true
+          }
+          {  
+            type: WaveEffect
+            sides: 8
+            lifetime: 110
+            strokeFrom: 1.1
+            strokeTo: 4
+            sizeFrom: 2
+            sizeTo: 35
+            followParent: true
+          }
+          {
+            type: ParticleEffect
+            particles: 6
+            length: 2
+            baseLength: 12
+            colorFrom: 6f83a8
+            colorTo: aac3f1
+            sizeFrom: 3
+            baseRotation: 46
+            sizeTo: 8
+            lifetime: 110
+            interp: pow2Out
+            sizeInterp: pow2Out
+            followParent: true
+            rotWithParent: false
+            }
+          ]
+        }
+        intervalRandomSpread: 12
+        intervalBullets: 2
+        intervalSpread: 90
+        intervalBullet: {
+         type: LightningBulletType
+         damage: 30
+         lightningColor: b6cbf3
+         lightningLength: 20
+         hitSound: laser
+         despawnSound: laser
+         pierce: true
+         pierceCap: 2
+         buildingDamageMultiplier: 0.65
+        }
+      }
+    }
+  {
+    name: energy-repulser
+    x: 13
+    y: -12
+    shootY: 5
+    mirror: true
+    reload: 40
+    inaccuracy: 2
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.9
+    shootSound: laser
+    recoil: 0.2
+    shake: 3
+    bullet: {
+      type: LaserBulletType
+      damage: 40
+      length: 120
+      width: 20
+      lifetime: 30
+      statusDuration: 1
+      colors: [7b92bb70, b6cbf390, ffffff]
+      sideLength: 70
+      smokeEffect: shootSmokeSquareSparse 
+    }
+  }
+]
+research: terrestrial-fabricator
+researchCostMultiplier: 0

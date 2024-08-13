@@ -1,0 +1,52 @@
+type: flying
+template: ErekirUnitType
+name: Spark
+description: highly delicate, very fast generates lighting
+lightColor: cca8fa
+outlineColor: 0f0f14
+lowAltitude: false
+flying: true
+drag: 0.08
+speed: 4
+rotateSpeed: 1.2
+circleTarget: true
+accel: 0.05
+health: 60
+armor: 5
+engineSize: 0
+engineColor: d0d4f8dd
+itemCapacity: 0
+hitSize: 4
+strafePenalty: 0.8
+strafePenalty: 0.8
+engines: [
+  {
+    x: 0
+    y: -5.2
+    radius: 2.5
+  }
+]
+abilities: [
+  {
+    type: MoveLightningAbility
+    heatRegion: arc-spark-heat
+    y: 5
+    chance: 0.1
+    length: 6
+    damage: 10
+    status: arc-energy-damage-1
+    stausDuration: 30
+    minSpeed: 0.8
+    maxSpeed: 3
+  }
+  {
+    type: MoveEffectAbility
+    teamColor: false
+    color: d0d4f8dd
+    effect: missileTrail
+    x: 0
+    y: -3
+    interval: 0.5
+    minVelocity: 0.6
+  }
+]

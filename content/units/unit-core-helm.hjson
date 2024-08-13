@@ -1,0 +1,86 @@
+name: Thought
+description: Defends the Veil core and builds structures. Has a healing beam for block repair.
+type: flying
+rotateSpeed: 8
+template: ErekirUnitType
+coreUnitDock: true
+range: 70
+faceTarget: true
+targetPriority: -2
+lowAltitude: false
+mineWalls: false
+mineFloor: true
+mineHardnessScaling: false
+flying: true
+mineSpeed: 8
+mineTier: 2
+buildSpeed: 2
+speed: 5
+drag: 0.08
+accel: 0.09
+itemCapacity: 45
+health: 440
+armor: 2
+hitSize: 9
+engineSize: 0
+targetable : false
+hittable : false
+outlineColor: 0f0f14
+isEnemy: false
+engines: [
+  {
+    x: -4.5
+    y: -1
+    radius: 2
+    rotation: 180
+  }
+  {
+    x: 4.5
+    y: -1
+    radius: 2
+  }
+  {
+    x: 0
+    y: -3.5
+    radius: 2
+  }
+]
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    color: ffda91
+  }
+]
+weapons: [
+  {
+    type: RepairBeamWeapon
+    widthSinMag: 0.11
+    beamWidth: 0.7
+    shootY: 0
+    repairSpeed: 3
+    fractionRepairSpeed: 0.1
+    shootCone: 15
+    healColor: 6f83a898
+    // Pal.accent
+    laserColor: 6f83a8
+    // Pal.accent
+    
+    targetUnits: false
+    targetBuildings: true
+    autoTarget: false
+    controllable: true
+    x: 0
+    y: 6
+    mirror: false
+    rotate: false
+    
+    bullet: {
+      maxRange: 70
+    }
+  }
+]
+buildBeamOffset: 6

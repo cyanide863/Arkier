@@ -1,0 +1,84 @@
+name: Demolish
+description: obliterates enemies by large atom-splitting busts.
+detail: Almost pure neutron star power,an artileery platform.
+type: legs
+template: ErekirUnitType
+lightColor: 9db9ed
+outlineColor: 0f0f14
+itemCapacity: 0
+speed: 0.6
+drag: 0.11
+hitSize: 25
+rotateSpeed: 1.2
+health: 2400
+armor: 2
+legStraightness: 0.35
+stepShake: 0
+legCount: 6
+legLength: 21
+lockLegBase: true
+legContinuousMove: true
+legExtension: -10
+legBaseOffset: 10
+legMaxLength: 1.1
+legMinLength: 0.2
+legLengthScl: 0.95
+legForwardScl: 1.11
+legGroupSize: 3
+rippleScale: 2
+legSplashDamage: 22
+legSplashRange: 30
+legMoveSpace: 1
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.2
+groundLayer: 75
+weapons: [
+  {
+    name: unit-demolish-railgun
+    shootSound: railgun
+    reload: 80
+    layer: -2
+    x: 10
+    y: 0
+    recoil: 0
+    shake: 1
+    bullet: {
+      speed: 18
+      lifetime: 35
+      damage: 70
+      pierceDamageFactor: 0.7
+      pierce: true
+      pierceCap: 2
+      pierceBuilding: true
+      splashDamage: 35
+      splashDamageRadius: 20
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareBig
+      width: 11
+      height: 16
+      frontColor: ffffff
+      backColor: 8ca9e8
+      hitColor: 8ca9e8
+      trailColor: 8ca9e8
+      trailWidth: 3
+      trailLength: 9
+      trailChance: 0
+      despawnEffect: none
+      hitEffect: {
+        type: ExplosionEffect
+        waveColor: 8ca9e8
+        smokeColor: 8ca9e8
+        sparkColor: 8ca9e8
+        waveLife: 8
+        waveStroke: 2
+        waveRad: 20
+        waveRadBase: 4
+        sparks: 12
+      }
+    }
+  }
+]
+research: terrestrial-fabricator
+researchCostMultiplier: 0
