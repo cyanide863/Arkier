@@ -3,13 +3,15 @@ template: ErekirUnitType
 name: Thunder
 description: very fast generates lighting bolts at enemies uses tesla coils 
 lightColor: cca8fa
-outlineColor: b2f0ff
+outlineColor: 0f0f14
 lowAltitude: false
 flying: true
 drag: 0.08
-speed: 5.6
+speed: 6
 rotateSpeed: 1.2
-accel: 0.025
+omniMovement: false
+circleTarget: true
+accel: 0.05
 health: 4500
 armor: 5
 engineSize: 0
@@ -20,7 +22,7 @@ weapons: [
   {
     name: thunder-weapon
     mirror: true
-    x: 48
+    x: 0
     reload: 80
     recoil: 0
     minShootVelocity: 3.5
@@ -68,11 +70,12 @@ weapons: [
     baseRotation: -180
     rotate: false
     rotateSpeed: 0
+    shootCone: 360
     alternate: false
     reload: 200
-    x: 40
+    x: 20
     y: -20
-    shootSound: missileLoop
+    shootSound: missileLaunch
     continuous: true
     shake: 3
     bullet: {
@@ -81,7 +84,7 @@ weapons: [
       hittable: false
       absorbable: false
       lifetime: 20
-      recoil: 1
+      recoil: 0.3
       hitEffect: none
       despawnEffect: none
       smokeEffect: none
@@ -96,8 +99,8 @@ weapons: [
           baseRotation: 90
           offset: -90
           layer: 116
-          region: arc-shootspike
-          sizeFrom: 40
+          region: arc-spike
+          sizeFrom: 20
           sizeTo: 0
           interp: pow5In
           colorFrom: a9d8ff
@@ -113,8 +116,8 @@ weapons: [
           baseRotation: 90
           offset: -90
           layer: 116
-          region: arc-shootspike
-          sizeFrom: 40
+          region: arc-spike
+          sizeFrom: 20
           sizeTo: 0
           interp: pow5In
           colorFrom: a9d8ff
@@ -130,8 +133,8 @@ weapons: [
           baseRotation: 90
           offset: -90
           layer: 117
-          region: arc-shootspike
-          sizeFrom: 25
+          region: arc-spike
+          sizeFrom: 8
           sizeTo: 0
           interp: pow5In
         }
@@ -145,8 +148,8 @@ weapons: [
           baseRotation: 90
           offset: -90
           layer: 117
-          region: arc-shootspike
-          sizeFrom: 25
+          region: arc-spike
+          sizeFrom: 8
           sizeTo: 0
           interp: pow5In
         }
@@ -158,10 +161,11 @@ weapons: [
     rotate: false
     rotateSpeed: 0
     alternate: false
+    shootCone: 360
     reload: 200
-    x: -40
+    x: -20
     y: -20
-    shootSound: missileLoop
+    shootSound: missileLaunch
     continuous: true
     shake: 3
     bullet: {
@@ -170,7 +174,7 @@ weapons: [
       hittable: false
       absorbable: false
       lifetime: 20
-      recoil: 1
+      recoil: 0.3
       hitEffect: none
       despawnEffect: none
       smokeEffect: none
@@ -185,8 +189,8 @@ weapons: [
           baseRotation: 90
           offset: -90
           layer: 116
-          region: arc-shootspike
-          sizeFrom: 40
+          region: arc-spike
+          sizeFrom: 20
           sizeTo: 0
           interp: pow5In
           colorFrom: a9d8ff
@@ -202,8 +206,8 @@ weapons: [
           baseRotation: 90
           offset: -90
           layer: 116
-          region: arc-shootspike
-          sizeFrom: 40
+          region: arc-spike
+          sizeFrom: 20
           sizeTo: 0
           interp: pow5In
           colorFrom: a9d8ff
@@ -219,8 +223,8 @@ weapons: [
           baseRotation: 90
           offset: -90
           layer: 117
-          region: arc-shootspike
-          sizeFrom: 25
+          region: arc-spike
+          sizeFrom: 8
           sizeTo: 0
           interp: pow5In
         }
@@ -234,8 +238,8 @@ weapons: [
           baseRotation: 90
           offset: -90
           layer: 117
-          region: arc-shootspike
-          sizeFrom: 25
+          region: arc-spike
+          sizeFrom: 8
           sizeTo: 0
           interp: pow5In
         }
@@ -270,46 +274,42 @@ abilities: [
   }
   {
     type: MoveEffectAbility
-    minVelocity: 2
+    teamColor: false
+    color: d0d4f8dd
+    effect: missileTrail
     x: 30
-    y: -30
-    rotateEffect: true
-    effect: [
-      {
-        particles: 1
-        lifetime: 50
-        length: 0
-        baseLength: 3
-        interp: pow10Out
-        sizeInterp: linear
-        sizeFrom: 3
-        sizeTo: 0
-        colorFrom: a9d8ff
-        colorTo: ffffff
-        layer: -115.01
-      }
-    ]
+    y: -20
+    interval: 0
+    minVelocity: 1.2
   }
   {
     type: MoveEffectAbility
-    minVelocity: 2
+    teamColor: false
+    color: d0d4f8dd
+    effect: missileTrail
     x: -30
-    y: -30
-    rotateEffect: true
-    effect: [
-      {
-        particles: 1
-        lifetime: 50
-        length: 0
-        baseLength: 3
-        interp: pow10Out
-        sizeInterp: linear
-        sizeFrom: 3
-        sizeTo: 0
-        colorFrom: a9d8ff
-        colorTo: ffffff
-        layer: -115.01
-      }
-    ]
+    y: -20
+    interval: 0.5
+    minVelocity: 1
+  }
+  {
+    type: MoveEffectAbility
+    teamColor: false
+    color: d0d4f8dd
+    effect: missileTrailShort
+    x: 20
+    y: -20
+    interval: 0.5
+    minVelocity: 1
+  }
+  {
+    type: MoveEffectAbility
+    teamColor: false
+    color: d0d4f8dd
+    effect: missileTrailShort
+    x: -20
+    y: -20
+    interval: 0.5
+    minVelocity: 1
   }
 ]

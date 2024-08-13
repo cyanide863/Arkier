@@ -1,4 +1,4 @@
-name: Conflict
+name: Chaos
 description: Fires artillery shells at nearby enemies.
 type: tank
 lightColor: ca6a65
@@ -51,8 +51,8 @@ weapons: [
       collides: true 
       collidesTiles: true
       damage: 200
-      lifetime: 70
-      speed: 3.5
+      lifetime: 35
+      speed: 7
       width: 8
       height: 10
       shrinkX: -1
@@ -78,7 +78,7 @@ weapons: [
           lifetime: 35
           region: arc-shootspike
           colorTo: ca6a65
-          sizeFrom: 6
+          sizeFrom: 30
           sizeTo: 0
         }
         {
@@ -87,7 +87,7 @@ weapons: [
           lifetime: 35
           region: arc-shootspike
           colorTo: ca6a65
-          sizeFrom: 7
+          sizeFrom: 20
           sizeTo: 0
         }
         {
@@ -96,7 +96,7 @@ weapons: [
           lifetime: 35
           region: arc-shootspike
           colorTo: ca6a65
-          sizeFrom: 8
+          sizeFrom: 20
           sizeTo: 0
         }
       ]
@@ -104,9 +104,9 @@ weapons: [
         {
           particles: 20
           length: 125
-          lifetime: 60
+          lifetime: 180
           cone: 20
-          sizeFrom: 2
+          sizeFrom: 7
           sizeTo: 0
           colorFrom: ca6a65
           colorTo: 656565
@@ -117,9 +117,9 @@ weapons: [
           particles: 20
           lightOpacity: 0
           length: 160
-          lifetime: 40
+          lifetime: 110
           cone: 25
-          sizeFrom: 1.5
+          sizeFrom: 3
           sizeTo: 0
           colorFrom: 999999
           colorTo: 656565

@@ -1,4 +1,4 @@
-name: Strife
+name: Havoc
 description: Fires small bullets at enemy targets.
 type: tank
 lightColor: ca6a65
@@ -36,7 +36,7 @@ weapons: [
   {
     x: 0
     y: 0
-    name: havoc-gun
+    name: unit-havoc-gun
     shootSound: shootAlt
     shootY: 4
     recoil: 1
