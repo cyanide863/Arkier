@@ -48,11 +48,13 @@ parts: [
 ]
 weapons: [
   {
-    name: qsentrex-launcher
-    reload: 250
+    name: unit-conflict-launcher
+    reload: 200
     layerOffset: 1
     x: 0
     y: -2
+    rotate: true
+    rotateSpeed: 0.5
     shoot: {
       type: ShootBarrel
       shots: 15
@@ -67,7 +69,6 @@ weapons: [
     }
     shootSound: missileLarge
     shake: 3
-    shoot
     bullet: {
       type: BulletType
       spawnUnit: arc-unit-cruise-missile
@@ -88,16 +89,17 @@ weapons: [
         cap: false
         colorFrom: ca6a65
         colorTo: dc907e
-      }
-      smokeEffect: [
+       }
+       smokeEffect: [
         shootBigSmoke2
         {
           type: RadialEffect
-          lengthOffset: 70
+          lengthOffset: 4
           rotationOffset: 180
-          amount: 2
+          amount: 1
           effect: shootBigSmoke2
         }
       ]
     }
-  }       
+  }
+]       

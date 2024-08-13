@@ -39,14 +39,13 @@ weapons: [
     name: unit-demolish-railgun
     shootSound: railgun
     reload: 80
-    layer: -0.0001
-    x: 16
+    layer: -2
+    x: 10
     y: 0
     recoil: 0
     shake: 1
     bullet: {
       speed: 18
-      sprite: arc-rail-bullet
       lifetime: 35
       damage: 70
       pierceDamageFactor: 0.7

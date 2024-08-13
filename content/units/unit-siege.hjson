@@ -1,30 +1,30 @@
 type: tank
 template: TankUnitType
-shadowElevation: 0.3
+shadowElevation: 0.4
 groundLayer: 85
-crushDamage: 5
-hitSize: 96
+crushDamage: 4
+hitSize: 50
 health: 34000
 armor: 20
 faceTarget: false
 speed: 0.7
 accel: 0.1
 drag: 0.1
-drownTimeMultiplier: 7
+drownTimeMultiplier: 3
 treadPullOffset: 0
-treadFrames: 30
+treadFrames: 40
 treadRects: [
   {
-    x: 95
-    y: -56
-    width: 63
-    height: 240
+    x: 71
+    y: -60
+    width: 47
+    height: 250
   }
   {
-    x: 16
-    y: -191
-    width: 63
-    height: 176
+    x: 71
+    y: -60
+    width: 33
+    height: 240
   }
 ]
 rotateSpeed: 1
@@ -46,11 +46,11 @@ weapons: [
       shots: 5
       shotDelay: 15
       barrels: [
-        -6, 12, 0,
-        0, 12, 0,
-        6, 12, 0,
-        3, 6, 0,
-        -3, 6, 0
+        -6, 3, 0,
+        0, 3, 0,
+        6, 3, 0,
+        3, 0, 0,
+        -3, 0, 0
       ]
     }
     parts: [
@@ -96,7 +96,7 @@ weapons: [
       {
         suffix: -barrel
         y: -3
-        x: -5.75
+        x: -3
         moveY: -7
         recoilIndex: 3
         progress: {
@@ -108,8 +108,8 @@ weapons: [
       }
       {
         suffix: -barrel
-        y: 3
-        x: -5.75
+        y: -3
+        x: 3
         moveY: -7
         recoilIndex: 4
         progress: {

@@ -3,13 +3,13 @@ template: ErekirUnitType
 name: Discharge
 description: very fast generates lighting bolts at enemies uses tesla coils 
 lightColor: cca8fa
-outlineColor: b2f0ff
+outlineColor: 0f0f14
 lowAltitude: false
 flying: true
 drag: 0.08
 speed: 6
 rotateSpeed: 1.3
-accel: 0.015
+accel: 0.05
 omniMovement: false
 circleTarget: true
 health: 1200
@@ -18,29 +18,6 @@ engineSize: 0
 itemCapacity: 0
 hitSize: 30
 strafePenalty: 0.8
-engines: [
-  {
-    x: 0
-    y: -35
-    radius: 6
-    rotation: -90
-    engineColor: 7b8bff
-  }
-  {
-    x: 26
-    y: -35
-    radius: 4
-    rotation: -90
-    engineColor: 7b8bff
-  }
-  {
-    x: 26
-    y: -35
-    radius: 4
-    rotation: -90
-    engineColor: 7b8bff
-  }
-]
 abilities: [
   {
     type: MoveLightningAbility
@@ -65,5 +42,25 @@ abilities: [
     stausDuration: 30
     minSpeed: 1.2
     maxSpeed: 3.7
+  }
+  {
+    type: MoveEffectAbility
+    teamColor: false
+    color: d0d4f8dd
+    effect: missileTrail
+    x: 12
+    y: -13
+    interval: 0.5
+    minVelocity: 0.6
+  }
+  {
+    type: MoveEffectAbility
+    teamColor: false
+    color: d0d4f8dd
+    effect: missileTrail
+    x: -12
+    y: -13
+    interval: 0.5
+    minVelocity: 0.6
   }
 ]

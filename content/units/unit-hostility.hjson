@@ -51,21 +51,53 @@ weapons: [
     y: 0
     name: unit-hostility-gun
     layerOffset: 0.0001
-    shootSound: artillery
+    shootSound: tankShoot1
     shootCone: 5
     shootY: 16
-    inaccuracy: 8
     recoil: 3
         shoot: {
+      type: ShootBarrel
       shots: 3
-      shotDelay: 6
+      shotDelay: 15
+      barrels: [
+        -7, 7, 0,
+         0, 7, 0,
+         7, 7, 0,
+      ]
     }
     parts: [
       {
         suffix: -barrel
         y: 0
+        x: -7
+        moveY: -6
+        recoilIndex: 0
+        progress: {
+          type: recoil
+          op: compress
+          start: 1
+          end: 1.5
+        }
+      }
+      {
+        suffix: -barrel
+        y: 0
         x: 0
         moveY: -6
+        recoilIndex: 1
+        progress: {
+          type: recoil
+          op: compress
+          start: 1.5
+          end: 2
+        }
+      }
+      {
+        suffix: -barrel
+        y: 0
+        x: 7
+        moveY: -6
+        recoilIndex: 2
         progress: {
           type: recoil
           op: compress
@@ -94,7 +126,7 @@ weapons: [
       shrinkInterp: pow3In
       lifetime: 120
       damage: 120
-      splashDamage: 300
+      splashDamage: 600
       splashDamageRadius: 20
       trailLength: 16
       trailWidth: 2
