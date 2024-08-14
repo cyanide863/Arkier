@@ -1,0 +1,590 @@
+name: Fulminate
+description: A large annhilator fires atom-splitting tearing the enemies.
+detail: fueled by a small neutron star a little fragile.
+type: legs
+template: ErekirUnitType
+lightColor: 9db9ed
+outlineColor: 0f0f14
+itemCapacity: 0
+speed: 0.4
+drag: 0.11
+hitSize: 40
+rotateSpeed: 1.2
+health: 22000
+armor: 3
+legStraightness: 0.90
+stepShake: 8
+legCount: 6
+legLength: 50
+lockLegBase: true
+legContinuousMove: true
+drownTimeMultiplier: 3.4
+legBaseOffset: 8
+legMoveSpace: 0.85
+legMaxLength: 1.6
+legExtension: -15
+legLengthScl: 0.95
+legForwardScl: 1.11
+legGroupSize: 1
+rippleScale: 4.5
+legSplashDamage: 50
+legSplashRange: 40
+allowLegStep: true
+hovering: true
+legPhysicsLayer: false
+shadowElevation: 0.3
+groundLayer: 74
+parts: [
+  {
+    type: RegionPart
+    suffix: -glow
+    blending: additive
+    layer: -1
+    outline: false
+    progress: warmup
+    color: fffff00
+    colorTo: 7382f0
+  }
+]
+weapons: [
+  {
+    name: hehe
+    rotate: false
+    x: 0
+    y: 30
+    shootY: 16
+    velocityRnd: 0.25
+    inaccuracy: 0
+    recoil: 2
+    reload: 230
+    cooldownTime: 35
+    shake: 1
+    layerOffset: 0.02
+    shadow: 0
+    heatColor: ff0000
+    minWarmup: 0.75
+    chargeSound: laserCharge
+    shootSound: laserBlast
+    shootStatus: unmoving
+    shootStatusDuration: 180
+    shoot: {
+    type: shootPattern
+    firstShotDelay: 160
+    }
+    bullet: {
+      speed: 4
+      lifetime: 240
+      damage: 120
+      pierceDamageFactor: 0.7
+      pierce: true
+      pierceBuilding: true
+      splashDamage: 670
+      splashDamageRadius: 60
+      shootEffect: [
+        {
+          particles: 20
+          length: 150
+          lifetime: 180
+          cone: -40
+          sizeFrom: 7
+          sizeTo: 0
+          colorFrom: 8ca9e8
+          colorTo: 8ca9e8
+          interp: pow5Out
+          sizeInterp: pow2In
+        }
+        {
+          length: 0
+          offset: 0
+          lifetime: 90
+          region: arc-plasma-gas1
+          colorTo: aac3f100
+          spin: -8
+          sizeFrom: 90
+          sizeTo: 60
+        }
+        {
+          length: 0
+          offset: 0
+          lifetime: 90
+          region: arc-plasma-gas2
+          colorTo: aac3f100
+          spin: 8
+          sizeFrom: 90
+          sizeTo: 60
+        }
+        {
+          length: 0
+          offset: 0
+          lifetime: 90
+          region: arc-plasma-gas1
+          colorTo: aac3f1
+          spin: -8
+          sizeFrom: 60
+          sizeTo: 30
+        }
+        {
+          length: 0
+          offset: 0
+          lifetime: 90
+          region: arc-plasma-gas2
+          colorTo: aac3f1
+          spin: 8
+          sizeFrom: 60
+          sizeTo: 30
+        }
+        {
+          length: 0
+          offset: 0
+          lifetime: 90
+          region: arc-blackholedisk1
+          colorTo: aac3f100
+          spin: -8
+          sizeFrom: 80
+          sizeTo: 120
+        }
+      ]
+      smokeEffect: [
+        {
+          particles: 20
+          length: 150
+          lifetime: 180
+          cone: 20
+          sizeFrom: 7
+          sizeTo: 0
+          colorFrom: 909090
+          colorTo: 656565
+          interp: pow5Out
+          sizeInterp: pow2In
+        }
+        {
+          particles: 20
+          length: 125
+          lifetime: 180
+          cone: 20
+          sizeFrom: 7
+          sizeTo: 0
+          colorFrom: 8ca9e8
+          colorTo: 8ca9e8
+          interp: pow4Out
+          sizeInterp: pow2In
+        }
+      ]
+      shrinkY: 0
+      shrinkX: 0
+      spin: 8
+      width: 45
+      height: 45
+      sprite: circle-bullet
+      frontColor: ffffff
+      backColor: 8ca9e8
+      hitColor: 8ca9e8
+      trailColor: 8ca9e8
+      trailWidth: 7
+     intervalRandomSpread: 360
+     intervalBullets: 5
+     bulletInterval: 3
+     intervalSpread: 270
+     intervalBullet: {
+        type: basicBulletType
+        width: 12 
+        height: 12
+        hitColor: 6f83a8
+        homingPower: 0.12
+        homingDelay: 15
+        homingRange: 160
+        sprite: arc-star
+        spin: -8
+        trailColor: 6f83a8
+        frontColor: 6f83a8
+        lightColor: b6cbf3
+        backColor: b6cbf3
+        speed: 5
+        hitShake: 4
+        lifetime: 75
+        trailWidth: 3
+        trailLength: 30
+        splashDamage: 150
+        splashDamageRadius: 40
+      }
+      trailLength: 9
+      trailChance: 0
+      fragBullets: 1
+      fragLifeMin: 1
+      fragBullet: {
+       type: basicBulletType
+       width: 100 
+       height: 100
+       hitColor: 6f83a8
+       sprite: circle-bullet
+       trailColor: 6f83a8
+       frontColor: ffffff
+       lightColor: b6cbf3
+       backColor: b6cbf3
+       shrinkX: 0
+       shrinkY: 0
+       speed: 0
+       hitShake: 12
+       lifetime: 80
+       trailWidth: 3
+       trailLength: 30
+       splashDamage: 560
+       splashDamageRadius: 156
+       despawnEffect: [
+         {
+           length: 260
+           lifetime: 70
+           particles: 20
+           cone: 360
+           colorFrom:  6f83a8
+           colorTo: aac3f1
+           sizeFrom: 20
+           sizeTo: 0
+           interp: pow3Out
+           sizeInterp: swingIn
+           layer: 105
+          }
+          {  
+            type: WaveEffect
+            lifetime: 140
+            sizeFrom: 0
+            sizeTo: 120
+            strokeFrom: 8
+            strokeTo: 4
+            followParent: true
+          }
+        ]
+      }
+      despawnEffect: [
+          {
+           length: 140
+           lifetime: 70
+           particles: 20
+           colorFrom:  6f83a8
+           colorTo: aac3f1
+           sizeFrom: 20
+           sizeTo: 0
+           interp: pow3Out
+           sizeInterp: pow2In
+           layer: 105
+          }
+          {
+            length: 0
+            offset: -35
+            lifetime: 90
+            region: arc-blackholedisk3
+            colorTo: aac3f1
+            spin: -8
+            sizeFrom: 170
+            sizeTo: 170
+          }
+          {
+            length: 0
+            offset: -35
+            lifetime: 90
+            region: circle
+            colorTo: 010101
+            spin: 5
+            sizeFrom: 60
+            sizeTo: 60
+          }
+          {
+            length: 0
+            offset: -35
+            lifetime: 90
+            region: arc-blackholedisk2
+            colorTo: aac3f1
+            spin: 5
+            sizeFrom: 140
+            sizeTo: 140
+          }
+          {
+            length: 0
+            offset: -35
+            lifetime: 90
+            region: arc-blackholedisk1
+            colorTo: aac3f1
+            spin: -12
+            sizeFrom: 100
+            sizeTo: 100
+          }
+          {
+            type: ParticleEffect
+            particles: 40
+            line: true
+            length: 250
+            baseLength: -250
+            colorFrom: 6f83a8
+            colorTo: aac3f1
+            sizeFrom: 5
+            sizeTo: 0
+            lifetime: 50
+            interp: swingIn
+            sizeInterp: pow2
+            followParent: true
+            rotWithParent: false
+          }
+          {
+           length: 160
+           lifetime: 70
+           particles: 20
+           colorFrom: 6f83a8
+           colorTo: aac3f1
+           sizeFrom: 18
+           sizeTo: 0
+           interp: pow3Out
+           sizeInterp: pow2In
+           layer: 105
+          }
+          {  
+            type: WaveEffect
+            lifetime: 140
+            sizeFrom: 0
+            sizeTo: 120
+            strokeFrom: 8
+            strokeTo: 4
+            followParent: true
+          }
+        ]
+      lightning: 1
+      lightningLength: 2
+      lightningType: {
+        speed: 0
+        damage: 0
+        drag: -0.05
+        lifetime: 0
+        sprite: arc-star-bullet
+        shrinkY: 0
+        width: 5
+        height: 5
+        frontColor: ffffff
+        backColor: 6f83a8
+        hitColor: 6f83a8
+        trailColor: 6f83a8
+        trailLength: 14
+        trailWidth: 1.4
+        hitEffect: hitBulletColor
+        despawnEffect: hitBulletColor
+        fragLifeMin: 0.2
+        fragBullets: 120
+        fragBullet: {
+         type: basicBulletType
+         width: 12 
+         height: 12
+         hitColor: 6f83a8
+         homingPower: 0.12
+         homingDelay: 15
+         homingRange: 160
+         sprite: arc-star
+         spin: -8
+         trailColor: 6f83a8
+         frontColor: 6f83a8
+         lightColor: b6cbf3
+         backColor: b6cbf3
+         speed: 5
+         hitShake: 4
+         lifetime: 75
+         trailWidth: 3
+         trailLength: 30
+         splashDamage: 150
+         splashDamageRadius: 40
+        }
+      }
+      chargeEffect: [
+          {
+            type: ParticleEffect
+            particles: 40
+            length: 250
+            baseLength: -250
+            colorFrom: 6f83a8
+            colorTo: aac3f1
+            sizeFrom: 5
+            sizeTo: 0
+            lifetime: 50
+            interp: pow2In
+            sizeInterp: pow2
+            followParent: true
+            rotWithParent: false
+          }
+          {
+            type: ParticleEffect
+            particles: 40
+            length: 280
+            baseLength: -280
+            colorFrom: 6f83a8
+            colorTo: aac3f1
+            sizeFrom: 12
+            sizeTo: 0
+            lifetime: 50
+            interp: pow2In
+            sizeInterp: pow2
+            followParent: true
+            rotWithParent: false
+          }
+          {  
+            type: WaveEffect
+            lifetime: 110
+            sizeFrom: 120
+            sizeTo: 0
+            strokeFrom: 6
+            strokeTo: 2
+            followParent: true
+          }
+          {  
+            type: WaveEffect
+            lifetime: 140
+            sizeFrom: 140
+            sizeTo: 0
+            strokeFrom: 8
+            strokeTo: 4
+            followParent: true
+          }
+        ]
+      }
+    }
+  {
+    name: unit-fulminate-gun
+    rotationLimit: 15
+    rotateSpeed: 0.2
+    rotate: true
+    x: 34
+    y: 0
+    shootY: 16
+    inaccuracy: 3
+    velocityRnd: 0.25
+    recoil: 2
+    reload: 8
+    cooldownTime: 35
+    shake: 1
+    layerOffset: -0.02
+    shadow: 20
+    heatColor: ff0000
+    minWarmup: 0.75
+    shoot: {
+      type: shootPattern
+      shots: 6
+    }
+    shootSound: shootSmite
+    bullet: {
+      speed: 9
+      lifetime: 37
+      damage: 80
+      pierceDamageFactor: 0.7
+      pierce: true
+      pierceBuilding: true
+      homingRange: 40
+      homingPower: 0.05
+      homingDelay: 10
+      splashDamage: 35
+      splashDamageRadius: 20
+      shootEffect: shootBigColor
+      smokeEffect: shootSmokeSquareBig
+      width: 15
+      height: 40
+      frontColor: ffffff
+      backColor: 8ca9e8
+      hitColor: 8ca9e8
+      trailColor: 8ca9e8
+      trailWidth: 3
+      trailLength: 9
+      trailChance: 0
+      despawnEffect: none
+      hitEffect: {
+        type: ExplosionEffect
+        waveColor: 8ca9e8
+        smokeColor: 8ca9e8
+        sparkColor: 8ca9e8
+        waveLife: 8
+        waveStroke: 2
+        waveRad: 20
+        waveRadBase: 4
+        sparks: 12
+      }
+    }
+  }
+  {
+    name: energy-repulser
+    x: 24
+    y: -6
+    shootY: 5
+    mirror: true
+    reload: 40
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.9
+    shootSound: laser
+    recoil: 0.2
+    shake: 3
+    bullet: {
+      type: LaserBulletType
+      damage: 30
+      length: 60
+      width: 40
+      lifetime: 30
+      statusDuration: 1
+      colors: [7b92bb70, b6cbf390, ffffff]
+      sideLength: 0
+      smokeEffect: shootSmokeSquareSparse 
+    }
+  }
+  {
+    name: energy-repulser
+    x: 17
+    y: 11
+    shootY: 5
+    mirror: true
+    reload: 60
+    inaccuracy: 0
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.9
+    shootSound: laser
+    recoil: 0.2
+    shake: 3
+    bullet: {
+      type: LaserBulletType
+      damage: 30
+      length: 100
+      width: 20
+      lifetime: 30
+      statusDuration: 1
+      colors: [7b92bb70, b6cbf390, ffffff]
+      sideLength: 0
+      smokeEffect: shootSmokeSquareSparse 
+    }
+  }
+  {
+    name: energy-gunner
+    x: 14
+    y: -12
+    shootY: 5
+    mirror: true
+    reload: 30
+    shootWarmupSpeed: 0.02
+    minWarmup: 0.9
+    shootSound: blaster
+    recoil: 0.2
+    shake: 2
+    shoot: {
+    type: shootPattern
+    shots: 3
+    }
+    bullet: {
+    type: basicBulletType
+    width: 20
+    height: 20
+    hitColor: 6f83a8
+    trailColor: 6f83a8
+    frontColor: 6f83a8
+    lightColor: b6cbf3
+    backColor: b6cbf3
+    speed: 5
+    hitShake: 4
+    lifetime: 75
+    trailWidth: 3
+    trailLength: 30
+    splashDamage: 150
+    splashDamageRadius: 40
+    }
+  }
+]
+research: terrestrial-fabricator
+researchCostMultiplier: 0
