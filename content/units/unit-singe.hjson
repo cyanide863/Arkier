@@ -1,0 +1,74 @@
+type: mech
+name: Flame
+description: fire small flames at enemies being to small to fire a continous flame.
+speed: 1.3
+flying: false
+health: 410
+hitSize: 13
+outlineColor: 0f0f14
+mechLegColor: 0f0f14
+  weapons: [
+    {  
+      name: unit-flame-gun
+      x: 6.5
+      y: 0
+      display: false
+      rotate: false
+      mirror: true
+      reload: 15
+      inaccuracy: 2
+      shootCone: 5
+      shootSound: laser3
+      bullet: {
+      type: BasicBulletType
+      shootEffect: {
+        type: ParticleEffect
+        particles: 10
+        length: 40
+        lifetime: 2
+        interp: circleOut
+        cone: 20
+        offset: 20
+        lightColor: db7f70
+        colorFrom: db7f70
+        colorTo: feb380
+        sizeFrom: 4
+        sizeTo: 0
+      }
+      smokeEffect: shootSmokeSquareSparse
+      trailEffect: hitSquaresColor
+      trailInterval: 3
+      sprite: circle-bullet
+      height: 7
+      width: 7
+      trailWidth: 3.5
+      trailLength: 15
+      backColor: db7f70
+      frontColor: ffffff
+      trailColor: db7f70
+      hitColor: db7f70
+      lifetime: 18
+      speed: 8
+      damage: 28
+      splashDamage: 10
+      splashDamageRadius: 50
+      pierce: true
+      pierceCap: 3
+      lightColor: db7f70
+      hitEffect: {
+        type: ParticleEffect
+        particles: 10
+        length: 40
+        lifetime: 4
+        interp: circleOut
+        cone: 360
+        offset: 20
+        lightColor: db7f70
+        colorFrom: db7f70
+        colorTo: feb380
+        sizeFrom: 4
+        sizeTo: 0
+      }
+    }
+  }
+]
