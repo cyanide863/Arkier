@@ -1,5 +1,5 @@
 type: mech
-name: Shiv
+name: Flame
 description: fire small flames at enemies being to small to fire a continous flame.
 speed: 1.3
 flying: false
