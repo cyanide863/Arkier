@@ -12,7 +12,7 @@ mechLegColor: 0f0f14
       name: unit-singe-burner
       x: 7.5
       y: 0
-      display: false
+      layerOffset: -0.001
       rotate: false
       mirror: true
       reload: 15
