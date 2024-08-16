@@ -1,0 +1,142 @@
+type: mech
+name: Singe
+description: fire small flames at enemies being to small to fire a continous flame.
+speed: 0.8
+flying: false
+health: 6700
+armour: 6
+hitSize: 13
+outlineColor: 0f0f14
+mechLegColor: 0f0f14
+mechFrontSway: 1.2
+mechSideSway: 0.7
+mechStepParticles: true
+mechLandShake: 2
+singleTarget: true
+  weapons: [
+    {  
+      name: unit-ember-gun
+      x: 19.2
+      y: 0
+      layerOffset: -0.001
+      rotate: false
+      mirror: true
+      reload: 12
+      shootCone: 5
+      alwaysContinuous: true
+      continuous: true
+      shootSound: torch
+      bullet: {
+      type: ContinuousFlameBulletType
+      shootEffect: {
+        type: ParticleEffect
+        particles: 10
+        line: true
+        length: 40
+        lifetime: 2
+        cone: 20
+        offset: 20
+        lightColor: db7f70
+        colorFrom: db7f70
+        colorTo: feb380
+        lenFrom: 7
+        lenTo: 1
+        sizeFrom: 4
+        sizeTo: 0
+      }
+      smokeEffect: none
+      lifetime: 20
+      drawFlare: false
+      hitColor: ffc9a2
+      damage: 36
+      knockback: 0
+      pierce: true
+      pierceArmor: false
+      length: 180
+      width: 5.8
+      lightColor: db7f70
+      hitEffect: {
+        type: ParticleEffect
+        particles: 25
+        line: true
+        length: 70
+        lifetime: 2
+        cone: 360
+        offset: 20
+        lightColor: db7f70
+        colorFrom: db7f70
+        colorTo: feb380
+        lenFrom: 7
+        lenTo: 2
+        sizeFrom: 5
+        sizeTo: 0
+        }
+      }
+    }
+  }
+    {  
+      name: plasma-gunner
+      x: 10.6
+      y: 0
+      display: false
+      rotate: false
+      mirror: true
+      reload: 15
+      inaccuracy: 2
+      velocityRnd: 0.6
+      shootCone: 120
+      shootSound: laser3
+      shoot: {
+      type: shootPattern
+      shots: 6
+      shotDelay: 5
+      }
+      bullet: {
+      shootEffect: {
+        type: ParticleEffect
+        particles: 10
+        length: 40
+        lifetime: 2
+        interp: circleOut
+        cone: 20
+        offset: 20
+        lightColor: db7f70
+        colorFrom: db7f70
+        colorTo: feb380
+        sizeFrom: 4
+        sizeTo: 0
+      }
+      smokeEffect: shootSmokeSquareSparse
+      trailEffect: hitSquaresColor
+      trailInterval: 3
+      height: 12
+      width: 9
+      trailWidth: 3.5
+      trailLength: 15
+      backColor: db7f70
+      frontColor: ffffff
+      trailColor: db7f70
+      hitColor: db7f70
+      lifetime: 18
+      speed: 8
+      damage: 40
+      splashDamage: 30
+      splashDamageRadius: 50
+      lightColor: db7f70
+      hitEffect: {
+        type: ParticleEffect
+        particles: 16
+        length: 50
+        lifetime: 4
+        interp: circleOut
+        cone: 360
+        offset: 20
+        lightColor: db7f70
+        colorFrom: db7f70
+        colorTo: feb380
+        sizeFrom: 7
+        sizeTo: 0
+      }
+    }
+  }
+]
