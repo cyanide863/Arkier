@@ -1,0 +1,35 @@
+type: mech
+name: Shiv
+description: fire small flames at enemies being to small to fire a continous flame.
+speed: 1.3
+flying: false
+health: 330
+hitSize: 10
+outlineColor: 0f0f14
+mechLegColor: 0f0f14
+  weapons: [
+    {  
+      name: unit-flame-gun
+      x: 6.5
+      y: 0
+      display: false
+      rotate: false
+      mirror: true
+      reload: 10
+      inaccuracy: 2
+      shootCone: 5
+      shootSound: small-flame
+      bullet: {
+      type: ContinuousFlameBulletType
+      lifetime: 20
+      drawFlare: false
+      hitColor: ffc9a2
+      damage: 30
+      knockback: 1
+      pierce: true
+      pierceArmor: false
+      length: 80
+      width: 2.1
+    }
+  }
+]
