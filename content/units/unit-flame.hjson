@@ -12,7 +12,7 @@ mechLegColor: 0f0f14
       name: unit-flame-gun
       x: 6.5
       y: 0
-      display: false
+      layerOffset: -0.001
       rotate: false
       mirror: true
       reload: 10
