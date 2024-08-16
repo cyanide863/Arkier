@@ -1,5 +1,5 @@
 type: mech
-name: Flame
+name: Singe
 description: fire small flames at enemies being to small to fire a continous flame.
 speed: 1.3
 flying: false
@@ -9,8 +9,8 @@ outlineColor: 0f0f14
 mechLegColor: 0f0f14
   weapons: [
     {  
-      name: unit-flame-gun
-      x: 6.5
+      name: unit-singe-burner
+      x: 7.5
       y: 0
       display: false
       rotate: false
