@@ -12,7 +12,7 @@ mechLegColor: 0f0f14
       name: unit-blaze-flame
       x: 12.5
       y: 0
-      display: false
+      layerOffset: -0.001
       rotate: false
       mirror: true
       reload: 15
@@ -78,7 +78,7 @@ mechLegColor: 0f0f14
   name: unit-blaze-cannon
   x: 6.5
   y: 0
-  display: false
+  layerOffset: 0.001
   rotate: false
   mirror: true
   reload: 15
