@@ -1,0 +1,128 @@
+type: mech
+name: Blaze
+description: fire small flames at enemies being to small to fire a continous flame.
+speed: 1
+flying: false
+health: 2200
+hitSize: 19
+outlineColor: 0f0f14
+mechLegColor: 0f0f14
+  weapons: [
+    {  
+      name: unit-blaze-flame
+      x: 12.5
+      y: 0
+      display: false
+      rotate: false
+      mirror: true
+      reload: 15
+      inaccuracy: 3
+      velocityRnd: 0.6
+      shootCone: 5
+      shootSound: laser3
+      shoot: {
+      type: shootPattern
+      shots: 3
+      }
+      bullet: {
+      type: artilleryBulletType
+      shootEffect: {
+        type: ParticleEffect
+        particles: 10
+        length: 40
+        lifetime: 2
+        interp: circleOut
+        cone: 20
+        offset: 20
+        lightColor: db7f70
+        colorFrom: db7f70
+        colorTo: feb380
+        sizeFrom: 4
+        sizeTo: 0
+      }
+      smokeEffect: shootSmokeSquareSparse
+      trailEffect: hitSquaresColor
+      trailInterval: 3
+      height: 12
+      width: 9
+      trailWidth: 3.5
+      shrinkY: -0.2
+      trailLength: 15
+      backColor: db7f70
+      frontColor: ffffff
+      trailColor: db7f70
+      hitColor: db7f70
+      lifetime: 18
+      speed: 8
+      damage: 40
+      splashDamage: 30
+      splashDamageRadius: 50
+      lightColor: db7f70
+      hitEffect: {
+        type: ParticleEffect
+        particles: 16
+        length: 50
+        lifetime: 4
+        interp: circleOut
+        cone: 360
+        offset: 20
+        lightColor: db7f70
+        colorFrom: db7f70
+        colorTo: feb380
+        sizeFrom: 7
+        sizeTo: 0
+      }
+    }
+  }
+{ 
+  name: unit-blaze-cannon
+  x: 6.5
+  y: 0
+  display: false
+  rotate: false
+  mirror: true
+  reload: 15
+  shootCone: 5
+  shootSound: synchro
+  bullet: {
+    type: ShrapnelBulletType
+    lifetime: 20
+    length: 96
+    width: 3
+    serrations: 2
+    serrationSpacing: 3
+    fromColor: ffcea0
+    toColor: ff7048
+    despawnEffect: none
+    shootEffect: {
+      type: ParticleEffect
+      particles: 16
+      length: 50
+      lifetime: 4
+      interp: circleOut
+      cone: 30
+      offset: 20
+      lightColor: db7f70
+      colorFrom: db7f70
+      colorTo: feb380
+      sizeFrom: 2
+      sizeTo: 0
+    }
+    smokeEffect: none
+    hitEffect: {
+      type: ParticleEffect
+      particles: 16
+      length: 68
+      lifetime: 4
+      interp: circleOut
+      cone: -30
+      offset: 20
+      lightColor: db7f70
+      colorFrom: db7f70
+      colorTo: feb380
+      sizeFrom: 7
+      sizeTo: 0
+      }
+    }
+  }
+]
