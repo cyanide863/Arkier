@@ -1,9 +1,0 @@
-name: Deserted Pine
-type: TallBlock
-variants: 2
-clipSize: 150
-shadowAlpha: 0.5
-shadowOffset: -2.5
-emitLight: true
-lightColor: eb755859
-lightRadius: 230

@@ -1,7 +1,0 @@
-type: Floor
-speedMultiplier: 0.7
-variants: 0
-statusDuration: 60
-cacheLayer: water
-liquidDrop: liquid-hydride
-isLiquid: true

@@ -1,9 +1,0 @@
-type: Floor
-liquidDrop: liquid-hydride
-liquidMultiplier: 0.9
-isLiquid: true
-shallow: true
-cacheLayer: water
-attributes: {
-  gravel: 2
-}

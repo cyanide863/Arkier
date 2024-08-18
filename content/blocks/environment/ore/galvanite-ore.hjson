@@ -1,5 +1,0 @@
-type: OreBlock
-name: Galvanite
-description: Raw, impure galvanium. Must be refined before use.
-itemDrop: item-galvanite
-variants: 3

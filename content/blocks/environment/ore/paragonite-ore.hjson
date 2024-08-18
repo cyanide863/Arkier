@@ -1,5 +1,0 @@
-type: OreBlock
-name: Paragonite
-itemDrop: item-paragonite
-wallOre: true
-variants: 2

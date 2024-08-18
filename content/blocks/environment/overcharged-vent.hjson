@@ -1,9 +1,0 @@
-name: Overcharge Vent
-type: SteamVent
-blendGroup: overcharge-floor
-parent: overcharge-floor
-effect: ventSteam
-effectColor: 433325
-attributes: {
-   heat: 0.2222222
-}

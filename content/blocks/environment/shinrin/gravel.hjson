@@ -1,7 +1,0 @@
-type: Floor
-variants: 3
-attributes: {
-  sand: 0.2
-  water: 0.2
-  gravel: 1
-}

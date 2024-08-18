@@ -1,5 +1,0 @@
-type: OreBlock
-name: Torretite
-description: Raw, impure torretite. Must be refined before use.
-itemDrop: item-torretite
-variants: 3

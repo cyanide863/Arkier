@@ -1,5 +1,0 @@
-type: OreBlock
-name: Vanadium
-itemDrop: item-vanadium
-wallOre: true
-variants: 3

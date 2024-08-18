@@ -1,5 +1,0 @@
-type: OreBlock
-name: Chromite
-description: Raw, impure chromium. Must be refined before use.
-itemDrop: item-chromite
-variants: 3

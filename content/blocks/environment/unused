@@ -1,9 +1,0 @@
-name: torretite vent
-type: SteamVent
-blendGroup: torretite-floor
-parent: torretite-floor
-effect: ventSteam
-effectColor: 9ca67c
-attributes: {
-   steam: 0.22222
-}
