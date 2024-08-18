@@ -1,9 +1,0 @@
-name: Chromatite
-description: A superconductive and durable alloy.
-cost: 2.2
-color: e0a0b9
-charge: 3
-hiddenOnPlanets: [
-  serpulo,
-  erekir
-]

@@ -1,9 +1,0 @@
-name: Vanadium-Carbide
-description: hard, but brittle. Used in reinforcing in machinery.
-cost: 1.8
-color: 9b8aaa
-hiddenOnPlanets: [
-  serpulo,
-  erekir
-]
-research: item-vanadium

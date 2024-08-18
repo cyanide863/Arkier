@@ -1,9 +1,0 @@
-name: galvanium
-description: pure galvanium.can be used in alloys
-cost: 0.8
-color: 3f3560
-charge: 0.3
-hiddenOnPlanets: [
-  serpulo,
-  erekir
-]

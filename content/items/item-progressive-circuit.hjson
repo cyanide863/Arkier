@@ -1,9 +1,0 @@
-name: Progressive circuit
-description: Capable of intermediate calculations. Used in path-finding systems.
-cost: 1.5
-color: 573a53
-hiddenOnPlanets: [
-  serpulo,
-  erekir
-]
-research: item-basic-circuit
